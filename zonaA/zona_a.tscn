@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://df7fsdl7bu340"]
 
+[ext_resource type="Script" uid="uid://bjietg1os5s20" path="res://sistema_sol.gd" id="1_oxmde"]
 [ext_resource type="Script" uid="uid://gcynf8lm6j7b" path="res://control_jugador.gd" id="1_rwx75"]
+[ext_resource type="Script" uid="uid://f5j0s7v7lp0i" path="res://ciclo_dia.gd" id="2_c7mlr"]
 [ext_resource type="Script" uid="uid://rbvgcxrsifhp" path="res://lector_entrada.gd" id="2_xbrrk"]
 [ext_resource type="Script" uid="uid://bm43kfji21dj" path="res://motor.gd" id="3_oxmde"]
 [ext_resource type="Script" uid="uid://ejogjbpi60fy" path="res://orientador.gd" id="4_c7mlr"]
@@ -14,7 +16,18 @@ size = Vector2(5, 5)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_40pyl"]
 albedo_color = Color(0.14295667, 0.08967427, 0.064908475, 1)
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xbrrk"]
+
+[sub_resource type="Sky" id="Sky_rwx75"]
+sky_material = SubResource("ProceduralSkyMaterial_xbrrk")
+
 [sub_resource type="Environment" id="Environment_neklc"]
+background_mode = 1
+background_color = Color(0.13725491, 0.21568628, 0.33333334, 1)
+sky = SubResource("Sky_rwx75")
+ambient_light_source = 2
+ambient_light_color = Color(0.04575874, 0.08225452, 0.27120623, 1)
+tonemap_mode = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_ostoq"]
 size = Vector3(0.2, 3, 5)
@@ -83,13 +96,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75, 1.5, 2.5)
 mesh = SubResource("BoxMesh_jlj7e")
 
 [node name="Sol" type="DirectionalLight3D" parent="." unique_id=1171175162]
-transform = Transform3D(0.8660254, 0.25, -0.4330127, 0, 0.8660254, 0.5, 0.5, -0.4330127, 0.75, 0, 4.0657625, 5.730858)
+transform = Transform3D(0.8660254, 0.25, -0.4330127, 0, 0.8660254, 0.5, 0.5, -0.4330127, 0.75, -1.7040503, 4.60947, 5.730858)
 light_energy = 0.5
 shadow_enabled = true
 
-[node name="SistemaSol" type="Node" parent="." unique_id=1161359304]
+[node name="SistemaSol" type="Node" parent="." unique_id=1161359304 node_paths=PackedStringArray("sol", "entorno")]
+script = ExtResource("1_oxmde")
+sol = NodePath("../Sol")
+entorno = NodePath("../WorldEnvironment")
 
 [node name="CicloDia" type="Node" parent="SistemaSol" unique_id=1344737503]
+script = ExtResource("2_c7mlr")
 
 [node name="Jugador" type="CharacterBody3D" parent="." unique_id=47889504]
 script = ExtResource("1_rwx75")

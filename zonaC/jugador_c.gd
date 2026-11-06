@@ -1,5 +1,4 @@
 extends CharacterBody3D
-
 @export var vel_caminar := 3.0            # m/s: cruzar el sótano (12 m) toma 4 s
 @export var vel_correr := 6.0             # m/s: lo cruza en 2 s
 @export var tecla_correr := KEY_SHIFT

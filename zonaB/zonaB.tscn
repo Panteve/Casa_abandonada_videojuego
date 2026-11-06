@@ -37,9 +37,10 @@ albedo_color = Color(0.93, 0.13, 0.24, 1)
 [sub_resource type="Environment" id="Environment_5ckkb"]
 ambient_light_source = 3
 ambient_light_color = Color(0.8509804, 0.85490197, 0.9254902, 1)
+ambient_light_energy = 0.7
 
-[sub_resource type="QuadMesh" id="QuadMesh_j0gg3"]
-size = Vector2(1.3, 1.5)
+[sub_resource type="BoxMesh" id="BoxMesh_ukb6v"]
+size = Vector3(1.3, 1.5, 0.01)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wkh3q"]
 albedo_color = Color(0.3680692, 0.26046744, 0.21086136, 1)
@@ -122,7 +123,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.616786, 0.62749267, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Puerta" unique_id=1885395113]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20031655, 0)
-mesh = SubResource("QuadMesh_j0gg3")
+mesh = SubResource("BoxMesh_ukb6v")
 surface_material_override/0 = SubResource("StandardMaterial3D_wkh3q")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Puerta" unique_id=1687686133]
@@ -137,13 +138,22 @@ script = ExtResource("8_w5t6a")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28690374, 0)
 shape = SubResource("BoxShape3D_dhmo7")
 
-[node name="luz_destello" type="OmniLight3D" parent="." unique_id=980442004]
+[node name="luzDestello" type="OmniLight3D" parent="." unique_id=980442004]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6102503, 0.60769343, 1.3305774)
 light_color = Color(0.72156864, 0.5254902, 0.043137256, 1)
 light_energy = 0.0
 omni_range = 4.0
 omni_attenuation = 2.0
 
-[node name="SistemaEventos" type="Node" parent="." unique_id=1091607531 node_paths=PackedStringArray("luz_evento")]
+[node name="SistemaEventos" type="Node" parent="." unique_id=1091607531 node_paths=PackedStringArray("luz_evento", "luz_variable", "luz_bombillo")]
 script = ExtResource("9_7bwrd")
-luz_evento = NodePath("../luz_destello")
+luz_evento = NodePath("../luzDestello")
+luz_variable = NodePath("../luzTension")
+luz_bombillo = NodePath("../OmniLight3D")
+segundos_derrota = 5.0
+
+[node name="luzTension" type="OmniLight3D" parent="." unique_id=147782428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.79901075, -1.7714272)
+shadow_enabled = true
+omni_range = 6.0
+omni_attenuation = 2.0

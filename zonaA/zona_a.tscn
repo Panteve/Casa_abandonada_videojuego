@@ -1,5 +1,11 @@
 [gd_scene format=3 uid="uid://df7fsdl7bu340"]
 
+[ext_resource type="Script" uid="uid://gcynf8lm6j7b" path="res://control_jugador.gd" id="1_rwx75"]
+[ext_resource type="Script" uid="uid://rbvgcxrsifhp" path="res://lector_entrada.gd" id="2_xbrrk"]
+[ext_resource type="Script" uid="uid://bm43kfji21dj" path="res://motor.gd" id="3_oxmde"]
+[ext_resource type="Script" uid="uid://ejogjbpi60fy" path="res://orientador.gd" id="4_c7mlr"]
+[ext_resource type="Script" uid="uid://yjo5g32efxa" path="res://agarrador.gd" id="5_h8pm0"]
+
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_onsl3"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_0kdyo"]
@@ -8,9 +14,7 @@ size = Vector2(5, 5)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_40pyl"]
 albedo_color = Color(0.14295667, 0.08967427, 0.064908475, 1)
 
-[sub_resource type="Environment" id="Environment_onsl3"]
-ambient_light_source = 3
-ambient_light_color = Color(0.8520683, 0.8539375, 0.9242788, 1)
+[sub_resource type="Environment" id="Environment_neklc"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ostoq"]
 size = Vector3(0.2, 3, 5)
@@ -24,13 +28,27 @@ size = Vector3(0.2, 3, 5)
 [sub_resource type="BoxMesh" id="BoxMesh_2tml3"]
 size = Vector3(5, 3, 0.2)
 
-[sub_resource type="BoxMesh" id="BoxMesh_wyn4e"]
+[sub_resource type="BoxMesh" id="BoxMesh_jlj7e"]
 size = Vector3(1.5, 3, 0.2)
 
-[sub_resource type="BoxMesh" id="BoxMesh_jlj7e"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ckkb"]
+albedo_color = Color(1, 1, 0.10980392, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1"]
+material = SubResource("StandardMaterial3D_5ckkb")
+
+[sub_resource type="BoxMesh" id="BoxMesh_2"]
+size = Vector3(0.3, 0.3, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="Mat_1"]
+albedo_color = Color(0.93, 0.13, 0.24, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uxa2c"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_11rk4"]
 size = Vector3(2, 1, 0.2)
 
-[node name="Node3D" type="Node3D" unique_id=1783554874]
+[node name="Cocina" type="Node3D" unique_id=1783554874]
 
 [node name="Piso" type="StaticBody3D" parent="." unique_id=238635574]
 
@@ -41,11 +59,8 @@ shape = SubResource("WorldBoundaryShape3D_onsl3")
 mesh = SubResource("PlaneMesh_0kdyo")
 surface_material_override/0 = SubResource("StandardMaterial3D_40pyl")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1816013460]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6474685, 1.2324592)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=194842163]
-environment = SubResource("Environment_onsl3")
+environment = SubResource("Environment_neklc")
 
 [node name="ParedIzquierda" type="MeshInstance3D" parent="." unique_id=1824904826]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.5, 0)
@@ -63,14 +78,63 @@ mesh = SubResource("BoxMesh_ketxm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -2.5)
 mesh = SubResource("BoxMesh_2tml3")
 
-[node name="Ventana2" type="MeshInstance3D" parent="." unique_id=2179211]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75, 1.5, 2.5)
-mesh = SubResource("BoxMesh_wyn4e")
-
 [node name="Ventana3" type="MeshInstance3D" parent="." unique_id=400389162]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 2.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75, 1.5, 2.5)
 mesh = SubResource("BoxMesh_jlj7e")
 
-[node name="Ventana4" type="MeshInstance3D" parent="." unique_id=221743038]
+[node name="Sol" type="DirectionalLight3D" parent="." unique_id=1171175162]
+transform = Transform3D(0.8660254, 0.25, -0.4330127, 0, 0.8660254, 0.5, 0.5, -0.4330127, 0.75, 0, 4.0657625, 5.730858)
+light_energy = 0.5
+shadow_enabled = true
+
+[node name="SistemaSol" type="Node" parent="." unique_id=1161359304]
+
+[node name="CicloDia" type="Node" parent="SistemaSol" unique_id=1344737503]
+
+[node name="Jugador" type="CharacterBody3D" parent="." unique_id=47889504]
+script = ExtResource("1_rwx75")
+
+[node name="Modelo" type="Node3D" parent="Jugador" unique_id=28365162]
+
+[node name="Cuerpo" type="MeshInstance3D" parent="Jugador/Modelo" unique_id=1536263128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_1")
+
+[node name="Nariz" type="MeshInstance3D" parent="Jugador/Modelo" unique_id=514818034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.6)
+mesh = SubResource("BoxMesh_2")
+surface_material_override/0 = SubResource("Mat_1")
+
+[node name="Mano" type="Marker3D" parent="Jugador/Modelo" unique_id=1594709045]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="LectorEntrada" type="Node" parent="Jugador" unique_id=1630237518]
+script = ExtResource("2_xbrrk")
+
+[node name="Motor" type="Node" parent="Jugador" unique_id=644141159]
+script = ExtResource("3_oxmde")
+
+[node name="Orientador" type="Node" parent="Jugador" unique_id=1156803224 node_paths=PackedStringArray("modelo")]
+script = ExtResource("4_c7mlr")
+modelo = NodePath("../Modelo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Jugador" unique_id=1526587844]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51013815, 0)
+shape = SubResource("BoxShape3D_uxa2c")
+
+[node name="Agarrador" type="Node3D" parent="Jugador" unique_id=2021408838 node_paths=PackedStringArray("modelo", "mano")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+script = ExtResource("5_h8pm0")
+modelo = NodePath("../Modelo")
+mano = NodePath("../Modelo/Mano")
+
+[node name="Camera3D" type="Camera3D" parent="Jugador" unique_id=1816013460]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6474685, 1.2324592)
+
+[node name="Ventana2" type="MeshInstance3D" parent="." unique_id=1552207406]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 2.5)
+mesh = SubResource("BoxMesh_11rk4")
+
+[node name="Ventana4" type="MeshInstance3D" parent="." unique_id=658703992]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 2.5)
-mesh = SubResource("BoxMesh_jlj7e")
+mesh = SubResource("BoxMesh_11rk4")

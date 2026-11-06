@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://cth5gmj4mkuoc"]
+
+[ext_resource type="Script" uid="uid://gcynf8lm6j7b" path="res://zonaB/jugador/control_jugador.gd" id="1_ukb6v"]
+[ext_resource type="Script" uid="uid://rbvgcxrsifhp" path="res://zonaB/jugador/lector_entrada.gd" id="2_dufrw"]
+[ext_resource type="Script" uid="uid://bm43kfji21dj" path="res://zonaB/jugador/motor.gd" id="3_g3p5c"]
+[ext_resource type="Script" uid="uid://ejogjbpi60fy" path="res://zonaB/jugador/orientador.gd" id="4_f32dw"]
+[ext_resource type="Script" uid="uid://udres0a13atv" path="res://zonaB/jugador/agarrador.gd" id="5_r81pw"]
+[ext_resource type="Script" uid="uid://cwua4ntjckyom" path="res://zonaB/jugador/camara_seguidora.gd" id="6_310fy"]
+[ext_resource type="Script" uid="uid://d36t1j3jd1eiq" path="res://zonaB/luz_parpadeante.gd" id="7_a3myb"]
+[ext_resource type="Script" uid="uid://b0lc8tbo5v2kl" path="res://zonaB/disparador.gd" id="8_w5t6a"]
+[ext_resource type="Script" uid="uid://ba1qb10d5h6a7" path="res://zonaB/sistema_eventos.gd" id="9_7bwrd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_onsl3"]
+albedo_color = Color(0.14117648, 0.09019608, 0.06666667, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uxa2c"]
+material = SubResource("StandardMaterial3D_onsl3")
+size = Vector3(10, 0.1, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hchaj"]
+size = Vector3(10, 0.1, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ckkb"]
+albedo_color = Color(1, 1, 0.10980392, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1"]
+material = SubResource("StandardMaterial3D_5ckkb")
+
+[sub_resource type="BoxMesh" id="BoxMesh_2"]
+size = Vector3(0.3, 0.3, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="Mat_1"]
+albedo_color = Color(0.93, 0.13, 0.24, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uxa2c"]
+
+[sub_resource type="Environment" id="Environment_5ckkb"]
+ambient_light_source = 3
+ambient_light_color = Color(0.8509804, 0.85490197, 0.9254902, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_j0gg3"]
+size = Vector2(1.3, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wkh3q"]
+albedo_color = Color(0.3680692, 0.26046744, 0.21086136, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d3xaf"]
+size = Vector3(1.3, 1.5, 0.01)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dhmo7"]
+size = Vector3(1.3, 1.5, 0.1)
+
+[node name="Mundo" type="Node3D" unique_id=938924075]
+
+[node name="Piso" type="StaticBody3D" parent="." unique_id=1210924328]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Piso" unique_id=2056512419]
+mesh = SubResource("BoxMesh_uxa2c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Piso" unique_id=1184084503]
+shape = SubResource("BoxShape3D_hchaj")
+
+[node name="Jugador" type="CharacterBody3D" parent="." unique_id=175263609]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.438983, 0, 0)
+collision_layer = 9
+script = ExtResource("1_ukb6v")
+
+[node name="Modelo" type="Node3D" parent="Jugador" unique_id=976789446]
+
+[node name="Cuerpo" type="MeshInstance3D" parent="Jugador/Modelo" unique_id=1743223623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_1")
+
+[node name="Nariz" type="MeshInstance3D" parent="Jugador/Modelo" unique_id=1210818850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.6)
+mesh = SubResource("BoxMesh_2")
+surface_material_override/0 = SubResource("Mat_1")
+
+[node name="Mano" type="Marker3D" parent="Jugador/Modelo" unique_id=899674915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="LectorEntrada" type="Node" parent="Jugador" unique_id=1512997255]
+script = ExtResource("2_dufrw")
+
+[node name="Motor" type="Node" parent="Jugador" unique_id=235708953]
+script = ExtResource("3_g3p5c")
+
+[node name="Orientador" type="Node" parent="Jugador" unique_id=600636124 node_paths=PackedStringArray("modelo")]
+script = ExtResource("4_f32dw")
+modelo = NodePath("../Modelo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Jugador" unique_id=2055259423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51013815, 0)
+shape = SubResource("BoxShape3D_uxa2c")
+
+[node name="Agarrador" type="Node3D" parent="Jugador" unique_id=432002819 node_paths=PackedStringArray("modelo", "mano")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+script = ExtResource("5_r81pw")
+modelo = NodePath("../Modelo")
+mano = NodePath("../Modelo/Mano")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=82835821 node_paths=PackedStringArray("objetivo", "motor")]
+process_priority = 10
+transform = Transform3D(1, 0, 0, 0, 0.819152, 0.573576, 0, -0.573576, 0.819152, 0, 5, 7)
+script = ExtResource("6_310fy")
+objetivo = NodePath("../Jugador")
+motor = NodePath("../Jugador/Motor")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=786954536]
+environment = SubResource("Environment_5ckkb")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1304164204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6017497, 0.8158685, 2.5995297)
+light_color = Color(0.9607843, 0.9607843, 0.8627451, 1)
+shadow_enabled = true
+omni_range = 2.0
+omni_attenuation = 2.0
+script = ExtResource("7_a3myb")
+
+[node name="Puerta" type="StaticBody3D" parent="." unique_id=1358645654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.616786, 0.62749267, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Puerta" unique_id=1885395113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20031655, 0)
+mesh = SubResource("QuadMesh_j0gg3")
+surface_material_override/0 = SubResource("StandardMaterial3D_wkh3q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puerta" unique_id=1687686133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28978682, 0)
+shape = SubResource("BoxShape3D_d3xaf")
+
+[node name="ZonaInteraccion" type="Area3D" parent="Puerta" unique_id=1422976324 groups=["disparadores"]]
+collision_mask = 9
+script = ExtResource("8_w5t6a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puerta/ZonaInteraccion" unique_id=393400981]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28690374, 0)
+shape = SubResource("BoxShape3D_dhmo7")
+
+[node name="luz_destello" type="OmniLight3D" parent="." unique_id=980442004]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6102503, 0.60769343, 1.3305774)
+light_color = Color(0.72156864, 0.5254902, 0.043137256, 1)
+light_energy = 0.0
+omni_range = 4.0
+omni_attenuation = 2.0
+
+[node name="SistemaEventos" type="Node" parent="." unique_id=1091607531 node_paths=PackedStringArray("luz_evento")]
+script = ExtResource("9_7bwrd")
+luz_evento = NodePath("../luz_destello")

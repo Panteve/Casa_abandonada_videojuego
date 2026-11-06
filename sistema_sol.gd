@@ -19,6 +19,10 @@ func _ready() -> void:
 	aplicar_hora()
 	era_noche = CicloDia.factor_sol(ciclo.hora) <= 0.0
 
+	cambio_noche.connect(func(n):
+		print("noche: ", n, " a las ", snappedf(ciclo.hora, 0.1))
+	)
+
 func _process(delta: float) -> void:
 	ciclo.avanzar(delta)
 	aplicar_hora()

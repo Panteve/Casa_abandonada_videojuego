@@ -107,6 +107,8 @@ entorno = NodePath("../WorldEnvironment")
 
 [node name="CicloDia" type="Node" parent="SistemaSol" unique_id=1344737503]
 script = ExtResource("2_c7mlr")
+duracion_dia = 12.0
+pausado = false
 
 [node name="Jugador" type="CharacterBody3D" parent="." unique_id=47889504]
 script = ExtResource("1_rwx75")

@@ -1,0 +1,156 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://zonaC/jugador_c.gd" id="1_jugador"]
+[ext_resource type="Script" path="res://zonaC/luz_jugador.gd" id="6_luz"]
+
+[sub_resource type="Environment" id="Entorno_sotano"]
+background_mode = 1
+background_color = Color(0.0666667, 0.0666667, 0.0666667, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.0666667, 0.0666667, 0.0666667, 1)
+ambient_light_energy = 1.0
+
+[sub_resource type="StandardMaterial3D" id="Mat_gris"]
+albedo_color = Color(0.6, 0.6, 0.6, 1)
+
+[sub_resource type="BoxMesh" id="Malla_piso"]
+material = SubResource("Mat_gris")
+size = Vector3(10, 0.2, 12)
+
+[sub_resource type="BoxShape3D" id="Forma_piso"]
+size = Vector3(10, 0.2, 12)
+
+[sub_resource type="BoxMesh" id="Malla_pared_ns"]
+material = SubResource("Mat_gris")
+size = Vector3(10.4, 3, 0.2)
+
+[sub_resource type="BoxShape3D" id="Forma_pared_ns"]
+size = Vector3(10.4, 3, 0.2)
+
+[sub_resource type="BoxMesh" id="Malla_pared_eo"]
+material = SubResource("Mat_gris")
+size = Vector3(0.2, 3, 12)
+
+[sub_resource type="BoxShape3D" id="Forma_pared_eo"]
+size = Vector3(0.2, 3, 12)
+
+[sub_resource type="BoxMesh" id="Malla_caja"]
+material = SubResource("Mat_gris")
+
+[sub_resource type="BoxShape3D" id="Forma_caja"]
+
+[sub_resource type="BoxShape3D" id="Forma_jugador"]
+size = Vector3(1, 0.9, 1)
+
+[node name="ZonaC" type="Node3D"]
+
+[node name="Entorno" type="WorldEnvironment" parent="."]
+environment = SubResource("Entorno_sotano")
+
+[node name="Sol" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 4, 0)
+light_energy = 0.0
+
+[node name="Piso" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+
+[node name="Malla" type="MeshInstance3D" parent="Piso"]
+mesh = SubResource("Malla_piso")
+
+[node name="Forma" type="CollisionShape3D" parent="Piso"]
+shape = SubResource("Forma_piso")
+
+[node name="Techo" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1, 0)
+
+[node name="Malla" type="MeshInstance3D" parent="Techo"]
+mesh = SubResource("Malla_piso")
+
+[node name="Forma" type="CollisionShape3D" parent="Techo"]
+shape = SubResource("Forma_piso")
+
+[node name="ParedNorte" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -6.1)
+
+[node name="Malla" type="MeshInstance3D" parent="ParedNorte"]
+mesh = SubResource("Malla_pared_ns")
+
+[node name="Forma" type="CollisionShape3D" parent="ParedNorte"]
+shape = SubResource("Forma_pared_ns")
+
+[node name="ParedSur" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 6.1)
+
+[node name="Malla" type="MeshInstance3D" parent="ParedSur"]
+mesh = SubResource("Malla_pared_ns")
+
+[node name="Forma" type="CollisionShape3D" parent="ParedSur"]
+shape = SubResource("Forma_pared_ns")
+
+[node name="ParedEste" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1, 1.5, 0)
+
+[node name="Malla" type="MeshInstance3D" parent="ParedEste"]
+mesh = SubResource("Malla_pared_eo")
+
+[node name="Forma" type="CollisionShape3D" parent="ParedEste"]
+shape = SubResource("Forma_pared_eo")
+
+[node name="ParedOeste" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1, 1.5, 0)
+
+[node name="Malla" type="MeshInstance3D" parent="ParedOeste"]
+mesh = SubResource("Malla_pared_eo")
+
+[node name="Forma" type="CollisionShape3D" parent="ParedOeste"]
+shape = SubResource("Forma_pared_eo")
+
+[node name="Caja1" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, 3)
+
+[node name="Malla" type="MeshInstance3D" parent="Caja1"]
+mesh = SubResource("Malla_caja")
+
+[node name="Forma" type="CollisionShape3D" parent="Caja1"]
+shape = SubResource("Forma_caja")
+
+[node name="Caja2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, 0)
+
+[node name="Malla" type="MeshInstance3D" parent="Caja2"]
+mesh = SubResource("Malla_caja")
+
+[node name="Forma" type="CollisionShape3D" parent="Caja2"]
+shape = SubResource("Forma_caja")
+
+[node name="Caja3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, -3)
+
+[node name="Malla" type="MeshInstance3D" parent="Caja3"]
+mesh = SubResource("Malla_caja")
+
+[node name="Forma" type="CollisionShape3D" parent="Caja3"]
+shape = SubResource("Forma_caja")
+
+[node name="Jugador" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+collision_layer = 8
+collision_mask = 3
+motion_mode = 1
+script = ExtResource("1_jugador")
+
+[node name="Forma" type="CollisionShape3D" parent="Jugador"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("Forma_jugador")
+
+[node name="Camera3D" type="Camera3D" parent="Jugador"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+current = true
+
+[node name="LuzJugador" type="SpotLight3D" parent="Jugador"]
+light_color = Color(0.960784, 0.960784, 0.862745, 1)
+light_energy = 6.4
+spot_range = 8.0
+spot_attenuation = 2.0
+spot_angle = 30.0
+script = ExtResource("6_luz")

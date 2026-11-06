@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://bm43kfji21dj" path="res://motor.gd" id="3_oxmde"]
 [ext_resource type="Script" uid="uid://ejogjbpi60fy" path="res://orientador.gd" id="4_c7mlr"]
 [ext_resource type="Script" uid="uid://yjo5g32efxa" path="res://agarrador.gd" id="5_h8pm0"]
+[ext_resource type="Script" uid="uid://db6j0u1br6y41" path="res://fotometro.gd" id="8_c7mlr"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_onsl3"]
 
@@ -157,3 +158,9 @@ mesh = SubResource("BoxMesh_11rk4")
 [node name="Ventana4" type="MeshInstance3D" parent="." unique_id=658703992]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 2.5)
 mesh = SubResource("BoxMesh_11rk4")
+
+[node name="Fotometro" type="Node" parent="." unique_id=2138802123 node_paths=PackedStringArray("sistema", "camara", "superficie")]
+script = ExtResource("8_c7mlr")
+sistema = NodePath("../SistemaSol")
+camara = NodePath("../Jugador/Camera3D")
+superficie = NodePath("../Piso/MeshInstance3D")

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bf5q4ybx5dgwy"]
 
 [ext_resource type="Script" uid="uid://d3f4hiroip1rs" path="res://player/player.gd" id="1_oul6g"]
+[ext_resource type="Script" uid="uid://1vtnmwpn7pe6" path="res://player/lector_entrada.gd" id="2_rkbax"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0kdyo"]
 
@@ -31,6 +32,9 @@ mesh = SubResource("CapsuleMesh_onsl3")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head" unique_id=1783466188]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7402642, -0.24028897)
+
+[node name="LectorEntrada" type="Node" parent="CharacterBody3D" unique_id=912879911]
+script = ExtResource("2_rkbax")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1126868333]
 environment = SubResource("Environment_onsl3")

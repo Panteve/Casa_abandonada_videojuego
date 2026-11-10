@@ -7,6 +7,7 @@ extends CharacterBody3D
 
 @onready var head: Node3D = $Head
 @onready var camera:Camera3D = $Head/Camera3D
+@onready var lector: LectorEntrada = $LectorEntrada
 
 
 func _ready() -> void:
@@ -35,18 +36,14 @@ func _input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	
+	var direccion := lector.leer_direccion()
 
-	var input_dir := Input.get_vector("izquierda", "derecha", "adelante", "atras")
-
-	var direction := (
-		transform.basis *
-		Vector3(input_dir.x, 0, input_dir.y)
-	).normalized()
+	var direction := transform.basis * direccion
 	var objetivo := direction * speed
 	var ritmo := aceleracion if direction.length() > 0.1 else friccion
-	
+
 	velocity.x = move_toward(velocity.x, objetivo.x, ritmo * delta)
 	velocity.z = move_toward(velocity.z, objetivo.z, ritmo * delta)
-	
-	
+
 	move_and_slide()

@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bf5q4ybx5dgwy"]
+
+[ext_resource type="Script" uid="uid://d3f4hiroip1rs" path="res://player/player.gd" id="1_oul6g"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0kdyo"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_onsl3"]
+
+[sub_resource type="Environment" id="Environment_onsl3"]
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_oul6g"]
+size = Vector3(50, 1, 50)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_onsl3"]
+
+[node name="Node3D" type="Node3D" unique_id=2041723411]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1546771484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46520162, 0)
+script = ExtResource("1_oul6g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=128042709]
+shape = SubResource("CapsuleShape3D_0kdyo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=1884485830]
+mesh = SubResource("CapsuleMesh_onsl3")
+
+[node name="Head" type="Node3D" parent="CharacterBody3D" unique_id=1874274619]
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head" unique_id=1783466188]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7402642, -0.24028897)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1126868333]
+environment = SubResource("Environment_onsl3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=111384455]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3129213, 0)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D" unique_id=485036559]
+mesh = SubResource("BoxMesh_oul6g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1253864018]
+shape = SubResource("WorldBoundaryShape3D_onsl3")

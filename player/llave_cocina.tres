@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bk4b28daoofkf"]
+
+[ext_resource type="Script" uid="uid://cp2bgmowlyi31" path="res://player/item.gd" id="1_1506h"]
+[ext_resource type="Texture2D" uid="uid://bd51aej8yl6cs" path="res://Modelos/2gHoW6eBr02alpuodlWMyThnquJ-mobile.jpg" id="1_wvxdy"]
+
+[resource]
+script = ExtResource("1_1506h")
+nombre = "Llave"
+icono = ExtResource("1_wvxdy")
+metadata/_custom_type_script = "uid://cp2bgmowlyi31"

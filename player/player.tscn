@@ -2,26 +2,34 @@
 
 [ext_resource type="Script" uid="uid://d3f4hiroip1rs" path="res://player/player.gd" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://1vtnmwpn7pe6" path="res://player/lector_entrada.gd" id="2_rkbax"]
+[ext_resource type="Script" uid="uid://cfygyrd5mrix3" path="res://player/inventario.gd" id="3_g1dw6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0kdyo"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_onsl3"]
 
-[node name="Player" type="Node3D" unique_id=2041723411]
-
-[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1546771484]
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1546771484]
 script = ExtResource("1_oul6g")
+speed = null
+aceleracion = null
+friccion = null
+mouse_sensitivity = null
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=128042709]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=128042709]
 shape = SubResource("CapsuleShape3D_0kdyo")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=1884485830]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1884485830]
 mesh = SubResource("CapsuleMesh_onsl3")
 
-[node name="Head" type="Node3D" parent="CharacterBody3D" unique_id=1874274619]
+[node name="Head" type="Node3D" parent="." unique_id=1874274619]
 
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head" unique_id=1783466188]
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1783466188]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7402642, -0.24028897)
 
-[node name="LectorEntrada" type="Node" parent="CharacterBody3D" unique_id=912879911]
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D" unique_id=683945036]
+
+[node name="LectorEntrada" type="Node" parent="." unique_id=912879911]
 script = ExtResource("2_rkbax")
+
+[node name="Inventario" type="Node" parent="." unique_id=1739401622]
+script = ExtResource("3_g1dw6")

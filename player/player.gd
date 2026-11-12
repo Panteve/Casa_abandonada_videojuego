@@ -5,7 +5,9 @@ extends CharacterBody3D
 @export var friccion: float = 25.0
 @export var mouse_sensitivity: float = 0.003
 
+@onready var rayo: RayCast3D = $Head/Camera3D/RayCast3D
 @onready var head: Node3D = $Head
+@onready var inventario: Inventario = $Inventario
 @onready var camera:Camera3D = $Head/Camera3D
 @onready var lector: LectorEntrada = $LectorEntrada
 
@@ -32,6 +34,8 @@ func _input(event: InputEvent) -> void:
 			if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED
 			else Input.MOUSE_MODE_CAPTURED
 		)
+	if event.is_action_pressed("interactuar"):  # crea esta acción en el Input Map (tecla E)
+		_intentar_recoger()
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -47,3 +51,10 @@ func _physics_process(delta: float) -> void:
 	velocity.z = move_toward(velocity.z, objetivo.z, ritmo * delta)
 
 	move_and_slide()
+
+func _intentar_recoger() -> void:
+	if not rayo.is_colliding():
+		return
+	var objetivo := rayo.get_collider()
+	if objetivo is Recogible and inventario.agregar(objetivo.item):
+		objetivo.recoger()

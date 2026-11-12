@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://duwtimarpti6m"]
+
+[ext_resource type="PackedScene" uid="uid://bd3ibqw3kuu4p" path="res://Modelos/estances_de_la_casa_gassia._ecomuseu_valls_aneu.glb" id="1_6ba58"]
+
+[node name="Node3D" type="Node3D" unique_id=1977122632]
+
+[node name="Sketchfab_Scene" parent="." unique_id=450202504 instance=ExtResource("1_6ba58")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)

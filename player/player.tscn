@@ -19,7 +19,7 @@ size = Vector3(50, 1, 50)
 [node name="Node3D" type="Node3D" unique_id=2041723411]
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1546771484]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46520162, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 script = ExtResource("1_oul6g")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=128042709]
@@ -40,7 +40,6 @@ script = ExtResource("2_rkbax")
 environment = SubResource("Environment_onsl3")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=111384455]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3129213, 0)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D" unique_id=485036559]
 mesh = SubResource("BoxMesh_oul6g")

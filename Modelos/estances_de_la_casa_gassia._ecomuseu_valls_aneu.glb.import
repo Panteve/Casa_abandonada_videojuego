@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bd3ibqw3kuu4p"
-path="res://.godot/imported/estances_de_la_casa_gassia._ecomuseu_valls_aneu.glb-5cb14872a336fba555ad3eaff0359c60.scn"
+path="res://.godot/imported/estances_de_la_casa_gassia._ecomuseu_valls_aneu.glb-804dc77b1b28bdab70ebc8ae4b989e96.scn"
 
 [deps]
 
-source_file="res://modelos/estances_de_la_casa_gassia._ecomuseu_valls_aneu.glb"
-dest_files=["res://.godot/imported/estances_de_la_casa_gassia._ecomuseu_valls_aneu.glb-5cb14872a336fba555ad3eaff0359c60.scn"]
+source_file="res://Modelos/estances_de_la_casa_gassia._ecomuseu_valls_aneu.glb"
+dest_files=["res://.godot/imported/estances_de_la_casa_gassia._ecomuseu_valls_aneu.glb-804dc77b1b28bdab70ebc8ae4b989e96.scn"]
 
 [params]
 

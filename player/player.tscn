@@ -7,16 +7,7 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_onsl3"]
 
-[sub_resource type="Environment" id="Environment_onsl3"]
-ambient_light_source = 3
-ambient_light_color = Color(1, 1, 1, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_oul6g"]
-size = Vector3(50, 1, 50)
-
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_onsl3"]
-
-[node name="Node3D" type="Node3D" unique_id=2041723411]
+[node name="Player" type="Node3D" unique_id=2041723411]
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1546771484]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
@@ -35,14 +26,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7402642, -0.24028897)
 
 [node name="LectorEntrada" type="Node" parent="CharacterBody3D" unique_id=912879911]
 script = ExtResource("2_rkbax")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1126868333]
-environment = SubResource("Environment_onsl3")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=111384455]
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D" unique_id=485036559]
-mesh = SubResource("BoxMesh_oul6g")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1253864018]
-shape = SubResource("WorldBoundaryShape3D_onsl3")

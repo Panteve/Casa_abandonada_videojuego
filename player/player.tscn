@@ -44,3 +44,5 @@ script = ExtResource("2_rkbax")
 
 [node name="Inventario" type="Node" parent="." unique_id=1739401622]
 script = ExtResource("3_g1dw6")
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1062713813]

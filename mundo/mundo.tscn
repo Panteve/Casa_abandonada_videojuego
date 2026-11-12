@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://duwtimarpti6m"]
+
+[ext_resource type="PackedScene" uid="uid://bd3ibqw3kuu4p" path="res://Modelos/estances_de_la_casa_gassia._ecomuseu_valls_aneu.glb" id="1_6ba58"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ajtct"]
+size = Vector3(40, 0.01, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ostoq"]
+size = Vector3(4.4002686, 3, 0.1)
+
+[node name="Pista" type="Node3D" unique_id=1977122632]
+
+[node name="Sketchfab_Scene" parent="." unique_id=450202504 instance=ExtResource("1_6ba58")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=125487238]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1107141128]
+shape = SubResource("BoxShape3D_ajtct")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1211681321]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2020798, 2.82989)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=1435351463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31549072, 0, 2.7141044)
+shape = SubResource("BoxShape3D_ostoq")

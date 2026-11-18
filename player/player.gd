@@ -6,6 +6,7 @@ extends CharacterBody3D
 @export var mouse_sensitivity: float = 0.003
 
 @onready var rayo: RayCast3D = $Head/Camera3D/RayCast3D
+@onready var luz: LuzJugador = $Head/Camera3D/SpotLight3D 
 @onready var head: Node3D = $Head
 @onready var inventario: Inventario = $Inventario
 @onready var camera:Camera3D = $Head/Camera3D
@@ -37,6 +38,9 @@ func _input(event: InputEvent) -> void:
 		)
 	if event.is_action_pressed("interactuar"):  # crea esta acción en el Input Map (tecla E)
 		_intentar_recoger()
+	
+	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_F:
+		luz.visible = not luz.visible
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

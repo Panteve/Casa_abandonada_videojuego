@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://d3f4hiroip1rs" path="res://player/player.gd" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://1vtnmwpn7pe6" path="res://player/lector_entrada.gd" id="2_rkbax"]
+[ext_resource type="Script" uid="uid://co7jhqg6dyb10" path="res://player/luz_jugador.gd" id="2_yw30f"]
 [ext_resource type="Script" uid="uid://cfygyrd5mrix3" path="res://inventario/inventario.gd" id="3_g1dw6"]
+[ext_resource type="PackedScene" path="res://player/inventario_ui.tscn" id="5_qjkh3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0kdyo"]
 radius = 0.36
@@ -10,10 +12,6 @@ height = 1.8
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=1546771484]
 script = ExtResource("1_oul6g")
-speed = null
-aceleracion = null
-friccion = null
-mouse_sensitivity = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=128042709]
 shape = SubResource("CapsuleShape3D_0kdyo")
@@ -28,6 +26,15 @@ target_position = Vector3(0, 0, -3)
 collision_mask = 5
 collide_with_areas = true
 
+[node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D" unique_id=788886272]
+light_color = Color(0.9607843, 0.9607843, 0.8627451, 1)
+light_energy = 6.4
+shadow_enabled = true
+spot_range = 8.0
+spot_attenuation = 2.0
+spot_angle = 30.0
+script = ExtResource("2_yw30f")
+
 [node name="LectorEntrada" type="Node" parent="." unique_id=912879911]
 script = ExtResource("2_rkbax")
 
@@ -35,3 +42,5 @@ script = ExtResource("2_rkbax")
 script = ExtResource("3_g1dw6")
 
 [node name="Node3D" type="Node3D" parent="." unique_id=1062713813]
+
+[node name="InventarioUI" parent="." unique_id=1092566610 instance=ExtResource("5_qjkh3")]

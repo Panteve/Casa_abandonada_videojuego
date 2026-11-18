@@ -5,10 +5,8 @@
 [ext_resource type="Script" uid="uid://cfygyrd5mrix3" path="res://player/inventario.gd" id="3_g1dw6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0kdyo"]
-radius = 0.3
-height = 1.5
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_onsl3"]
+radius = 0.36
+height = 1.8
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=1546771484]
 script = ExtResource("1_oul6g")
@@ -20,13 +18,10 @@ mouse_sensitivity = null
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=128042709]
 shape = SubResource("CapsuleShape3D_0kdyo")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1884485830]
-mesh = SubResource("CapsuleMesh_onsl3")
-
 [node name="Head" type="Node3D" parent="." unique_id=1874274619]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7831596, -0.25277832)
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=1783466188]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7402642, -0.24028897)
 
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D" unique_id=683945036]
 

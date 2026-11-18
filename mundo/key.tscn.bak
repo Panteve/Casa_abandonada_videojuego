@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cktw76ssdhlfc"]
+
+[ext_resource type="PackedScene" uid="uid://didtgsd1wksgk" path="res://Modelos/Worn_Key.fbx" id="1_85qay"]
+
+[node name="Key" type="Node3D" unique_id=1906555330]
+
+[node name="Worn_Key" parent="." unique_id=1612511055 instance=ExtResource("1_85qay")]
+
+[editable path="Worn_Key"]

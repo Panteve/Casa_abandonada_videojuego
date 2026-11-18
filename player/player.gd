@@ -14,6 +14,7 @@ extends CharacterBody3D
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	rayo.add_exception(self)
 
 		
 func _unhandled_input(event: InputEvent) -> void:

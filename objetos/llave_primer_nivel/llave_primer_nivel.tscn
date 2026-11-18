@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cktw76ssdhlfc"]
 
-[ext_resource type="PackedScene" uid="uid://didtgsd1wksgk" path="res://Modelos/Worn_Key.fbx" id="1_85qay"]
-[ext_resource type="Script" uid="uid://b16xau6b8367m" path="res://player/recogible.gd" id="2_recog"]
-[ext_resource type="Resource" uid="uid://bk4b28daoofkf" path="res://player/llave_cocina.tres" id="3_llave"]
+[ext_resource type="PackedScene" uid="uid://didtgsd1wksgk" path="res://assets/objetos/Worn_Key.fbx" id="1_85qay"]
+[ext_resource type="Script" uid="uid://b16xau6b8367m" path="res://inventario/recogible.gd" id="2_recog"]
+[ext_resource type="Resource" uid="uid://bk4b28daoofkf" path="res://objetos/llave_primer_nivel/llave_primer_nivel.tres" id="3_llave"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_key"]
 radius = 0.25

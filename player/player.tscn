@@ -4,11 +4,11 @@
 [ext_resource type="Script" uid="uid://1vtnmwpn7pe6" path="res://player/lector_entrada.gd" id="2_rkbax"]
 [ext_resource type="Script" uid="uid://co7jhqg6dyb10" path="res://player/luz_jugador.gd" id="2_yw30f"]
 [ext_resource type="Script" uid="uid://cfygyrd5mrix3" path="res://inventario/inventario.gd" id="3_g1dw6"]
-[ext_resource type="PackedScene" path="res://player/inventario_ui.tscn" id="5_qjkh3"]
+[ext_resource type="PackedScene" uid="uid://drgrmitv0x1qb" path="res://player/inventario_ui.tscn" id="5_qjkh3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0kdyo"]
 radius = 0.36
-height = 1.8
+height = 1.5
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=1546771484]
 script = ExtResource("1_oul6g")
@@ -17,7 +17,7 @@ script = ExtResource("1_oul6g")
 shape = SubResource("CapsuleShape3D_0kdyo")
 
 [node name="Head" type="Node3D" parent="." unique_id=1874274619]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7831596, -0.25277832)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5658088, -0.25277832)
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=1783466188]
 

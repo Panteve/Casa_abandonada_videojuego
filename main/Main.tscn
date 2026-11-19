@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://b86io7gty462v" path="res://mundo/Escenario.tscn" id="2_wbnyf"]
 [ext_resource type="PackedScene" uid="uid://cktw76ssdhlfc" path="res://objetos/llave_primer_nivel/llave_primer_nivel.tscn" id="3_5kcm4"]
 [ext_resource type="PackedScene" uid="uid://bpobarmo8wx32" path="res://objetos/primer_nota/papel.tscn" id="4_cmtxc"]
-[ext_resource type="Script" uid="uid://b16xau6b8367m" path="res://inventario/recogible.gd" id="5_tv7ag"]
 
 [node name="Main" type="Node3D" unique_id=1245151571]
 
@@ -25,4 +24,3 @@ transform = Transform3D(0.83515495, 0.50721514, 0.21271819, 0.16373566, 0.139941
 
 [node name="Papel" parent="." unique_id=77009218 instance=ExtResource("4_cmtxc")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 3.0799432, -0.81190264, -0.56649446)
-script = ExtResource("5_tv7ag")

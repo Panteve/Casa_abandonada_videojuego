@@ -5,6 +5,8 @@
 [ext_resource type="Script" uid="uid://co7jhqg6dyb10" path="res://player/luz_jugador.gd" id="2_yw30f"]
 [ext_resource type="Script" uid="uid://cfygyrd5mrix3" path="res://inventario/inventario.gd" id="3_g1dw6"]
 [ext_resource type="PackedScene" uid="uid://drgrmitv0x1qb" path="res://player/inventario_ui.tscn" id="5_qjkh3"]
+[ext_resource type="PackedScene" path="res://player/vineta.tscn" id="6_vineta"]
+[ext_resource type="PackedScene" path="res://player/mira.tscn" id="7_mira"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0kdyo"]
 radius = 0.36
@@ -44,3 +46,7 @@ script = ExtResource("3_g1dw6")
 [node name="Node3D" type="Node3D" parent="." unique_id=1062713813]
 
 [node name="InventarioUI" parent="." unique_id=1092566610 instance=ExtResource("5_qjkh3")]
+
+[node name="Vineta" parent="." instance=ExtResource("6_vineta")]
+
+[node name="Mira" parent="." instance=ExtResource("7_mira")]

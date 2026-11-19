@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dy67pykox5dc7"]
 
 [ext_resource type="PackedScene" uid="uid://bf5q4ybx5dgwy" path="res://player/player.tscn" id="1_pjrb6"]
+[ext_resource type="Script" uid="uid://ds2ag7tp6dxxp" path="res://mundo/labels.gd" id="1_qtrhv"]
 [ext_resource type="PackedScene" uid="uid://b86io7gty462v" path="res://mundo/Escenario.tscn" id="2_wbnyf"]
 [ext_resource type="PackedScene" uid="uid://cktw76ssdhlfc" path="res://objetos/llave_primer_nivel/llave_primer_nivel.tscn" id="3_5kcm4"]
 [ext_resource type="PackedScene" uid="uid://bpobarmo8wx32" path="res://objetos/primer_nota/papel.tscn" id="4_cmtxc"]
@@ -12,6 +13,7 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8594382, 0.6778377, -1.9753993)
 
 [node name="Escenario" parent="." unique_id=373970047 instance=ExtResource("2_wbnyf")]
+script = ExtResource("1_qtrhv")
 
 [node name="Luz_Cocina" type="SpotLight3D" parent="." unique_id=388181231]
 transform = Transform3D(1, 0, 0, 0, 0.9914003, 0.13086443, 0, -0.13086443, 0.9914003, 11.411361, 1.6612676, 0.12348342)

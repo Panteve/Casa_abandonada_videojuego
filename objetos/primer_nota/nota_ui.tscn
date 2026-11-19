@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://b0pxxcyira54n" path="res://objetos/primer_nota/nota.png" id="1_o0y3r"]
 [ext_resource type="Script" uid="uid://di6jwnfdq5abd" path="res://objetos/primer_nota/nota.gd" id="1_uthkc"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tfnf5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [node name="NotaUI" type="CanvasLayer" unique_id=1644210316]
 script = ExtResource("1_uthkc")
 
@@ -16,20 +19,23 @@ offset_left = -890.5583
 offset_top = -1020.9424
 offset_right = 831.54474
 offset_bottom = 855.14844
+theme_override_styles/panel = SubResource("StyleBoxFlat_tfnf5")
 
 [node name="Titulo" type="Label" parent="papel/Panel" unique_id=313871528]
 layout_mode = 0
 offset_left = 118.025795
 offset_top = 39.267017
 offset_right = 1634.8197
-offset_bottom = 414.4852
-theme_override_font_sizes/font_size = 100
+offset_bottom = 301.04715
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 150
 horizontal_alignment = 1
 
 [node name="Contenido" type="RichTextLabel" parent="papel/Panel" unique_id=591339606]
 layout_mode = 0
 offset_left = 101.931335
-offset_top = 484.2932
+offset_top = 388.30713
 offset_right = 1625.5366
-offset_bottom = 1771.3787
+offset_bottom = 1910.9949
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 100

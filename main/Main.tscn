@@ -3,19 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://bf5q4ybx5dgwy" path="res://player/player.tscn" id="1_pjrb6"]
 [ext_resource type="PackedScene" uid="uid://b86io7gty462v" path="res://mundo/Escenario.tscn" id="2_wbnyf"]
 [ext_resource type="PackedScene" uid="uid://cktw76ssdhlfc" path="res://objetos/llave_primer_nivel/llave_primer_nivel.tscn" id="3_5kcm4"]
-
-[sub_resource type="Environment" id="Environment_onsl3"]
-background_mode = 1
-background_color = Color(0.043137256, 0.050980393, 0.07058824, 1)
-ambient_light_source = 2
-ambient_light_color = Color(0.101960786, 0.1254902, 0.1882353, 1)
-tonemap_mode = 2
-glow_enabled = true
-fog_enabled = true
-fog_light_color = Color(0.043137256, 0.05490196, 0.078431375, 1)
-fog_density = 0.03
-adjustment_enabled = true
-adjustment_saturation = 0.8
+[ext_resource type="PackedScene" uid="uid://bpobarmo8wx32" path="res://objetos/primer_nota/papel.tscn" id="4_cmtxc"]
+[ext_resource type="Script" uid="uid://b16xau6b8367m" path="res://inventario/recogible.gd" id="5_tv7ag"]
 
 [node name="Main" type="Node3D" unique_id=1245151571]
 
@@ -33,3 +22,7 @@ spot_range = 5.743249
 
 [node name="Key" parent="." unique_id=1906555330 instance=ExtResource("3_5kcm4")]
 transform = Transform3D(0.83515495, 0.50721514, 0.21271819, 0.16373566, 0.13994187, -0.9765279, -0.52507794, 0.85038173, 0.033823956, 9.490342, 0.7095784, -0.573531)
+
+[node name="Papel" parent="." unique_id=77009218 instance=ExtResource("4_cmtxc")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 3.0799432, -0.81190264, -0.56649446)
+script = ExtResource("5_tv7ag")

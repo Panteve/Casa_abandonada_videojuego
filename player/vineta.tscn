@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://nntcpbm2yicb"]
+
+[ext_resource type="Script" uid="uid://hdxxxrg02qcr" path="res://player/vineta.gd" id="1_script"]
+[ext_resource type="Shader" uid="uid://byxk1igvikwfu" path="res://player/vineta.gdshader" id="2_shader"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vineta"]
+shader = ExtResource("2_shader")
+shader_parameter/intensidad = 0.0
+shader_parameter/color_borde = Color(0, 0, 0, 1)
+shader_parameter/suavidad = 0.45
+
+[node name="Vineta" type="CanvasLayer" unique_id=2082569166]
+script = ExtResource("1_script")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=735020595]
+material = SubResource("ShaderMaterial_vineta")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

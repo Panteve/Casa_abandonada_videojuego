@@ -7,4 +7,10 @@
 script = ExtResource("1_wyl47")
 nombre = "Nota"
 icono = ExtResource("1_tfnf5")
+tipo = "nota"
+contenido = "Si estás leyendo esto, significa que encontraste la entrada a la casa.
+
+No confíes en lo que escuches durante la noche. Hay algo aquí dentro que no quiere que salgas.
+
+Busca la llave en la cocina."
 metadata/_custom_type_script = "uid://cp2bgmowlyi31"

@@ -15,6 +15,9 @@ var _bob_tiempo: float = 0.0
 @onready var inventario: Inventario = $Inventario
 @onready var camera:Camera3D = $Head/Camera3D
 @onready var lector: LectorEntrada = $LectorEntrada
+const NotaUIScene = preload("res://objetos/primer_nota/nota_ui.tscn")
+
+var nota_ui: CanvasLayer
 
 const PresenciaScript := preload("res://player/presencia.gd")
 
@@ -23,6 +26,9 @@ var _punto_reinicio: Vector3
 
 
 func _ready() -> void:
+	nota_ui = NotaUIScene.instantiate()
+	get_tree().current_scene.call_deferred("add_child", nota_ui)
+	
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	rayo.add_exception(self)
 
@@ -64,6 +70,10 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _input(event: InputEvent) -> void:
+	
+	if nota_ui.abierta:
+		return
+		
 	if event.is_action_pressed("ui_cancel"):
 		Input.mouse_mode = (
 			Input.MOUSE_MODE_VISIBLE
@@ -75,9 +85,18 @@ func _input(event: InputEvent) -> void:
 
 	if event.is_action_pressed("linterna"):
 		poner_linterna(not luz.visible)
-
+	
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			_intentar_leer_nota()
 
 func _physics_process(delta: float) -> void:
+	if nota_ui.abierta:
+		velocity.x = 0
+		velocity.z = 0
+		move_and_slide()
+		return
+	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
@@ -109,3 +128,11 @@ func _intentar_recoger() -> void:
 	var objetivo := rayo.get_collider()
 	if objetivo is Recogible and inventario.agregar(objetivo.item):
 		objetivo.recoger()
+		
+func _intentar_leer_nota() -> void:
+	var item: Item = inventario.slots[inventario.seleccionado]
+	if item == null:
+		return
+
+	if item.tipo == "nota":
+		nota_ui.abrir_nota(item.nombre, item.contenido)

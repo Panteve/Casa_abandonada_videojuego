@@ -1,35 +1,46 @@
 class_name LuzJugador
 extends SpotLight3D
 
-@export var rango := 8.0      # m: hasta dónde alumbra
-@export var altura := 0     # m sobre los pies del jugador (la altura de los ojos)
+signal bateria_cambio(porcentaje: float)
 
+@export var rango := 8.0
+@export var altura := 0.0
+@export var duracion := 120.0      # segundos de batería con la linterna encendida
+@export var umbral_baja := 0.25    # por debajo de este porcentaje la luz se va debilitando
+
+var bateria := 0.0                 # segundos que le quedan
+var energia_base := 1.0
 
 func _ready() -> void:
 	position = Vector3(0.0, altura, 0.0)
 	spot_range = rango
-	spot_attenuation = 2.0    # la que se parece a 1/d²
+	spot_attenuation = 2.0
+	energia_base = light_energy
+	bateria = duracion
 
-	# Pruebas de las funciones puras (nivel 1 y nivel 3).
-	# Nivel 1, debe imprimir: 1.0 0.25 0.0625
-	print(atenuacion(1.0), " ", atenuacion(2.0), " ", atenuacion(4.0))
-	# Nivel 3, debe imprimir: 1.0 y 0.0794 (brillo 32)
-	print(blinn_phong(Vector3(0, 1, 0), Vector3(0, 1, 1), Vector3(0, 1, -1), 32.0))
-	print(blinn_phong(Vector3(0, 1, 0), Vector3(0, 1, 1), Vector3(0, 1, 0), 32.0))
+func _process(delta: float) -> void:
+	if not visible:
+		return                      # apagada: no gasta batería
+	bateria = maxf(0.0, bateria - delta)
+	if bateria <= 0.0:
+		visible = false             # se acabo la batería
+	_actualizar()
 
-static func atenuacion(d: float, exponente: float = 2.0) -> float:
-	return 1.0 / pow(maxf(d, 0.0001), exponente)
 
-static func blinn_phong(normal: Vector3, hacia_luz: Vector3,
-		hacia_ojo: Vector3, brillo: float) -> float:
-	var n := normalizar(normal)
-	var l := normalizar(hacia_luz)
-	var v := normalizar(hacia_ojo)
-	var h := normalizar(l + v)
-	return pow(maxf(0.0, n.dot(h)), brillo)
+## no deja encender si no hay batería
+func alternar() -> void:
+	if bateria <= 0.0:
+		return
+	visible = not visible
 
-static func normalizar(v: Vector3) -> Vector3:
-	var largo := sqrt(v.x * v.x + v.y * v.y + v.z * v.z)
-	if largo == 0.0:
-		return Vector3.ZERO
-	return v / largo
+
+## cuando se recarga la pila se suman 60segs
+func recargar(segundos: float) -> void:
+	bateria = minf(duracion, bateria + segundos)
+	_actualizar()
+
+func _actualizar() -> void:
+	var porcentaje := bateria / duracion
+	# con poca batería la luz se debilita de a poco, la iluminacion no va a bajar de 15%
+	light_energy = energia_base * clampf(porcentaje / umbral_baja, 0.15, 1.0)
+	bateria_cambio.emit(porcentaje)

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://cjx037krm2gpp"]
+
+[ext_resource type="Texture2D" uid="uid://b0pxxcyira54n" path="res://objetos/primer_nota/nota.png" id="1_tfnf5"]
+[ext_resource type="Script" uid="uid://cp2bgmowlyi31" path="res://inventario/item.gd" id="1_wyl47"]
+
+[resource]
+script = ExtResource("1_wyl47")
+icono = ExtResource("1_tfnf5")
+metadata/_custom_type_script = "uid://cp2bgmowlyi31"

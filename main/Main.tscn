@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bf5q4ybx5dgwy" path="res://player/player.tscn" id="1_pjrb6"]
 [ext_resource type="PackedScene" uid="uid://b86io7gty462v" path="res://mundo/Escenario.tscn" id="2_wbnyf"]
+[ext_resource type="PackedScene" uid="uid://cktw76ssdhlfc" path="res://objetos/llave_primer_nivel/llave_primer_nivel.tscn" id="3_5kcm4"]
 
 [sub_resource type="Environment" id="Environment_onsl3"]
 background_mode = 1
@@ -33,3 +34,6 @@ light_color = Color(0.56078434, 0.6431373, 0.78431374, 1)
 light_energy = 3.0
 light_specular = 0.0
 spot_range = 5.743249
+
+[node name="Key" parent="." unique_id=1906555330 instance=ExtResource("3_5kcm4")]
+transform = Transform3D(0.83515495, 0.50721514, 0.21271819, 0.16373566, 0.13994187, -0.9765279, -0.52507794, 0.85038173, 0.033823956, 9.490342, 0.7095784, -0.573531)

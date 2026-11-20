@@ -1,16 +1,23 @@
 [gd_scene format=3 uid="uid://dy67pykox5dc7"]
 
 [ext_resource type="PackedScene" uid="uid://bf5q4ybx5dgwy" path="res://player/player.tscn" id="1_pjrb6"]
-[ext_resource type="Script" uid="uid://ds2ag7tp6dxxp" path="res://mundo/labels.gd" id="1_qtrhv"]
+[ext_resource type="Script" uid="uid://ds2ag7tp6dxxp" path="res://mundo/visible.gd" id="1_qtrhv"]
 [ext_resource type="PackedScene" uid="uid://b86io7gty462v" path="res://mundo/Escenario.tscn" id="2_wbnyf"]
 [ext_resource type="PackedScene" uid="uid://cktw76ssdhlfc" path="res://objetos/llave_primer_nivel/llave_primer_nivel.tscn" id="3_5kcm4"]
 [ext_resource type="PackedScene" uid="uid://bpobarmo8wx32" path="res://objetos/primer_nota/papel.tscn" id="4_cmtxc"]
 [ext_resource type="Resource" uid="uid://cjx037krm2gpp" path="res://objetos/primer_nota/nota.tres" id="5_tv7ag"]
+[ext_resource type="PackedScene" uid="uid://bso8co0lx5c73" path="res://mundo/puerta/bedroom_door.tscn" id="7_o80qs"]
 
 [node name="Main" type="Node3D" unique_id=1245151571]
 
 [node name="CharacterBody3D" parent="." unique_id=1546771484 instance=ExtResource("1_pjrb6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8594382, 0.6778377, -1.9753993)
+speed = null
+aceleracion = null
+friccion = null
+mouse_sensitivity = null
+bob_frecuencia = null
+bob_amplitud = null
 
 [node name="Escenario" parent="." unique_id=373970047 instance=ExtResource("2_wbnyf")]
 script = ExtResource("1_qtrhv")
@@ -28,3 +35,6 @@ transform = Transform3D(0.83515495, 0.50721514, 0.21271819, 0.16373566, 0.139941
 [node name="Papel" parent="." unique_id=77009218 instance=ExtResource("4_cmtxc")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 3.0799432, -0.81190264, -0.56649446)
 item = ExtResource("5_tv7ag")
+
+[node name="Bedroom_door" parent="." unique_id=1330479414 instance=ExtResource("7_o80qs")]
+transform = Transform3D(0.99991965, 0, -0.012667567, 0, 1, 0, 0.012667567, 0, 0.99991965, 7.421634, 0, -7.968)

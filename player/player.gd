@@ -71,6 +71,9 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _input(event: InputEvent) -> void:
 	
+	if event.is_action_pressed("abrir"):
+		_intentar_abrir_puerta()
+	
 	if nota_ui.abierta:
 		return
 		
@@ -136,3 +139,30 @@ func _intentar_leer_nota() -> void:
 
 	if item.tipo == "nota":
 		nota_ui.abrir_nota(item.nombre, item.contenido)
+
+
+func _intentar_abrir_puerta() -> void:
+
+	# Comprobar si el jugador está mirando algo
+	if not rayo.is_colliding():
+		return
+
+	# Obtener el objeto que está mirando
+	var objetivo = rayo.get_collider()
+
+	# Comprobar si es una puerta
+	if not objetivo is Puerta:
+		return
+
+	# Obtener el objeto seleccionado del inven	tario
+	var item: Item = inventario.slots[inventario.seleccionado]
+
+	if item == null:
+		print("No tienes ningún objeto seleccionado")
+		return
+
+	# Comprobar si el objeto es una llave
+	if item.tipo == "llave":
+		objetivo.abrir()
+	else:
+		print("Necesitas una llave para abrir esta puerta")

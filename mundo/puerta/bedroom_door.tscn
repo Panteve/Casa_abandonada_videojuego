@@ -90,14 +90,14 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ARCH_Door_Bedroom:rotation")
+tracks/0/path = NodePath("AnimatableBody3D:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 3.1415927, 0)]
+"values": [Vector3(0, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_b8x6m"]
@@ -106,14 +106,14 @@ length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ARCH_Door_Bedroom:rotation")
+tracks/0/path = NodePath("AnimatableBody3D:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 3.1415927, 0), Vector3(0, 1.1868238, 0)]
+"values": [Vector3(0, 0, 0), Vector3(0, -1.9198622, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3bnfe"]
@@ -124,16 +124,15 @@ _data = {
 
 [node name="Bedroom_door" type="Node3D" unique_id=1330479414]
 
-[node name="ARCH_Door_Bedroom" type="MeshInstance3D" parent="." unique_id=432282494]
-transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -0.99999994, 0, 0, 0)
-mesh = SubResource("ArrayMesh_wlrgq")
-
-[node name="AnimatableBody3D" type="AnimatableBody3D" parent="ARCH_Door_Bedroom" unique_id=251481386]
-transform = Transform3D(-0.9999998, 0, 8.742276e-08, 0, 1, 0, -8.742276e-08, 0, -0.9999998, 0, 0, 0)
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=251481386]
 script = ExtResource("4_7al5a")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ARCH_Door_Bedroom/AnimatableBody3D" unique_id=460447715]
+[node name="ARCH_Door_Bedroom" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=432282494]
 transform = Transform3D(-1.0000001, 0, -8.7422784e-08, 0, 1, 0, 8.7422784e-08, 0, -1.0000001, 0, 0, 0)
+mesh = SubResource("ArrayMesh_wlrgq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=460447715]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_1ttn2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2074744436]

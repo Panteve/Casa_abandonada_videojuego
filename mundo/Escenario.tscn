@@ -600,6 +600,10 @@ shape = SubResource("ConcavePolygonShape3D_5nhdr")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Door_Entrance/StaticBody3D" unique_id=1092192878]
 shape = SubResource("ConcavePolygonShape3D_gymtn")
 
+[node name="ARCH_Door_Bedroom" parent="Abandoned_Apartment_Floor_01" index="35" unique_id=686687780]
+transform = Transform3D(-0.76604444, 0, 0.64278764, 0, 1, 0, -0.64278764, 0, -0.76604444, 7.44, 0, -8)
+visible = false
+
 [node name="ARCH_Door_Basement" parent="Abandoned_Apartment_Floor_01" index="39" unique_id=829565171]
 transform = Transform3D(-0.99999714, 0, 0.002367049, 0, 1, 0, -0.002367049, 0, -0.99999714, 16.46, -2.8, -1.1332661)
 
@@ -1140,6 +1144,9 @@ shape = SubResource("ConcavePolygonShape3D_j2ltn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_StairHall_Radiator/StaticBody3D" unique_id=1330179773]
 shape = SubResource("ConcavePolygonShape3D_yhfw7")
+
+[node name="PROP_Corridor_Photo_3" parent="Abandoned_Apartment_Floor_01" index="148" unique_id=1721544678]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.245547, 1.55, -7.94)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/PROP_StairHall_Box_1" parent_id_path=PackedInt32Array(1975250841, 1435356948) index="0" unique_id=1415975867]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bf5q4ybx5dgwy" path="res://player/player.tscn" id="1_pjrb6"]
 [ext_resource type="Script" uid="uid://ds2ag7tp6dxxp" path="res://mundo/visible.gd" id="1_qtrhv"]
-[ext_resource type="PackedScene" uid="uid://b86io7gty462v" path="res://mundo/escenario.tscn" id="2_wbnyf"]
+[ext_resource type="PackedScene" uid="uid://b86io7gty462v" path="res://mundo/Escenario.tscn" id="2_wbnyf"]
 [ext_resource type="PackedScene" uid="uid://cktw76ssdhlfc" path="res://objetos/llave_primer_nivel/llave_primer_nivel.tscn" id="3_5kcm4"]
 [ext_resource type="PackedScene" uid="uid://bpobarmo8wx32" path="res://objetos/primer_nota/papel.tscn" id="4_cmtxc"]
 [ext_resource type="Resource" uid="uid://cjx037krm2gpp" path="res://objetos/primer_nota/nota.tres" id="5_tv7ag"]
@@ -34,10 +34,10 @@ transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 3.0799432, -0.811902
 item = ExtResource("5_tv7ag")
 
 [node name="Puerta_cocina" parent="." unique_id=1330479414 instance=ExtResource("7_o80qs")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.997643, 0, -3.462554)
+transform = Transform3D(-5.6824803e-08, 0, 1, 0, 1, 0, -1.3, 0, -4.371139e-08, 8.997643, 0.0056728125, -3.5509367)
 llave_requerida = ExtResource("9_llave")
 
 [node name="Pausa" parent="." unique_id=2106766696 instance=ExtResource("8_0h8po")]
 
 [node name="Puerta_cocina_no" parent="." unique_id=1761547313 instance=ExtResource("7_o80qs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.335338, 0, -6.009829)
+transform = Transform3D(1.05, 0, 0, 0, 1, 0, 0, 0, 1, 10.422133, 0, -6.009829)

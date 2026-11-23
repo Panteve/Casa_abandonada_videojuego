@@ -9,13 +9,14 @@
 [ext_resource type="PackedScene" uid="uid://bso8co0lx5c73" path="res://mundo/puerta/puerta.tscn" id="7_o80qs"]
 [ext_resource type="PackedScene" uid="uid://ddxflfrrbph8q" path="res://ui/menu_pausa/pausa.tscn" id="8_0h8po"]
 [ext_resource type="Resource" uid="uid://bk4b28daoofkf" path="res://objetos/llave_primer_nivel/llave_primer_nivel.tres" id="9_llave"]
-<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://ecvculwpm1qv" path="res://mundo/comoda/comoda.tscn" id="10_4c57u"]
 [ext_resource type="Texture2D" uid="uid://cqfol0swf8pq8" path="res://assets/texturas/simbolo_ojo.png" id="11_efxa6"]
 [ext_resource type="Script" uid="uid://blbc1uspgt1fw" path="res://mundo/simbolos.gd" id="12_vivmo"]
 [ext_resource type="Texture2D" uid="uid://d1ycq350df5ce" path="res://assets/texturas/simbolo_luna.png" id="12_w48qg"]
 [ext_resource type="Texture2D" uid="uid://ck52ltpqgrrwv" path="res://assets/texturas/simbolo_puerta.png" id="13_vivmo"]
 [ext_resource type="Texture2D" uid="uid://cvvowsup6tx5i" path="res://assets/texturas/simbolo_mano.png" id="14_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://cfo555l15vieg" path="res://objetos/cuchillo/cuchillo_cocina.tscn" id="16_yaehf"]
+[ext_resource type="PackedScene" uid="uid://caecvafliepjn" path="res://mundo/gabinete/gabinete_cocina.tscn" id="17_074og"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_uxa2c"]
 
@@ -49,10 +50,6 @@ transparency = 1
 albedo_texture = ExtResource("14_2cqfq")
 emission_enabled = true
 emission = Color(0, 0.7921569, 0, 1)
-=======
-[ext_resource type="PackedScene" uid="uid://caecvafliepjn" path="res://mundo/gabinete/gabinete_cocina.tscn" id="10_4c57u"]
-[ext_resource type="PackedScene" uid="uid://cfo555l15vieg" path="res://objetos/cuchillo/cuchillo_cocina.tscn" id="11_efxa6"]
->>>>>>> Stashed changes
 
 [node name="Main" type="Node3D" unique_id=1245151571]
 
@@ -70,19 +67,11 @@ light_energy = 3.0
 light_specular = 0.0
 spot_range = 5.743249
 
-<<<<<<< Updated upstream
 [node name="Llave_cocina" parent="." unique_id=1906555330 instance=ExtResource("3_5kcm4")]
-transform = Transform3D(0.83515495, 0.50721514, 0.21271819, 0.16373566, 0.13994187, -0.9765279, -0.52507794, 0.85038173, 0.033823956, 9.490342, 0.7095784, -0.573531)
+transform = Transform3D(0.84098613, 0.540667, -0.020532833, -0.07489747, 0.07874814, -0.994077, -0.5358477, 0.83754295, 0.1067207, 13.543938, 1.0325038, -5.654211)
 
 [node name="Nota_cocina" parent="." unique_id=77009218 instance=ExtResource("4_cmtxc")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 3.0799432, -0.81190264, -0.56649446)
-=======
-[node name="Key" parent="." unique_id=1906555330 instance=ExtResource("3_5kcm4")]
-transform = Transform3D(0.83515495, 0.50721514, 0.21271817, 0.2520056, -0.009108484, -0.9676829, -0.48888594, 0.86177146, -0.13542804, 13.538383, 1.0372449, -5.5798335)
-
-[node name="Papel" parent="." unique_id=77009218 instance=ExtResource("4_cmtxc")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 12.756668, -0.83253264, -1.8998556)
->>>>>>> Stashed changes
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 12.7153015, -0.82946503, -1.9560051)
 item = ExtResource("5_tv7ag")
 
 [node name="Puerta_cocina" parent="." unique_id=1330479414 instance=ExtResource("7_o80qs")]
@@ -94,7 +83,6 @@ llave_requerida = ExtResource("9_llave")
 [node name="Puerta_cocina_no" parent="." unique_id=1761547313 instance=ExtResource("7_o80qs")]
 transform = Transform3D(1.05, 0, 0, 0, 1, 0, 0, 0, 1, 10.422133, 0, -6.009829)
 
-<<<<<<< Updated upstream
 [node name="Comoda_comedor" parent="." unique_id=295224761 instance=ExtResource("10_4c57u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1234615, 4.412752e-06, -5.6688333)
 
@@ -128,10 +116,9 @@ visible = false
 mesh = SubResource("QuadMesh_bn13o")
 surface_material_override/0 = SubResource("StandardMaterial3D_6uljq")
 script = ExtResource("12_vivmo")
-=======
-[node name="Gabinete_cocina" parent="." unique_id=1751942648 instance=ExtResource("10_4c57u")]
-transform = Transform3D(0.020912044, 0, -0.99978137, 0, 1, 0, 0.99978137, 0, 0.020912044, 13.580769, 2.185569e-08, -5.5655575)
 
-[node name="Cuchillo_cocina" parent="." unique_id=725413035 instance=ExtResource("11_efxa6")]
-transform = Transform3D(-0.5541057, 0.46946308, 0.68743825, 0.7366135, 0.66119534, 0.14220178, -0.38777262, 0.5851711, -0.71218467, 13.578225, 1.623795, -0.36010104)
->>>>>>> Stashed changes
+[node name="Cuchillo_cocina" parent="." unique_id=1402700645 instance=ExtResource("16_yaehf")]
+transform = Transform3D(0.7004102, 0.6489006, 0.29724315, 0, 0.41645828, -0.90915483, -0.7137405, 0.63678133, 0.29169163, 13.419674, 1.6858015, -0.33534878)
+
+[node name="Gabinete_cocina" parent="." unique_id=1710437413 instance=ExtResource("17_074og")]
+transform = Transform3D(0.024112348, 0, -0.99970925, 0, 1, 0, 0.99970925, 0, 0.024112348, 13.597791, 3.7074128e-07, -5.542321)

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cfo555l15vieg"]
+
+[ext_resource type="PackedScene" uid="uid://c030nkbiuyobm" path="res://assets/objetos/old_simple_knife.glb" id="1_84yac"]
+[ext_resource type="Script" uid="uid://b16xau6b8367m" path="res://inventario/recogible.gd" id="1_b7w8x"]
+[ext_resource type="Resource" uid="uid://bsgp3507f2y4" path="res://objetos/cuchillo/cuchillo.tres" id="2_iiv2w"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ostoq"]
+radius = 0.09667969
+height = 0.29327393
+
+[node name="Cuchillo_cocina" type="Area3D" unique_id=1402700645]
+script = ExtResource("1_b7w8x")
+item = ExtResource("2_iiv2w")
+
+[node name="Sketchfab_Scene" parent="." unique_id=1397605519 instance=ExtResource("1_84yac")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=850826296]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.018467456, 0)
+shape = SubResource("CapsuleShape3D_ostoq")
+
+[editable path="Sketchfab_Scene"]

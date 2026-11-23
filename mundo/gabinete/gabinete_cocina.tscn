@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://caecvafliepjn"]
+
+[ext_resource type="Script" uid="uid://8k1oo777xje7" path="res://mundo/gabinete/gabinete.gd" id="1_5ma7m"]
+[ext_resource type="PackedScene" uid="uid://y36kdd8s32lo" path="res://assets/objetos/gabinet.glb" id="1_ho4eu"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5ma7m"]
+points = PackedVector3Array(0.81, -1.05, 5.186389, -0.8899999, -1.05, 5.186389, 0.81, -1.05, 2.591389, -0.8899999, -1.05, 2.591389)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ostoq"]
+size = Vector3(0.57858276, 1.033081, 0.6292114)
+
+[node name="Gabinete_cocina" type="AnimatableBody3D" unique_id=1710437413]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_5ma7m")
+
+[node name="Sketchfab_Scene" parent="." unique_id=689695039 instance=ExtResource("1_ho4eu")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_Scene/Sketchfab_model/46f19b9e01c6450699090288b8f57565_fbx/RootNode/Gabinet_Door/Gabinet_Door_Window_0" parent_id_path=PackedInt32Array(689695039, 661980879) index="0" unique_id=1011430141]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene/Sketchfab_model/46f19b9e01c6450699090288b8f57565_fbx/RootNode/Gabinet_Door/Gabinet_Door_Window_0/StaticBody3D" unique_id=1170070273]
+shape = SubResource("ConvexPolygonShape3D_5ma7m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1499070974]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003768921, 1.0466849, 0.015045166)
+shape = SubResource("BoxShape3D_ostoq")
+
+[editable path="Sketchfab_Scene"]

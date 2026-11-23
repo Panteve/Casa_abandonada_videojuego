@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bsgp3507f2y4"]
+
+[ext_resource type="Texture2D" uid="uid://cib7vnktic3g" path="res://objetos/cuchillo/cuchillo.png" id="1_70fkt"]
+[ext_resource type="Script" uid="uid://cp2bgmowlyi31" path="res://inventario/item.gd" id="1_ttn86"]
+
+[resource]
+script = ExtResource("1_ttn86")
+nombre = "cuchillo"
+icono = ExtResource("1_70fkt")
+tipo = "cuchillo"
+metadata/_custom_type_script = "uid://cp2bgmowlyi31"

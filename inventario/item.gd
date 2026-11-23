@@ -5,6 +5,6 @@ extends Resource
 @export var icono: Texture2D
 
 
-@export_enum("normal", "nota", "llave") var tipo: String = "normal"
+@export_enum("normal", "nota", "llave", "cuchillo") var tipo: String = "normal"
 
 @export_multiline var contenido: String = ""

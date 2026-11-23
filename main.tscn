@@ -10,6 +10,44 @@
 [ext_resource type="PackedScene" uid="uid://ddxflfrrbph8q" path="res://ui/menu_pausa/pausa.tscn" id="8_0h8po"]
 [ext_resource type="Resource" uid="uid://bk4b28daoofkf" path="res://objetos/llave_primer_nivel/llave_primer_nivel.tres" id="9_llave"]
 [ext_resource type="PackedScene" uid="uid://ecvculwpm1qv" path="res://mundo/comoda/comoda.tscn" id="10_4c57u"]
+[ext_resource type="Texture2D" uid="uid://cqfol0swf8pq8" path="res://assets/texturas/simbolo_ojo.png" id="11_efxa6"]
+[ext_resource type="Script" uid="uid://blbc1uspgt1fw" path="res://mundo/simbolos.gd" id="12_vivmo"]
+[ext_resource type="Texture2D" uid="uid://d1ycq350df5ce" path="res://assets/texturas/simbolo_luna.png" id="12_w48qg"]
+[ext_resource type="Texture2D" uid="uid://ck52ltpqgrrwv" path="res://assets/texturas/simbolo_puerta.png" id="13_vivmo"]
+[ext_resource type="Texture2D" uid="uid://cvvowsup6tx5i" path="res://assets/texturas/simbolo_mano.png" id="14_2cqfq"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_uxa2c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_thsib"]
+transparency = 1
+albedo_texture = ExtResource("11_efxa6")
+metallic_specular = 0.0
+emission_enabled = true
+emission = Color(0, 0.7934291, 7.70092e-07, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_hchaj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r6318"]
+transparency = 1
+albedo_texture = ExtResource("12_w48qg")
+emission_enabled = true
+emission = Color(0, 0.7921569, 0, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_r6318"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3lxni"]
+transparency = 1
+albedo_texture = ExtResource("13_vivmo")
+emission_enabled = true
+emission = Color(0, 0.7921569, 0, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_bn13o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6uljq"]
+transparency = 1
+albedo_texture = ExtResource("14_2cqfq")
+emission_enabled = true
+emission = Color(0, 0.7921569, 0, 1)
 
 [node name="Main" type="Node3D" unique_id=1245151571]
 
@@ -48,3 +86,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1234615, 4.412752e-06, -5.6
 
 [node name="Puerta_comedor" parent="." unique_id=111857257 instance=ExtResource("7_o80qs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6242633, 0.046892285, -5.994891)
+
+[node name="Simbolo_ojo" type="MeshInstance3D" parent="." unique_id=1717636221 groups=["simbolos"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8195047, 2.241693, -5.93599)
+visible = false
+mesh = SubResource("QuadMesh_uxa2c")
+surface_material_override/0 = SubResource("StandardMaterial3D_thsib")
+script = ExtResource("12_vivmo")
+
+[node name="Simbolo_luna" type="MeshInstance3D" parent="." unique_id=1986708739 groups=["simbolos"]]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.022019029, 1.5060662, -1.7437023)
+visible = false
+mesh = SubResource("QuadMesh_hchaj")
+surface_material_override/0 = SubResource("StandardMaterial3D_r6318")
+script = ExtResource("12_vivmo")
+
+[node name="Simbolo_puerta" type="MeshInstance3D" parent="." unique_id=1838697216 groups=["simbolos"]]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.871462, 2.5714006, -2.9684377)
+visible = false
+mesh = SubResource("QuadMesh_r6318")
+surface_material_override/0 = SubResource("StandardMaterial3D_3lxni")
+script = ExtResource("12_vivmo")
+
+[node name="Simbolo_mano" type="MeshInstance3D" parent="." unique_id=983829420 groups=["simbolos"]]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.8352015, 2.0745862, -0.02494365)
+visible = false
+mesh = SubResource("QuadMesh_bn13o")
+surface_material_override/0 = SubResource("StandardMaterial3D_6uljq")
+script = ExtResource("12_vivmo")

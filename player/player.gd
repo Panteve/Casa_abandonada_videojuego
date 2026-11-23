@@ -15,6 +15,7 @@ var _bob_tiempo: float = 0.0
 @onready var inventario: Inventario = $Inventario
 @onready var camera:Camera3D = $Head/Camera3D
 @onready var lector: LectorEntrada = $LectorEntrada
+
 const NotaUIScene = preload("res://objetos/primer_nota/nota_ui.tscn")
 
 var nota_ui: CanvasLayer
@@ -45,9 +46,12 @@ func _ready() -> void:
 
 func poner_linterna(encendida: bool) -> void:
 	luz.visible = encendida
+	
 	if encendida:
 		presencia.desactivar()
+		get_tree().call_group("simbolos", "alternar_visibilidad", false)
 	else:
+		get_tree().call_group("simbolos", "alternar_visibilidad", true)
 		presencia.activar()
 
 

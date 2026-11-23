@@ -1,0 +1,79 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://hud/bateria_hud.gd" id="1_hud"]
+
+[sub_resource type="StyleBoxFlat" id="Fondo_barra"]
+bg_color = Color(0.0666667, 0.0666667, 0.0666667, 0.8)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.960784, 0.960784, 0.862745, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="Relleno_normal"]
+bg_color = Color(0.960784, 0.960784, 0.862745, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.0666667, 0.0666667, 0.0666667, 0.8)
+
+[sub_resource type="StyleBoxFlat" id="Relleno_bajo"]
+bg_color = Color(0.75, 0.08, 0.08, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.0666667, 0.0666667, 0.0666667, 0.8)
+
+[node name="BateriaHUD" type="CanvasLayer"]
+script = ExtResource("1_hud")
+estilo_normal = SubResource("Relleno_normal")
+estilo_bajo = SubResource("Relleno_bajo")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -90.0
+offset_right = 230.0
+offset_bottom = -40.0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="Linterna" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 50.0
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="Cola" type="ColorRect" parent="Control/Linterna"]
+custom_minimum_size = Vector2(10, 20)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+color = Color(0.960784, 0.960784, 0.862745, 1)
+
+[node name="Barra" type="ProgressBar" parent="Control/Linterna"]
+custom_minimum_size = Vector2(120, 28)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/background = SubResource("Fondo_barra")
+theme_override_styles/fill = SubResource("Relleno_normal")
+value = 100.0
+show_percentage = false
+
+[node name="Cabeza" type="ColorRect" parent="Control/Linterna"]
+custom_minimum_size = Vector2(14, 42)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+color = Color(0.960784, 0.960784, 0.862745, 1)

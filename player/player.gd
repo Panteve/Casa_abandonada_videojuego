@@ -76,13 +76,6 @@ func _input(event: InputEvent) -> void:
 	
 	if nota_ui.abierta:
 		return
-		
-	if event.is_action_pressed("ui_cancel"):
-		Input.mouse_mode = (
-			Input.MOUSE_MODE_VISIBLE
-			if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED
-			else Input.MOUSE_MODE_CAPTURED
-		)
 	if event.is_action_pressed("interactuar"):
 		_intentar_recoger()
 

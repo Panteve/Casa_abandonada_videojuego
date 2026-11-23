@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ecvculwpm1qv"]
+
+[ext_resource type="PackedScene" uid="uid://catgqev266tkp" path="res://assets/objetos/comoda_living_room/ikea_radmanso_comoda_de_3_cajones.glb" id="1_ueaim"]
+
+[node name="Sketchfab_Scene" unique_id=295224761 instance=ExtResource("1_ueaim")]
+
+[node name="Object_6" parent="Sketchfab_model/root/GLTF_SceneRootNode/ASY_ART_20593604_S01_NV01_3/ASY_LPT01_20593604_S01_NV01_0" parent_id_path=PackedInt32Array(619968224) index="0" unique_id=617935622]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.13998665)
+
+[node name="Object_10" parent="Sketchfab_model/root/GLTF_SceneRootNode/ASY_ART_20593604_S01_NV01_3/ASY_LPT03_20593604_S01_NV01_2" parent_id_path=PackedInt32Array(845153107) index="0" unique_id=1917507723]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2283048)

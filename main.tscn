@@ -27,10 +27,10 @@ light_energy = 3.0
 light_specular = 0.0
 spot_range = 5.743249
 
-[node name="Key" parent="." unique_id=1906555330 instance=ExtResource("3_5kcm4")]
+[node name="Llave_cocina" parent="." unique_id=1906555330 instance=ExtResource("3_5kcm4")]
 transform = Transform3D(0.83515495, 0.50721514, 0.21271819, 0.16373566, 0.13994187, -0.9765279, -0.52507794, 0.85038173, 0.033823956, 9.490342, 0.7095784, -0.573531)
 
-[node name="Papel" parent="." unique_id=77009218 instance=ExtResource("4_cmtxc")]
+[node name="Nota_cocina" parent="." unique_id=77009218 instance=ExtResource("4_cmtxc")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 3.0799432, -0.81190264, -0.56649446)
 item = ExtResource("5_tv7ag")
 
@@ -45,3 +45,6 @@ transform = Transform3D(1.05, 0, 0, 0, 1, 0, 0, 0, 1, 10.422133, 0, -6.009829)
 
 [node name="Comoda_comedor" parent="." unique_id=295224761 instance=ExtResource("10_4c57u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1234615, 4.412752e-06, -5.6688333)
+
+[node name="Puerta_comedor" parent="." unique_id=111857257 instance=ExtResource("7_o80qs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6242633, 0.046892285, -5.994891)

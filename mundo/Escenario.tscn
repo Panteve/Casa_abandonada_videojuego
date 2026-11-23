@@ -676,6 +676,9 @@ shape = SubResource("ConcavePolygonShape3D_5nhdr")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Door_Entrance/StaticBody3D" unique_id=1092192878]
 shape = SubResource("ConcavePolygonShape3D_gymtn")
 
+[node name="ARCH_Door_Living" parent="Abandoned_Apartment_Floor_01" index="33" unique_id=128729106]
+visible = false
+
 [node name="ARCH_Door_Kitchen" parent="Abandoned_Apartment_Floor_01" index="34" unique_id=1663131442]
 visible = false
 

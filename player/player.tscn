@@ -4,10 +4,10 @@
 [ext_resource type="Script" uid="uid://1vtnmwpn7pe6" path="res://player/lector_entrada.gd" id="2_rkbax"]
 [ext_resource type="Script" uid="uid://co7jhqg6dyb10" path="res://player/luz_jugador.gd" id="2_yw30f"]
 [ext_resource type="Script" uid="uid://cfygyrd5mrix3" path="res://inventario/inventario.gd" id="3_g1dw6"]
-[ext_resource type="PackedScene" uid="uid://drgrmitv0x1qb" path="res://player/inventario_ui.tscn" id="5_qjkh3"]
-[ext_resource type="PackedScene" uid="uid://nntcpbm2yicb" path="res://player/vineta.tscn" id="6_vineta"]
-[ext_resource type="PackedScene" path="res://player/mira.tscn" id="7_mira"]
-[ext_resource type="PackedScene" path="res://hud/bateria_hud.tscn" id="8_rgyib"]
+[ext_resource type="PackedScene" uid="uid://drgrmitv0x1qb" path="res://inventario/ui/inventario_ui.tscn" id="5_qjkh3"]
+[ext_resource type="PackedScene" uid="uid://nntcpbm2yicb" path="res://ui/vineta/vineta.tscn" id="6_vineta"]
+[ext_resource type="PackedScene" path="res://ui/cross_hair/mira.tscn" id="7_mira"]
+[ext_resource type="PackedScene" path="res://ui/bateria_hud/bateria_hud.tscn" id="8_rgyib"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0kdyo"]
 radius = 0.36

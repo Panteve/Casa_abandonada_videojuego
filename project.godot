@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="La Casa Abandonada"
-run/main_scene="res://menu/menu_principal.tscn"
+run/main_scene="res://ui/menu_principal/menu_principal.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://cck16xybv8t7j"
 
 [display]
 

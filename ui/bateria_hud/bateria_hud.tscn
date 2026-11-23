@@ -1,6 +1,6 @@
 [gd_scene format=3]
 
-[ext_resource type="Script" path="res://hud/bateria_hud.gd" id="1_hud"]
+[ext_resource type="Script" uid="uid://cwabltv3ukkvd" path="res://ui/bateria_hud/bateria_hud.gd" id="1_hud"]
 
 [sub_resource type="StyleBoxFlat" id="Fondo_barra"]
 bg_color = Color(0.0666667, 0.0666667, 0.0666667, 0.8)

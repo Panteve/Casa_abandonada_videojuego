@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ddxflfrrbph8q"]
 
-[ext_resource type="Script" uid="uid://dfx3n2xnjvu25" path="res://pausa/pausa.gd" id="1_pausa"]
+[ext_resource type="Script" uid="uid://dfx3n2xnjvu25" path="res://ui/menu_pausa/pausa.gd" id="1_pausa"]
 
 [sub_resource type="StyleBoxEmpty" id="Estilo_vacio"]
 content_margin_left = 14.0

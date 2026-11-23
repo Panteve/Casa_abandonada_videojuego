@@ -1,7 +1,7 @@
 extends Control
 
 ## escena que se carga al pulsar JUGAR 
-@export_file("*.tscn") var escena_juego := "res://main/Main.tscn"
+@export_file("*.tscn") var escena_juego := "res://main.tscn"
 
 @onready var menu: Control = $Menu
 @onready var panel_opciones: Control = $PanelOpciones

@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 ## escena a la que se vuelve, (salir menu)
-@export_file("*.tscn") var escena_menu := "res://menu/menu_principal.tscn"
+@export_file("*.tscn") var escena_menu := "res://ui/menu_principal/menu_principal.tscn"
 
 @onready var menu: Control = $Control/Menu
 @onready var panel_opciones: Control = $Control/PanelOpciones

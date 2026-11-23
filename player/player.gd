@@ -135,27 +135,20 @@ func _intentar_leer_nota() -> void:
 
 
 func _intentar_abrir_puerta() -> void:
-
-	# Comprobar si el jugador está mirando algo
 	if not rayo.is_colliding():
 		return
 
-	# Obtener el objeto que está mirando
 	var objetivo = rayo.get_collider()
-
-	# Comprobar si es una puerta
 	if not objetivo is Puerta:
 		return
 
-	# Obtener el objeto seleccionado del inven	tario
 	var item: Item = inventario.slots[inventario.seleccionado]
 
-	if item == null:
-		print("No tienes ningún objeto seleccionado")
-		return
-
-	# Comprobar si el objeto es una llave
-	if item.tipo == "llave":
+	if objetivo.puede_abrir_con(item):
 		objetivo.abrir()
+	elif objetivo.llave_requerida == null:
+		print("Esta puerta no se puede abrir")
+	elif item == null:
+		print("Esta puerta está cerrada con llave")
 	else:
-		print("Necesitas una llave para abrir esta puerta")
+		print("Este objeto no abre esta puerta")

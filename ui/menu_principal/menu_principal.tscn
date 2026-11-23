@@ -1,6 +1,6 @@
 [gd_scene format=3]
 
-[ext_resource type="Script" path="res://menu/menu_principal.gd" id="1_menu"]
+[ext_resource type="Script" uid="uid://c6nafetqcuq30" path="res://ui/menu_principal/menu_principal.gd" id="1_menu"]
 
 [sub_resource type="StyleBoxEmpty" id="Estilo_vacio"]
 content_margin_left = 14.0

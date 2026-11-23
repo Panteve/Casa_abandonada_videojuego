@@ -1219,7 +1219,7 @@ shape = SubResource("ConcavePolygonShape3D_b153q")
 shape = SubResource("ConcavePolygonShape3D_j2ltn")
 
 [node name="FURN_Kitchen_Boards" type="MeshInstance3D" parent="Abandoned_Apartment_Floor_01" unique_id=1343457144]
-transform = Transform3D(-3.9729393e-08, 0, 1.2568632, 0, 1.2568631, 0, -0.90890265, 0, -5.4939235e-08, 9.072488, 0.7150756, -3.0470312)
+transform = Transform3D(0.90890265, 0, 0, 0, 1.2568631, 0, 0, 0, 1.2568632, 9.897832, 0.7150756, -5.9415827)
 mesh = SubResource("ArrayMesh_l1pqg")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Boards" unique_id=23180719]

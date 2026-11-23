@@ -33,11 +33,11 @@ transform = Transform3D(0.83515495, 0.50721514, 0.21271819, 0.16373566, 0.139941
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 3.0799432, -0.81190264, -0.56649446)
 item = ExtResource("5_tv7ag")
 
-[node name="puerta_cocina" parent="." unique_id=1330479414 instance=ExtResource("7_o80qs")]
-transform = Transform3D(-0.9998568, 0, -0.0169208, 0, 1, 0, 0.0169208, 0, -0.9998568, 9.54714, 0, -6)
+[node name="Puerta_cocina" parent="." unique_id=1330479414 instance=ExtResource("7_o80qs")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.997643, 0, -3.462554)
 llave_requerida = ExtResource("9_llave")
 
 [node name="Pausa" parent="." unique_id=2106766696 instance=ExtResource("8_0h8po")]
 
-[node name="Puerta" parent="." unique_id=1761547313 instance=ExtResource("7_o80qs")]
-transform = Transform3D(0.023682363, 0, 0.99971956, 0, 1, 0, -0.99971956, 0, 0.023682363, 9.0096855, 0, -3.4733257)
+[node name="Puerta_cocina_no" parent="." unique_id=1761547313 instance=ExtResource("7_o80qs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.335338, 0, -6.009829)

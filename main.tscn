@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bso8co0lx5c73" path="res://mundo/puerta/puerta.tscn" id="7_o80qs"]
 [ext_resource type="PackedScene" uid="uid://ddxflfrrbph8q" path="res://ui/menu_pausa/pausa.tscn" id="8_0h8po"]
 [ext_resource type="Resource" uid="uid://bk4b28daoofkf" path="res://objetos/llave_primer_nivel/llave_primer_nivel.tres" id="9_llave"]
+[ext_resource type="PackedScene" uid="uid://ecvculwpm1qv" path="res://mundo/comoda/comoda.tscn" id="10_4c57u"]
 
 [node name="Main" type="Node3D" unique_id=1245151571]
 
@@ -41,3 +42,6 @@ llave_requerida = ExtResource("9_llave")
 
 [node name="Puerta_cocina_no" parent="." unique_id=1761547313 instance=ExtResource("7_o80qs")]
 transform = Transform3D(1.05, 0, 0, 0, 1, 0, 0, 0, 1, 10.422133, 0, -6.009829)
+
+[node name="Comoda_comedor" parent="." unique_id=295224761 instance=ExtResource("10_4c57u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1234615, 4.412752e-06, -5.6688333)

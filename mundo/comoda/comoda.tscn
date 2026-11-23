@@ -1,11 +1,18 @@
 [gd_scene format=3 uid="uid://ecvculwpm1qv"]
 
 [ext_resource type="PackedScene" uid="uid://catgqev266tkp" path="res://assets/objetos/comoda_living_room/ikea_radmanso_comoda_de_3_cajones.glb" id="1_ueaim"]
+[ext_resource type="Texture2D" uid="uid://0wfyki02q2i1" path="res://assets/escenarios/free-abandoned-apartment/textures/M_Wood_Furniture_51.jpeg" id="2_0dqop"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_efxa6"]
+albedo_texture = ExtResource("2_0dqop")
 
 [node name="Sketchfab_Scene" unique_id=295224761 instance=ExtResource("1_ueaim")]
 
-[node name="Object_6" parent="Sketchfab_model/root/GLTF_SceneRootNode/ASY_ART_20593604_S01_NV01_3/ASY_LPT01_20593604_S01_NV01_0" parent_id_path=PackedInt32Array(619968224) index="0" unique_id=617935622]
+[node name="Object_4" parent="Sketchfab_model/root/GLTF_SceneRootNode/ASY_ART_20593604_S01_NV01_3" parent_id_path=PackedInt32Array(1769303473) index="0" unique_id=1138205691]
+surface_material_override/0 = SubResource("StandardMaterial3D_efxa6")
+
+[node name="Object_6" parent="Sketchfab_model/root/GLTF_SceneRootNode/ASY_ART_20593604_S01_NV01_3/ASY_LPT01_20593604_S01_NV01_0" parent_id_path=PackedInt32Array(1253635989) index="0" unique_id=169300367]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.13998665)
 
-[node name="Object_10" parent="Sketchfab_model/root/GLTF_SceneRootNode/ASY_ART_20593604_S01_NV01_3/ASY_LPT03_20593604_S01_NV01_2" parent_id_path=PackedInt32Array(845153107) index="0" unique_id=1917507723]
+[node name="Object_10" parent="Sketchfab_model/root/GLTF_SceneRootNode/ASY_ART_20593604_S01_NV01_3/ASY_LPT03_20593604_S01_NV01_2" parent_id_path=PackedInt32Array(245154798) index="0" unique_id=863077082]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2283048)

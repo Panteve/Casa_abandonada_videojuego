@@ -76,7 +76,9 @@ func _unhandled_input(event: InputEvent) -> void:
 func _input(event: InputEvent) -> void:
 	
 	if event.is_action_pressed("abrir"):
+		_intentar_abrir_gabinete()
 		_intentar_abrir_puerta()
+		
 	
 	if nota_ui.abierta:
 		return
@@ -156,3 +158,23 @@ func _intentar_abrir_puerta() -> void:
 		print("Esta puerta está cerrada con llave")
 	else:
 		print("Este objeto no abre esta puerta")
+
+func _intentar_abrir_gabinete() -> void:
+	if not rayo.is_colliding():
+		return
+
+	var objetivo = rayo.get_collider()
+	if not objetivo is Gabinete:
+		return
+
+	if objetivo.abierto:
+		return
+
+	var item: Item = inventario.slots[inventario.seleccionado]
+
+	if objetivo.puede_abrir_con(item):
+		objetivo.abrir()
+	elif item == null:
+		print("El gabinete está atascado, necesitas algo para forzarlo")
+	else:
+		print("Este objeto no sirve para abrir el gabinete")

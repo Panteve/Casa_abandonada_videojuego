@@ -1,47 +1,47 @@
+
 extends CharacterBody3D
 
-@export var speed:float = 2.5
+@export var speed: float = 2.5
 @export var aceleracion: float = 10.0
 @export var friccion: float = 8.0
 @export var mouse_sensitivity: float = 0.003
 @export var bob_frecuencia: float = 2.2
 @export var bob_amplitud: float = 0.05
+@export var intervalo_pasos := 1.6
 
-var _bob_tiempo: float = 0.0
-
+@onready var pasos: AudioStreamPlayer = $Pasos
 @onready var rayo: RayCast3D = $Head/Camera3D/RayCast3D
-@onready var luz: LuzJugador = $Head/Camera3D/SpotLight3D 
+@onready var luz: LuzJugador = $Head/Camera3D/SpotLight3D
 @onready var head: Node3D = $Head
 @onready var inventario: Inventario = $Inventario
-@onready var camera:Camera3D = $Head/Camera3D
+@onready var camera: Camera3D = $Head/Camera3D
 @onready var lector: LectorEntrada = $LectorEntrada
+
 const NotaUIScene = preload("res://objetos/primer_nota/nota_ui.tscn")
-
-var nota_ui: CanvasLayer
-
 const PresenciaScript := preload("res://player/presencia.gd")
 
+var nota_ui: CanvasLayer
 var presencia: Node
 var _punto_reinicio: Vector3
+var _bob_tiempo: float = 0.0
+var tiempo_paso := 0.0
 
 
 func _ready() -> void:
 	nota_ui = NotaUIScene.instantiate()
 	get_tree().current_scene.call_deferred("add_child", nota_ui)
-	
+
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	rayo.add_exception(self)
 
 	_punto_reinicio = global_position
 	presencia = PresenciaScript.new()
 	add_child(presencia)
-	
+
 	presencia.aviso.connect(_on_presencia_aviso)
 	presencia.alcanzado.connect(_on_presencia_alcanzado)
-	
 	if not luz.visible:
 		presencia.activar()
-
 
 func poner_linterna(encendida: bool) -> void:
 	luz.visible = encendida
@@ -50,10 +50,8 @@ func poner_linterna(encendida: bool) -> void:
 	else:
 		presencia.activar()
 
-
 func _on_presencia_aviso() -> void:
 	print("La presencia se acerca...")
-
 
 func _on_presencia_alcanzado() -> void:
 	print("La presencia te alcanzó")
@@ -61,27 +59,25 @@ func _on_presencia_alcanzado() -> void:
 	velocity = Vector3.ZERO
 	poner_linterna(true)
 
-
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * mouse_sensitivity)
 		head.rotate_x(-event.relative.y * mouse_sensitivity)
 		head.rotation.x = clamp(head.rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
-
 func _input(event: InputEvent) -> void:
-	
 	if event.is_action_pressed("abrir"):
 		_intentar_abrir_puerta()
-	
+
 	if nota_ui.abierta:
 		return
+
 	if event.is_action_pressed("interactuar"):
 		_intentar_recoger()
 
 	if event.is_action_pressed("linterna"):
 		poner_linterna(not luz.visible)
-	
+
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			_intentar_leer_nota()
@@ -91,8 +87,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = 0
 		velocity.z = 0
 		move_and_slide()
+		_actualizar_pasos(delta)
 		return
-	
+
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
@@ -105,11 +102,25 @@ func _physics_process(delta: float) -> void:
 	velocity.z = move_toward(velocity.z, objetivo.z, ritmo * delta)
 
 	move_and_slide()
-	_bob(delta)
 
+	_bob(delta)
+	_actualizar_pasos(delta)
+
+func _actualizar_pasos(delta: float) -> void:
+	var rapidez := Vector2(velocity.x, velocity.z).length()
+
+	if is_on_floor() and rapidez > 0.5:
+		tiempo_paso -= delta
+
+		if tiempo_paso <= 0.0:
+			pasos.play()
+			tiempo_paso = intervalo_pasos
+	else:
+		tiempo_paso = 0.0
 
 func _bob(delta: float) -> void:
 	var vel_h := Vector2(velocity.x, velocity.z).length()
+
 	if is_on_floor() and vel_h > 0.1:
 		_bob_tiempo += delta * vel_h
 		camera.position.y = sin(_bob_tiempo * bob_frecuencia) * bob_amplitud
@@ -117,28 +128,30 @@ func _bob(delta: float) -> void:
 	else:
 		camera.position = camera.position.lerp(Vector3.ZERO, delta * 10.0)
 
-
 func _intentar_recoger() -> void:
 	if not rayo.is_colliding():
 		return
+
 	var objetivo := rayo.get_collider()
+
 	if objetivo is Recogible and inventario.agregar(objetivo.item):
 		objetivo.recoger()
-		
+
 func _intentar_leer_nota() -> void:
 	var item: Item = inventario.slots[inventario.seleccionado]
+
 	if item == null:
 		return
 
 	if item.tipo == "nota":
 		nota_ui.abrir_nota(item.nombre, item.contenido)
 
-
 func _intentar_abrir_puerta() -> void:
 	if not rayo.is_colliding():
 		return
 
 	var objetivo = rayo.get_collider()
+
 	if not objetivo is Puerta:
 		return
 

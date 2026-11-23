@@ -1,4 +1,4 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://vsfyqtbp08kl"]
 
 [ext_resource type="Script" uid="uid://c6nafetqcuq30" path="res://ui/menu_principal/menu_principal.gd" id="1_menu"]
 
@@ -15,7 +15,7 @@ content_margin_right = 14.0
 content_margin_bottom = 4.0
 bg_color = Color(0.545098, 0, 0, 0.85)
 
-[node name="MenuPrincipal" type="Control"]
+[node name="MenuPrincipal" type="Control" unique_id=1803373796]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,7 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_menu")
 
-[node name="Fondo" type="ColorRect" parent="."]
+[node name="Fondo" type="ColorRect" parent="." unique_id=1341560153]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,7 +34,7 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Menu" type="MarginContainer" parent="."]
+[node name="Menu" type="MarginContainer" parent="." unique_id=972384763]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -46,70 +46,73 @@ theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 90
 theme_override_constants/margin_bottom = 80
 
-[node name="Columna" type="VBoxContainer" parent="Menu"]
+[node name="Columna" type="VBoxContainer" parent="Menu" unique_id=1488971886]
 layout_mode = 2
 theme_override_constants/separation = 70
 
-[node name="Titulo" type="Label" parent="Menu/Columna"]
+[node name="Titulo" type="Label" parent="Menu/Columna" unique_id=1540335044]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.545098, 0, 0, 1)
 theme_override_font_sizes/font_size = 72
 text = "LA CASA ABANDONADA"
 
-[node name="Botones" type="VBoxContainer" parent="Menu/Columna"]
+[node name="Botones" type="VBoxContainer" parent="Menu/Columna" unique_id=1349175865]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_constants/separation = 10
 
-[node name="Jugar" type="Button" parent="Menu/Columna/Botones"]
+[node name="Jugar" type="Button" parent="Menu/Columna/Botones" unique_id=1670695192]
 custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0.960784, 0.960784, 0.862745, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("Estilo_vacio")
-theme_override_styles/hover = SubResource("Estilo_resaltado")
 theme_override_styles/pressed = SubResource("Estilo_resaltado")
+theme_override_styles/hover = SubResource("Estilo_resaltado")
 theme_override_styles/hover_pressed = SubResource("Estilo_resaltado")
 theme_override_styles/focus = SubResource("Estilo_resaltado")
 text = "JUGAR"
 alignment = 0
 
-[node name="Opciones" type="Button" parent="Menu/Columna/Botones"]
+[node name="Opciones" type="Button" parent="Menu/Columna/Botones" unique_id=1298925618]
 custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0.960784, 0.960784, 0.862745, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("Estilo_vacio")
-theme_override_styles/hover = SubResource("Estilo_resaltado")
 theme_override_styles/pressed = SubResource("Estilo_resaltado")
+theme_override_styles/hover = SubResource("Estilo_resaltado")
 theme_override_styles/hover_pressed = SubResource("Estilo_resaltado")
 theme_override_styles/focus = SubResource("Estilo_resaltado")
 text = "OPCIONES"
 alignment = 0
 
-[node name="Salir" type="Button" parent="Menu/Columna/Botones"]
+[node name="Salir" type="Button" parent="Menu/Columna/Botones" unique_id=2036556559]
 custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0.960784, 0.960784, 0.862745, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("Estilo_vacio")
-theme_override_styles/hover = SubResource("Estilo_resaltado")
 theme_override_styles/pressed = SubResource("Estilo_resaltado")
+theme_override_styles/hover = SubResource("Estilo_resaltado")
 theme_override_styles/hover_pressed = SubResource("Estilo_resaltado")
 theme_override_styles/focus = SubResource("Estilo_resaltado")
 text = "SALIR"
 alignment = 0
 
-[node name="PanelOpciones" type="MarginContainer" parent="."]
+[node name="PanelOpciones" type="MarginContainer" parent="." unique_id=846912313]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -122,28 +125,28 @@ theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 90
 theme_override_constants/margin_bottom = 80
 
-[node name="Columna" type="VBoxContainer" parent="PanelOpciones"]
+[node name="Columna" type="VBoxContainer" parent="PanelOpciones" unique_id=966420378]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_constants/separation = 30
 
-[node name="Titulo" type="Label" parent="PanelOpciones/Columna"]
+[node name="Titulo" type="Label" parent="PanelOpciones/Columna" unique_id=914419643]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.545098, 0, 0, 1)
 theme_override_font_sizes/font_size = 56
 text = "OPCIONES"
 
-[node name="Volumen" type="HBoxContainer" parent="PanelOpciones/Columna"]
+[node name="Volumen" type="HBoxContainer" parent="PanelOpciones/Columna" unique_id=478695280]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Etiqueta" type="Label" parent="PanelOpciones/Columna/Volumen"]
+[node name="Etiqueta" type="Label" parent="PanelOpciones/Columna/Volumen" unique_id=1317092880]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.960784, 0.960784, 0.862745, 1)
 theme_override_font_sizes/font_size = 24
 text = "VOLUMEN"
 
-[node name="Slider" type="HSlider" parent="PanelOpciones/Columna/Volumen"]
+[node name="Slider" type="HSlider" parent="PanelOpciones/Columna/Volumen" unique_id=1316019257]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_vertical = 4
@@ -151,25 +154,25 @@ max_value = 1.0
 step = 0.01
 value = 1.0
 
-[node name="PantallaCompleta" type="CheckBox" parent="PanelOpciones/Columna"]
+[node name="PantallaCompleta" type="CheckBox" parent="PanelOpciones/Columna" unique_id=1311457262]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.960784, 0.960784, 0.862745, 1)
 theme_override_font_sizes/font_size = 24
 text = "PANTALLA COMPLETA"
 
-[node name="Volver" type="Button" parent="PanelOpciones/Columna"]
+[node name="Volver" type="Button" parent="PanelOpciones/Columna" unique_id=1738459554]
 custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0.960784, 0.960784, 0.862745, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("Estilo_vacio")
-theme_override_styles/hover = SubResource("Estilo_resaltado")
 theme_override_styles/pressed = SubResource("Estilo_resaltado")
+theme_override_styles/hover = SubResource("Estilo_resaltado")
 theme_override_styles/hover_pressed = SubResource("Estilo_resaltado")
 theme_override_styles/focus = SubResource("Estilo_resaltado")
 text = "VOLVER"
 alignment = 0
-

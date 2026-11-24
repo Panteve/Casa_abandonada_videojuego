@@ -21,6 +21,20 @@ func puede_abrir_con(item: Item) -> bool:
 	return item != null and item.tipo == tipo_herramienta
 
 
+func usar(interactor: Interactor) -> void:
+	if abierto or _abriendo:
+		return
+
+	var item := interactor.item_seleccionado()
+	if puede_abrir_con(item):
+		interactor.consumir_seleccionado()
+		abrir()
+	elif item == null:
+		print("El gabinete está atascado, necesitas algo para forzarlo")
+	else:
+		print("Este objeto no sirve para abrir el gabinete")
+
+
 func abrir() -> void:
 	if abierto or _abriendo:
 		return

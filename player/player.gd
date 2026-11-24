@@ -1,4 +1,6 @@
 extends CharacterBody3D
+## Coordina al jugador. Movimiento y mirada viven aquí; el resto está en nodos hijos:
+## Interactor (qué tengo delante), LectorNotas, LuzJugador, Inventario y Presencia.
 
 @export var speed:float = 2.5
 @export var aceleracion: float = 10.0
@@ -9,16 +11,12 @@ extends CharacterBody3D
 
 var _bob_tiempo: float = 0.0
 
-@onready var rayo: RayCast3D = $Head/Camera3D/RayCast3D
-@onready var luz: LuzJugador = $Head/Camera3D/SpotLight3D 
+@onready var luz: LuzJugador = $Head/Camera3D/SpotLight3D
 @onready var head: Node3D = $Head
-@onready var inventario: Inventario = $Inventario
-@onready var camera:Camera3D = $Head/Camera3D
+@onready var camera: Camera3D = $Head/Camera3D
 @onready var lector: LectorEntrada = $LectorEntrada
-
-const NotaUIScene = preload("res://objetos/primer_nota/nota_ui.tscn")
-
-var nota_ui: CanvasLayer
+@onready var interactor: Interactor = $Interactor
+@onready var notas: LectorNotas = $LectorNotas
 
 const PresenciaScript := preload("res://player/presencia.gd")
 
@@ -27,31 +25,28 @@ var _punto_reinicio: Vector3
 
 
 func _ready() -> void:
-	nota_ui = NotaUIScene.instantiate()
-	get_tree().current_scene.call_deferred("add_child", nota_ui)
-	
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	rayo.add_exception(self)
 
 	_punto_reinicio = global_position
 	presencia = PresenciaScript.new()
 	add_child(presencia)
-	
+
 	presencia.aviso.connect(_on_presencia_aviso)
 	presencia.alcanzado.connect(_on_presencia_alcanzado)
-	
+	luz.cambio_encendida.connect(_on_linterna_cambio)
+
 	if not luz.visible:
 		presencia.activar()
 
 
 func poner_linterna(encendida: bool) -> void:
 	luz.visible = encendida
-	
+
+
+func _on_linterna_cambio(encendida: bool) -> void:
 	if encendida:
 		presencia.desactivar()
-		get_tree().call_group("simbolos", "alternar_visibilidad", false)
 	else:
-		get_tree().call_group("simbolos", "alternar_visibilidad", true)
 		presencia.activar()
 
 
@@ -74,26 +69,26 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _input(event: InputEvent) -> void:
-	
+	if notas.abierta:
+		return    # con una nota abierta, el visor se encarga del clic derecho
+
 	if event.is_action_pressed("abrir"):
-		_intentar_abrir_gabinete()
-		_intentar_abrir_puerta()
-		
-	
-	if nota_ui.abierta:
-		return
+		interactor.usar()
+
 	if event.is_action_pressed("interactuar"):
-		_intentar_recoger()
+		interactor.interactuar()
 
 	if event.is_action_pressed("linterna"):
 		poner_linterna(not luz.visible)
 	
+	#TODO:PONER TECLA ASIGNADA
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
-			_intentar_leer_nota()
+			interactor.leer()
+
 
 func _physics_process(delta: float) -> void:
-	if nota_ui.abierta:
+	if notas.abierta:
 		velocity.x = 0
 		velocity.z = 0
 		move_and_slide()
@@ -122,59 +117,3 @@ func _bob(delta: float) -> void:
 		camera.position.x = cos(_bob_tiempo * bob_frecuencia * 0.5) * bob_amplitud * 0.5
 	else:
 		camera.position = camera.position.lerp(Vector3.ZERO, delta * 10.0)
-
-
-func _intentar_recoger() -> void:
-	if not rayo.is_colliding():
-		return
-	var objetivo := rayo.get_collider()
-	if objetivo is Recogible and inventario.agregar(objetivo.item):
-		objetivo.recoger()
-		
-func _intentar_leer_nota() -> void:
-	var item: Item = inventario.slots[inventario.seleccionado]
-	if item == null:
-		return
-
-	if item.tipo == "nota":
-		nota_ui.abrir_nota(item.nombre, item.contenido)
-
-
-func _intentar_abrir_puerta() -> void:
-	if not rayo.is_colliding():
-		return
-
-	var objetivo = rayo.get_collider()
-	if not objetivo is Puerta:
-		return
-
-	var item: Item = inventario.slots[inventario.seleccionado]
-
-	if objetivo.puede_abrir_con(item):
-		objetivo.abrir()
-	elif objetivo.llave_requerida == null:
-		print("Esta puerta no se puede abrir")
-	elif item == null:
-		print("Esta puerta está cerrada con llave")
-	else:
-		print("Este objeto no abre esta puerta")
-
-func _intentar_abrir_gabinete() -> void:
-	if not rayo.is_colliding():
-		return
-
-	var objetivo = rayo.get_collider()
-	if not objetivo is Gabinete:
-		return
-
-	if objetivo.abierto:
-		return
-
-	var item: Item = inventario.slots[inventario.seleccionado]
-
-	if objetivo.puede_abrir_con(item):
-		objetivo.abrir()
-	elif item == null:
-		print("El gabinete está atascado, necesitas algo para forzarlo")
-	else:
-		print("Este objeto no sirve para abrir el gabinete")

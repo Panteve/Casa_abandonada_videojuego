@@ -2,6 +2,8 @@ class_name LuzJugador
 extends SpotLight3D
 
 signal bateria_cambio(porcentaje: float)
+## Se emite cada vez que la linterna se enciende o se apaga (también al agotarse la batería).
+signal cambio_encendida(encendida: bool)
 
 @export var rango := 8.0
 @export var altura := 0.0
@@ -17,6 +19,7 @@ func _ready() -> void:
 	spot_attenuation = 2.0
 	energia_base = light_energy
 	bateria = duracion
+	visibility_changed.connect(func() -> void: cambio_encendida.emit(visible))
 
 func _process(delta: float) -> void:
 	if not visible:

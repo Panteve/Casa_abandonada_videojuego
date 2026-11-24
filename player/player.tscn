@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://nntcpbm2yicb" path="res://ui/vineta/vineta.tscn" id="6_vineta"]
 [ext_resource type="PackedScene" path="res://ui/cross_hair/mira.tscn" id="7_mira"]
 [ext_resource type="PackedScene" path="res://ui/bateria_hud/bateria_hud.tscn" id="8_rgyib"]
+[ext_resource type="Script" uid="uid://dorktw011if4y" path="res://player/interactor.gd" id="9_interactor"]
+[ext_resource type="Script" uid="uid://cwucftlflt6i1" path="res://player/lector_notas.gd" id="10_notas"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0kdyo"]
 radius = 0.36
@@ -29,7 +31,7 @@ target_position = Vector3(0, 0, -3)
 collision_mask = 5
 collide_with_areas = true
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D" unique_id=788886272]
+[node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D" unique_id=788886272 groups=["linterna"]]
 light_color = Color(0.9607843, 0.9607843, 0.8627451, 1)
 light_energy = 6.4
 shadow_enabled = true
@@ -43,6 +45,12 @@ script = ExtResource("2_rkbax")
 
 [node name="Inventario" type="Node" parent="." unique_id=1739401622]
 script = ExtResource("3_g1dw6")
+
+[node name="LectorNotas" type="Node" parent="." unique_id=884056981]
+script = ExtResource("10_notas")
+
+[node name="Interactor" type="Node" parent="." unique_id=757364013]
+script = ExtResource("9_interactor")
 
 [node name="Node3D" type="Node3D" parent="." unique_id=1062713813]
 

@@ -19,6 +19,18 @@ func puede_abrir_con(item: Item) -> bool:
 	return item == llave_requerida
 
 
+func usar(interactor: Interactor) -> void:
+	var item := interactor.item_seleccionado()
+	if puede_abrir_con(item):
+		abrir()
+	elif llave_requerida == null:
+		print("Esta puerta no se puede abrir")
+	elif item == null:
+		print("Esta puerta está cerrada con llave")
+	else:
+		print("Este objeto no abre esta puerta")
+
+
 func abrir() -> void:
 	if abierta:
 		return

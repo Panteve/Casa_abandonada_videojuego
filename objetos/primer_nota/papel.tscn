@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bpobarmo8wx32"]
 
 [ext_resource type="PackedScene" uid="uid://hfqdhp0w3kva" path="res://assets/objetos/paper.glb" id="1_krmi2"]
-[ext_resource type="Script" uid="uid://b16xau6b8367m" path="res://inventario/recogible.gd" id="1_r3rr0"]
+[ext_resource type="Script" path="res://objetos/primer_nota/nota_leible.gd" id="1_r3rr0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ajtct"]
 size = Vector3(7.584, 0.2, 5.762)

@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://ds2ag7tp6dxxp" path="res://mundo/visible.gd" id="1_qtrhv"]
 [ext_resource type="PackedScene" uid="uid://b86io7gty462v" path="res://mundo/Escenario.tscn" id="2_wbnyf"]
 [ext_resource type="PackedScene" uid="uid://cktw76ssdhlfc" path="res://objetos/llave_primer_nivel/llave_primer_nivel.tscn" id="3_5kcm4"]
-[ext_resource type="PackedScene" uid="uid://bpobarmo8wx32" path="res://objetos/primer_nota/papel.tscn" id="4_cmtxc"]
-[ext_resource type="Resource" uid="uid://cjx037krm2gpp" path="res://objetos/primer_nota/nota.tres" id="5_tv7ag"]
+[ext_resource type="PackedScene" uid="uid://bpobarmo8wx32" path="res://objetos/nota/papel.tscn" id="4_cmtxc"]
+[ext_resource type="Resource" uid="uid://cjx037krm2gpp" path="res://objetos/nota_cocina/nota.tres" id="5_tv7ag"]
 [ext_resource type="PackedScene" uid="uid://bso8co0lx5c73" path="res://mundo/puerta/puerta.tscn" id="7_o80qs"]
 [ext_resource type="PackedScene" uid="uid://ddxflfrrbph8q" path="res://ui/menu_pausa/pausa.tscn" id="8_0h8po"]
 [ext_resource type="Resource" uid="uid://bk4b28daoofkf" path="res://objetos/llave_primer_nivel/llave_primer_nivel.tres" id="9_llave"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cvvowsup6tx5i" path="res://assets/texturas/simbolo_mano.png" id="14_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://cfo555l15vieg" path="res://objetos/cuchillo/cuchillo_cocina.tscn" id="16_yaehf"]
 [ext_resource type="PackedScene" uid="uid://caecvafliepjn" path="res://mundo/gabinete/gabinete_cocina.tscn" id="17_074og"]
+[ext_resource type="Resource" uid="uid://dogapnyxb5dbw" path="res://objetos/nota_comedor/nota.tres" id="18_074og"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_uxa2c"]
 
@@ -57,68 +58,75 @@ emission = Color(0, 0.7921569, 0, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.885969, 0.6778377, -1.9753993)
 
 [node name="Escenario" parent="." unique_id=373970047 instance=ExtResource("2_wbnyf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025919914, 0, 0.0034804344)
 script = ExtResource("1_qtrhv")
 
-[node name="Luz_Cocina" type="SpotLight3D" parent="." unique_id=388181231]
+[node name="Pausa" parent="." unique_id=2106766696 instance=ExtResource("8_0h8po")]
+
+[node name="Cocina" type="Node3D" parent="." unique_id=283193017]
+
+[node name="Luz_Cocina" type="SpotLight3D" parent="Cocina" unique_id=388181231]
 transform = Transform3D(1, 0, 0, 0, 0.9914003, 0.13086443, 0, -0.13086443, 0.9914003, 11.411361, 1.6612676, 0.12348342)
 light_color = Color(0.56078434, 0.6431373, 0.78431374, 1)
 light_energy = 3.0
 light_specular = 0.0
 spot_range = 5.743249
 
-[node name="Llave_cocina" parent="." unique_id=1906555330 instance=ExtResource("3_5kcm4")]
+[node name="Gabinete_cocina" parent="Cocina" unique_id=1710437413 instance=ExtResource("17_074og")]
+transform = Transform3D(0.024112348, 0, -0.99970925, 0, 1, 0, 0.99970925, 0, 0.024112348, 13.597791, 3.7074128e-07, -5.542321)
+
+[node name="Cuchillo_cocina" parent="Cocina" unique_id=1402700645 instance=ExtResource("16_yaehf")]
+transform = Transform3D(0.7004102, 0.6489006, 0.29724315, 0, 0.41645828, -0.90915483, -0.7137405, 0.63678133, 0.29169163, 13.419674, 1.6858015, -0.33534878)
+
+[node name="Llave_cocina" parent="Cocina" unique_id=1906555330 instance=ExtResource("3_5kcm4")]
 transform = Transform3D(0.84098613, 0.540667, -0.020532833, -0.07489747, 0.07874814, -0.994077, -0.5358477, 0.83754295, 0.1067207, 13.543938, 1.0325038, -5.654211)
 
-[node name="Nota_cocina" parent="." unique_id=77009218 instance=ExtResource("4_cmtxc")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 12.7153015, -0.82946503, -1.9560051)
+[node name="Nota_cocina" parent="Cocina" unique_id=77009218 instance=ExtResource("4_cmtxc")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 11.916509, 0.68110126, -3.6039267)
 item = ExtResource("5_tv7ag")
 
-[node name="Puerta_cocina" parent="." unique_id=1330479414 instance=ExtResource("7_o80qs")]
+[node name="Puerta_cocina" parent="Cocina" unique_id=1330479414 instance=ExtResource("7_o80qs")]
 transform = Transform3D(-5.6824803e-08, 0, 1, 0, 1, 0, -1.3, 0, -4.371139e-08, 8.997643, 0.0056728125, -3.5509367)
 llave_requerida = ExtResource("9_llave")
 
-[node name="Pausa" parent="." unique_id=2106766696 instance=ExtResource("8_0h8po")]
-
-[node name="Puerta_cocina_no" parent="." unique_id=1761547313 instance=ExtResource("7_o80qs")]
+[node name="Puerta_cocina_no" parent="Cocina" unique_id=1761547313 instance=ExtResource("7_o80qs")]
 transform = Transform3D(1.05, 0, 0, 0, 1, 0, 0, 0, 1, 10.422133, 0, -6.009829)
 
-[node name="Comoda_comedor" parent="." unique_id=295224761 instance=ExtResource("10_4c57u")]
+[node name="Sala" type="Node3D" parent="." unique_id=101097117]
+
+[node name="Comoda_comedor" parent="Sala" unique_id=295224761 instance=ExtResource("10_4c57u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1234615, 4.412752e-06, -5.6688333)
 
-[node name="Puerta_comedor" parent="." unique_id=111857257 instance=ExtResource("7_o80qs")]
+[node name="Puerta_comedor" parent="Sala" unique_id=111857257 instance=ExtResource("7_o80qs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6242633, 0.046892285, -5.994891)
 
-[node name="Simbolo_ojo" type="MeshInstance3D" parent="." unique_id=1717636221 groups=["simbolos"]]
+[node name="Simbolo_ojo" type="MeshInstance3D" parent="Sala" unique_id=1717636221 groups=["simbolos"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8195047, 2.241693, -5.93599)
 visible = false
 mesh = SubResource("QuadMesh_uxa2c")
 surface_material_override/0 = SubResource("StandardMaterial3D_thsib")
 script = ExtResource("12_vivmo")
 
-[node name="Simbolo_luna" type="MeshInstance3D" parent="." unique_id=1986708739 groups=["simbolos"]]
+[node name="Simbolo_luna" type="MeshInstance3D" parent="Sala" unique_id=1986708739 groups=["simbolos"]]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.022019029, 1.5060662, -1.7437023)
 visible = false
 mesh = SubResource("QuadMesh_hchaj")
 surface_material_override/0 = SubResource("StandardMaterial3D_r6318")
 script = ExtResource("12_vivmo")
 
-[node name="Simbolo_puerta" type="MeshInstance3D" parent="." unique_id=1838697216 groups=["simbolos"]]
+[node name="Simbolo_puerta" type="MeshInstance3D" parent="Sala" unique_id=1838697216 groups=["simbolos"]]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.871462, 2.5714006, -2.9684377)
 visible = false
 mesh = SubResource("QuadMesh_r6318")
 surface_material_override/0 = SubResource("StandardMaterial3D_3lxni")
 script = ExtResource("12_vivmo")
 
-[node name="Simbolo_mano" type="MeshInstance3D" parent="." unique_id=983829420 groups=["simbolos"]]
+[node name="Simbolo_mano" type="MeshInstance3D" parent="Sala" unique_id=983829420 groups=["simbolos"]]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.8352015, 2.0745862, -0.02494365)
 visible = false
 mesh = SubResource("QuadMesh_bn13o")
 surface_material_override/0 = SubResource("StandardMaterial3D_6uljq")
 script = ExtResource("12_vivmo")
 
-[node name="Cuchillo_cocina" parent="." unique_id=1402700645 instance=ExtResource("16_yaehf")]
-transform = Transform3D(0.7004102, 0.6489006, 0.29724315, 0, 0.41645828, -0.90915483, -0.7137405, 0.63678133, 0.29169163, 13.419674, 1.6858015, -0.33534878)
-
-[node name="Gabinete_cocina" parent="." unique_id=1710437413 instance=ExtResource("17_074og")]
-transform = Transform3D(0.024112348, 0, -0.99970925, 0, 1, 0, 0.99970925, 0, 0.024112348, 13.597791, 3.7074128e-07, -5.542321)
+[node name="Nota sala" parent="Sala" unique_id=546005525 instance=ExtResource("4_cmtxc")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 2.0499232, 0.69343233, -2.196663)
+item = ExtResource("18_074og")

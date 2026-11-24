@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://y36kdd8s32lo"
-path="res://.godot/imported/gabinet.glb-2400285a4414da9fbb75af312a29d553.scn"
+uid="uid://c030nkbiuyobm"
+path="res://.godot/imported/old_simple_knife.glb-02cb5f5760616a7e75ffa91efe9d89d1.scn"
 
 [deps]
 
-source_file="res://assets/objetos/gabinet.glb"
-dest_files=["res://.godot/imported/gabinet.glb-2400285a4414da9fbb75af312a29d553.scn"]
+source_file="res://assets/objetos/knife/old_simple_knife.glb"
+dest_files=["res://.godot/imported/old_simple_knife.glb-02cb5f5760616a7e75ffa91efe9d89d1.scn"]
 
 [params]
 

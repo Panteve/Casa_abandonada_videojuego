@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3w3osixcebe"
-path.s3tc="res://.godot/imported/gabinet_0.png-33afbd0b65a8dffd9adafb70c500bcf5.s3tc.ctex"
+uid="uid://d3huehi1icdhp"
+path.s3tc="res://.godot/imported/gabinet_1.png-b72fb14c586972fe5fba4c9bda2e380e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "f6e81171e808af38806ea758242411dd"
+"md5": "5e811e41019d3c3467e97a9af4371300"
 }
 
 [deps]
 
-source_file="res://assets/objetos/gabinet_0.png"
-dest_files=["res://.godot/imported/gabinet_0.png-33afbd0b65a8dffd9adafb70c500bcf5.s3tc.ctex"]
+source_file="res://assets/objetos/gabinet/gabinet_1.png"
+dest_files=["res://.godot/imported/gabinet_1.png-b72fb14c586972fe5fba4c9bda2e380e.s3tc.ctex"]
 
 [params]
 

@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://cphb6xknvkxhd"]
 
-[ext_resource type="Texture2D" uid="uid://b0pxxcyira54n" path="res://objetos/primer_nota/nota.png" id="1_o0y3r"]
-[ext_resource type="Script" uid="uid://di6jwnfdq5abd" path="res://objetos/primer_nota/nota.gd" id="1_uthkc"]
+[ext_resource type="Script" uid="uid://di6jwnfdq5abd" path="res://objetos/nota/nota.gd" id="1_fak5f"]
+[ext_resource type="Texture2D" uid="uid://b0pxxcyira54n" path="res://objetos/nota/nota.png" id="2_suem8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tfnf5"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="NotaUI" type="CanvasLayer" unique_id=1644210316]
-script = ExtResource("1_uthkc")
+script = ExtResource("1_fak5f")
 
 [node name="papel" type="Sprite2D" parent="." unique_id=465819161]
 position = Vector2(542.00006, 302)
 scale = Vector2(0.1864, 0.2292)
-texture = ExtResource("1_o0y3r")
+texture = ExtResource("2_suem8")
 
 [node name="Panel" type="Panel" parent="papel" unique_id=1872925290]
 offset_left = -890.5583

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://caecvafliepjn"]
 
 [ext_resource type="Script" uid="uid://8k1oo777xje7" path="res://mundo/gabinete/gabinete.gd" id="1_5ma7m"]
-[ext_resource type="PackedScene" uid="uid://y36kdd8s32lo" path="res://assets/objetos/gabinet.glb" id="1_ho4eu"]
+[ext_resource type="PackedScene" uid="uid://y36kdd8s32lo" path="res://assets/objetos/gabinet/gabinet.glb" id="1_ho4eu"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5ma7m"]
 points = PackedVector3Array(0.81, -1.05, 5.186389, -0.8899999, -1.05, 5.186389, 0.81, -1.05, 2.591389, -0.8899999, -1.05, 2.591389)

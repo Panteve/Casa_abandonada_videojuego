@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" path="res://ui/bateria_hud/bateria_hud.tscn" id="8_rgyib"]
 [ext_resource type="Script" uid="uid://dorktw011if4y" path="res://player/interactor.gd" id="9_interactor"]
 [ext_resource type="Script" uid="uid://cwucftlflt6i1" path="res://player/lector_notas.gd" id="10_notas"]
+[ext_resource type="Script" uid="uid://c4k4lfa6a550u" path="res://player/presencia.gd" id="11_presencia"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0kdyo"]
 radius = 0.36
@@ -49,10 +50,11 @@ script = ExtResource("3_g1dw6")
 [node name="LectorNotas" type="Node" parent="." unique_id=884056981]
 script = ExtResource("10_notas")
 
+[node name="Presencia" type="Node" parent="." unique_id=672935970]
+script = ExtResource("11_presencia")
+
 [node name="Interactor" type="Node" parent="." unique_id=757364013]
 script = ExtResource("9_interactor")
-
-[node name="Node3D" type="Node3D" parent="." unique_id=1062713813]
 
 [node name="InventarioUI" parent="." unique_id=1092566610 instance=ExtResource("5_qjkh3")]
 

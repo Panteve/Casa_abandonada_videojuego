@@ -1,7 +1,7 @@
 class_name LectorNotas
 extends Node
 
-const NotaUIScene := preload("res://objetos/primer_nota/nota_ui.tscn")
+const NotaUIScene := preload("res://objetos/nota/nota_ui.tscn")
 
 var _ui: CanvasLayer
 

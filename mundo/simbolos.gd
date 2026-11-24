@@ -13,7 +13,7 @@ func _conectar() -> void:
 	if luz == null:
 		return
 	luz.cambio_encendida.connect(func(encendida: bool) -> void: alternar_visibilidad(not encendida))
-	alternar_visibilidad(not luz.visible)
+	alternar_visibilidad(not luz.encendida)
 
 
 func alternar_visibilidad(visibilidad: bool) -> void:

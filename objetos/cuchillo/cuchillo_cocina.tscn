@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cfo555l15vieg"]
 
-[ext_resource type="PackedScene" uid="uid://c030nkbiuyobm" path="res://assets/objetos/old_simple_knife.glb" id="1_84yac"]
+[ext_resource type="PackedScene" uid="uid://c030nkbiuyobm" path="res://assets/objetos/knife/old_simple_knife.glb" id="1_84yac"]
 [ext_resource type="Script" uid="uid://b16xau6b8367m" path="res://inventario/recogible.gd" id="1_b7w8x"]
 [ext_resource type="Resource" uid="uid://bsgp3507f2y4" path="res://objetos/cuchillo/cuchillo.tres" id="2_iiv2w"]
 

@@ -1,6 +1,6 @@
 extends CharacterBody3D
 ## Coordina al jugador. Movimiento y mirada viven aquí; el resto está en nodos hijos:
-## Interactor (qué tengo delante), LectorNotas, LuzJugador, Inventario y Presencia.
+## Interactor (qué tengo delante), LectorNotas, LuzJugador (tecla y batería), Inventario y Presencia.
 
 @export var speed:float = 2.5
 @export var aceleracion: float = 10.0
@@ -17,10 +17,8 @@ var _bob_tiempo: float = 0.0
 @onready var lector: LectorEntrada = $LectorEntrada
 @onready var interactor: Interactor = $Interactor
 @onready var notas: LectorNotas = $LectorNotas
+@onready var presencia: Presencia = $Presencia
 
-const PresenciaScript := preload("res://player/presencia.gd")
-
-var presencia: Node
 var _punto_reinicio: Vector3
 
 
@@ -28,26 +26,8 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 	_punto_reinicio = global_position
-	presencia = PresenciaScript.new()
-	add_child(presencia)
-
 	presencia.aviso.connect(_on_presencia_aviso)
 	presencia.alcanzado.connect(_on_presencia_alcanzado)
-	luz.cambio_encendida.connect(_on_linterna_cambio)
-
-	if not luz.visible:
-		presencia.activar()
-
-
-func poner_linterna(encendida: bool) -> void:
-	luz.visible = encendida
-
-
-func _on_linterna_cambio(encendida: bool) -> void:
-	if encendida:
-		presencia.desactivar()
-	else:
-		presencia.activar()
 
 
 func _on_presencia_aviso() -> void:
@@ -58,7 +38,7 @@ func _on_presencia_alcanzado() -> void:
 	print("La presencia te alcanzó")
 	global_position = _punto_reinicio
 	velocity = Vector3.ZERO
-	poner_linterna(true)
+	luz.encender()
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -79,7 +59,8 @@ func _input(event: InputEvent) -> void:
 		interactor.interactuar()
 
 	if event.is_action_pressed("linterna"):
-		poner_linterna(not luz.visible)
+		luz.alternar()
+
 	
 	#TODO:PONER TECLA ASIGNADA
 	if event is InputEventMouseButton:

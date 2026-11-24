@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dogapnyxb5dbw"]
+
+[ext_resource type="Texture2D" uid="uid://b0pxxcyira54n" path="res://objetos/nota/nota.png" id="1_lkqjq"]
+[ext_resource type="Script" uid="uid://cp2bgmowlyi31" path="res://inventario/item.gd" id="1_m48xr"]
+
+[resource]
+script = ExtResource("1_m48xr")
+nombre = "Nota"
+icono = ExtResource("1_lkqjq")
+tipo = "nota"
+contenido = "Cae la noche.
+Algo despierta y te mira.
+Te alcanza.
+Y la salida se cierra."
+metadata/_custom_type_script = "uid://cp2bgmowlyi31"

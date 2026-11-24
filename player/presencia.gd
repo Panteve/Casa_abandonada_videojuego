@@ -1,4 +1,6 @@
+class_name Presencia
 extends Node
+## Se activa sola cuando la linterna está apagada y se desactiva cuando se enciende.
 
 signal aviso    
 signal alcanzado  
@@ -17,6 +19,23 @@ var _saturacion_base := 0.8
 func _ready() -> void:
 	set_process(false)    # dormida hasta que se apague la linterna
 	_buscar_entorno.call_deferred()
+	_conectar_linterna.call_deferred()
+
+
+func _conectar_linterna() -> void:
+	var luz := get_tree().get_first_node_in_group("linterna") as LuzJugador
+	if luz == null:
+		return
+	luz.cambio_encendida.connect(_on_linterna_cambio)
+	if not luz.encendida:
+		activar()
+
+
+func _on_linterna_cambio(encendida: bool) -> void:
+	if encendida:
+		desactivar()
+	else:
+		activar()
 
 
 func _buscar_entorno() -> void:
@@ -27,12 +46,10 @@ func _buscar_entorno() -> void:
 
 
 func activar() -> void:
-	print("Presencia: activada")
 	set_process(true)
 
 
 func desactivar() -> void:
-	print("Presencia: desactivada")
 	set_process(false)
 	segundos_a_oscuras = 0.0
 	_aviso_emitido = false
@@ -50,7 +67,6 @@ func _process(delta: float) -> void:
 		desactivar()
 		alcanzado.emit()
 		return
-
 	_aplicar_efectos()
 
 

@@ -12,6 +12,7 @@ signal cambio_encendida(encendida: bool)
 
 var bateria := 0.0                 # segundos que le quedan
 var energia_base := 1.0
+var encendida := false             # estado real de la linterna (visible es solo el efecto)
 
 func _ready() -> void:
 	position = Vector3(0.0, altura, 0.0)
@@ -19,22 +20,42 @@ func _ready() -> void:
 	spot_attenuation = 2.0
 	energia_base = light_energy
 	bateria = duracion
-	visibility_changed.connect(func() -> void: cambio_encendida.emit(visible))
+	encendida = visible
+
 
 func _process(delta: float) -> void:
-	if not visible:
+	if not encendida:
 		return                      # apagada: no gasta batería
 	bateria = maxf(0.0, bateria - delta)
 	if bateria <= 0.0:
-		visible = false             # se acabo la batería
+		apagar()                    # se acabo la batería
 	_actualizar()
 
 
-## no deja encender si no hay batería
-func alternar() -> void:
-	if bateria <= 0.0:
+## No enciende si no hay batería.
+func encender() -> void:
+	if encendida or bateria <= 0.0:
 		return
-	visible = not visible
+	_fijar(true)
+
+
+func apagar() -> void:
+	if not encendida:
+		return
+	_fijar(false)
+
+
+func alternar() -> void:
+	if encendida:
+		apagar()
+	else:
+		encender()
+
+
+func _fijar(valor: bool) -> void:
+	encendida = valor
+	visible = valor
+	cambio_encendida.emit(valor)
 
 
 ## cuando se recarga la pila se suman 60segs

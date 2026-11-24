@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bpobarmo8wx32"]
 
 [ext_resource type="PackedScene" uid="uid://hfqdhp0w3kva" path="res://assets/objetos/paper.glb" id="1_krmi2"]
-[ext_resource type="Script" path="res://objetos/primer_nota/nota_leible.gd" id="1_r3rr0"]
+[ext_resource type="Script" uid="uid://2fo0hkmi8k81" path="res://objetos/nota/nota_leible.gd" id="1_r3rr0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ajtct"]
 size = Vector3(7.584, 0.2, 5.762)
@@ -11,9 +11,12 @@ transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
 script = ExtResource("1_r3rr0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=124040184]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.15128, 31.950415, -33.891655)
+transform = Transform3D(0.9939038, 0, 0.11025072, 0, 1, 0, -0.11025072, 0, 0.9939038, -0.19894183, 1.521216, -1.2276918)
 shape = SubResource("BoxShape3D_ajtct")
 
 [node name="Sketchfab_Scene" parent="." unique_id=573660645 instance=ExtResource("1_krmi2")]
+
+[node name="Object_2" parent="Sketchfab_Scene/Sketchfab_model/ef143a20c7b24060971ea0d572fcbfca_obj_cleaner_materialmerger_gles" parent_id_path=PackedInt32Array(573660645, 1806266529) index="0" unique_id=1700197335]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.854689, -32.81685, -30.468435)
 
 [editable path="Sketchfab_Scene"]

@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk6luvrbwx171"
-path.s3tc="res://.godot/imported/old_simple_knife_2.png-fb58deb785648a7d09929df0f16055f4.s3tc.ctex"
+uid="uid://b3w3osixcebe"
+path.s3tc="res://.godot/imported/gabinet_0.png-5b51d8aac2e510e9831bf7b04e372f68.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "cda19a48d2b74c0bc592569b8b7ea9a5"
+"md5": "f6e81171e808af38806ea758242411dd"
 }
 
 [deps]
 
-source_file="res://assets/objetos/old_simple_knife_2.png"
-dest_files=["res://.godot/imported/old_simple_knife_2.png-fb58deb785648a7d09929df0f16055f4.s3tc.ctex"]
+source_file="res://assets/objetos/gabinet/gabinet_0.png"
+dest_files=["res://.godot/imported/gabinet_0.png-5b51d8aac2e510e9831bf7b04e372f68.s3tc.ctex"]
 
 [params]
 
@@ -25,12 +25,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://assets/objetos/old_simple_knife_2.png"
+roughness/mode=0
+roughness/src_normal=""
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

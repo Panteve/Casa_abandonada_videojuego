@@ -8,7 +8,9 @@ script = ExtResource("1_m48xr")
 nombre = "Nota"
 icono = ExtResource("1_lkqjq")
 tipo = "nota"
-contenido = "Cae la noche.
+contenido = "Lo que buscas no se deja ver con luz.
+
+Cae la noche.
 Algo despierta y te mira.
 Te alcanza.
 Y la salida se cierra."

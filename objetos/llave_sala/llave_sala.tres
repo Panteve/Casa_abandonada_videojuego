@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://cyb1856b0icqb"]
+
+[ext_resource type="Texture2D" uid="uid://bd51aej8yl6cs" path="res://objetos/llave_cocina/2gHoW6eBr02alpuodlWMyThnquJ-mobile.jpg" id="1_1hdv7"]
+[ext_resource type="Script" uid="uid://cp2bgmowlyi31" path="res://inventario/item.gd" id="1_tlndi"]
+
+[resource]
+script = ExtResource("1_tlndi")
+nombre = "Llave"
+icono = ExtResource("1_1hdv7")
+tipo = "llave"
+metadata/_custom_type_script = "uid://cp2bgmowlyi31"

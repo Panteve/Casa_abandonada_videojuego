@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b764ssy2lodsv"]
+
+[ext_resource type="Script" uid="uid://bapdglrow05t1" path="res://mundo/panel_simbolos/boton_simbolo.gd" id="1_boton"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_boton"]
+size = Vector2(0.2, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_boton"]
+size = Vector3(0.2, 0.2, 0.08)
+
+[node name="BotonSimbolo" type="Area3D" unique_id=286076108]
+script = ExtResource("1_boton")
+
+[node name="Malla" type="MeshInstance3D" parent="." unique_id=1106314153]
+mesh = SubResource("QuadMesh_boton")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=893299544]
+shape = SubResource("BoxShape3D_boton")

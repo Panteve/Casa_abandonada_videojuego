@@ -20,21 +20,17 @@ func puede_abrir_con(item: Item) -> bool:
 
 
 func usar(interactor: Interactor) -> void:
+	if abierta:
+		return
 	var item := interactor.item_seleccionado()
 	if puede_abrir_con(item):
+		interactor.consumir_seleccionado()
 		abrir()
-	elif llave_requerida == null:
-		print("Esta puerta no se puede abrir")
-	elif item == null:
-		print("Esta puerta está cerrada con llave")
-	else:
-		print("Este objeto no abre esta puerta")
 
 
 func abrir() -> void:
 	if abierta:
 		return
-
 	abierta = true
 
 	var tween := create_tween()

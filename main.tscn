@@ -3,18 +3,20 @@
 [ext_resource type="PackedScene" uid="uid://bf5q4ybx5dgwy" path="res://player/player.tscn" id="1_pjrb6"]
 [ext_resource type="Script" uid="uid://ds2ag7tp6dxxp" path="res://mundo/visible.gd" id="1_qtrhv"]
 [ext_resource type="PackedScene" uid="uid://b86io7gty462v" path="res://mundo/Escenario.tscn" id="2_wbnyf"]
-[ext_resource type="PackedScene" uid="uid://cktw76ssdhlfc" path="res://objetos/llave_primer_nivel/llave_primer_nivel.tscn" id="3_5kcm4"]
+[ext_resource type="PackedScene" uid="uid://cktw76ssdhlfc" path="res://objetos/llave/llave.tscn" id="3_5kcm4"]
 [ext_resource type="PackedScene" uid="uid://bpobarmo8wx32" path="res://objetos/nota/papel.tscn" id="4_cmtxc"]
 [ext_resource type="Resource" uid="uid://cjx037krm2gpp" path="res://objetos/nota_cocina/nota.tres" id="5_tv7ag"]
 [ext_resource type="PackedScene" uid="uid://bso8co0lx5c73" path="res://mundo/puerta/puerta.tscn" id="7_o80qs"]
 [ext_resource type="PackedScene" uid="uid://ddxflfrrbph8q" path="res://ui/menu_pausa/pausa.tscn" id="8_0h8po"]
-[ext_resource type="Resource" uid="uid://bk4b28daoofkf" path="res://objetos/llave_primer_nivel/llave_primer_nivel.tres" id="9_llave"]
+[ext_resource type="Resource" uid="uid://bk4b28daoofkf" path="res://objetos/llave_cocina/llave_primer_nivel.tres" id="9_llave"]
 [ext_resource type="PackedScene" uid="uid://ecvculwpm1qv" path="res://mundo/comoda/comoda.tscn" id="10_4c57u"]
 [ext_resource type="Texture2D" uid="uid://cqfol0swf8pq8" path="res://assets/texturas/simbolo_ojo.png" id="11_efxa6"]
+[ext_resource type="PackedScene" path="res://mundo/panel_simbolos/panel_simbolos.tscn" id="12_cegan"]
 [ext_resource type="Script" uid="uid://blbc1uspgt1fw" path="res://mundo/simbolos.gd" id="12_vivmo"]
 [ext_resource type="Texture2D" uid="uid://d1ycq350df5ce" path="res://assets/texturas/simbolo_luna.png" id="12_w48qg"]
 [ext_resource type="Texture2D" uid="uid://ck52ltpqgrrwv" path="res://assets/texturas/simbolo_puerta.png" id="13_vivmo"]
 [ext_resource type="Texture2D" uid="uid://cvvowsup6tx5i" path="res://assets/texturas/simbolo_mano.png" id="14_2cqfq"]
+[ext_resource type="Resource" uid="uid://cyb1856b0icqb" path="res://objetos/llave_sala/llave_sala.tres" id="14_82xsv"]
 [ext_resource type="PackedScene" uid="uid://cfo555l15vieg" path="res://objetos/cuchillo/cuchillo_cocina.tscn" id="16_yaehf"]
 [ext_resource type="PackedScene" uid="uid://caecvafliepjn" path="res://mundo/gabinete/gabinete_cocina.tscn" id="17_074og"]
 [ext_resource type="Resource" uid="uid://dogapnyxb5dbw" path="res://objetos/nota_comedor/nota.tres" id="18_074og"]
@@ -93,11 +95,15 @@ transform = Transform3D(1.05, 0, 0, 0, 1, 0, 0, 0, 1, 10.422133, 0, -6.009829)
 
 [node name="Sala" type="Node3D" parent="." unique_id=101097117]
 
+[node name="PanelSimbolos" parent="Sala" unique_id=701168522 instance=ExtResource("12_cegan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.119179, 1.2891825, -5.925)
+
 [node name="Comoda_comedor" parent="Sala" unique_id=295224761 instance=ExtResource("10_4c57u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1234615, 4.412752e-06, -5.6688333)
 
 [node name="Puerta_comedor" parent="Sala" unique_id=111857257 instance=ExtResource("7_o80qs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6242633, 0.046892285, -5.994891)
+llave_requerida = ExtResource("14_82xsv")
 
 [node name="Simbolo_ojo" type="MeshInstance3D" parent="Sala" unique_id=1717636221 groups=["simbolos"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8195047, 2.241693, -5.93599)
@@ -107,7 +113,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_thsib")
 script = ExtResource("12_vivmo")
 
 [node name="Simbolo_luna" type="MeshInstance3D" parent="Sala" unique_id=1986708739 groups=["simbolos"]]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.022019029, 1.5060662, -1.7437023)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.006931573, 1.5060662, -1.7437023)
 visible = false
 mesh = SubResource("QuadMesh_hchaj")
 surface_material_override/0 = SubResource("StandardMaterial3D_r6318")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bd51aej8yl6cs"
-path="res://.godot/imported/2gHoW6eBr02alpuodlWMyThnquJ-mobile.jpg-1f4ab818767e949271b01c5b1cd6551a.ctex"
+path="res://.godot/imported/2gHoW6eBr02alpuodlWMyThnquJ-mobile.jpg-14531c3c524b955b6614b7a2cbcbb990.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objetos/llave_primer_nivel/2gHoW6eBr02alpuodlWMyThnquJ-mobile.jpg"
-dest_files=["res://.godot/imported/2gHoW6eBr02alpuodlWMyThnquJ-mobile.jpg-1f4ab818767e949271b01c5b1cd6551a.ctex"]
+source_file="res://objetos/llave_cocina/2gHoW6eBr02alpuodlWMyThnquJ-mobile.jpg"
+dest_files=["res://.godot/imported/2gHoW6eBr02alpuodlWMyThnquJ-mobile.jpg-14531c3c524b955b6614b7a2cbcbb990.ctex"]
 
 [params]
 

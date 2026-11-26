@@ -5,6 +5,7 @@ extends Node
 @onready var rayo: RayCast3D = $"../Head/Camera3D/RayCast3D"
 @onready var inventario: Inventario = $"../Inventario"
 @onready var notas: LectorNotas = $"../LectorNotas"
+@onready var luz: LuzJugador = $"../Head/Camera3D/SpotLight3D"
 
 
 func _ready() -> void:

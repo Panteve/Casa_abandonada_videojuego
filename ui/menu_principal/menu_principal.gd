@@ -1,7 +1,6 @@
 extends Control
 
-## escena que se carga al pulsar JUGAR 
-@export_file("*.tscn") var escena_juego := "res://main.tscn"
+@export_file("*.tscn") var escena_juego := "res://main/Main.tscn"
 
 @onready var menu: Control = $Menu
 @onready var panel_opciones: Control = $PanelOpciones
@@ -12,9 +11,11 @@ extends Control
 @onready var check_pantalla: CheckBox = $PanelOpciones/Columna/PantallaCompleta
 @onready var boton_volver: Button = $PanelOpciones/Columna/Volver
 
-
 func _ready() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE   # esto es para q el juego capture el mouse
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE   # el juego captura el mouse
+
+	for boton in [boton_jugar, boton_opciones, boton_salir, boton_volver]:
+		boton.focus_mode = Control.FOCUS_NONE
 
 	boton_jugar.pressed.connect(_on_jugar)
 	boton_opciones.pressed.connect(_mostrar_opciones.bind(true))
@@ -25,15 +26,13 @@ func _ready() -> void:
 
 	slider_volumen.value = db_to_linear(AudioServer.get_bus_volume_db(0))
 	check_pantalla.button_pressed = DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN
-	boton_jugar.grab_focus()
 
 func _on_jugar() -> void:
-	get_tree().change_scene_to_file(escena_juego)
+	get_tree().change_scene_to_file("res://main.tscn")
 
 func _mostrar_opciones(mostrar: bool) -> void:
 	menu.visible = not mostrar
 	panel_opciones.visible = mostrar
-	(boton_volver if mostrar else boton_opciones).grab_focus()
 
 func _on_volumen(valor: float) -> void:
 	AudioServer.set_bus_volume_db(0, linear_to_db(valor))

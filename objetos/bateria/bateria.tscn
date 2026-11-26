@@ -1,0 +1,29 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://objetos/bateria_recarga.gd" id="1_bateria"]
+
+[sub_resource type="StandardMaterial3D" id="Mat_pila"]
+albedo_color = Color(0.721569, 0.52549, 0.0431373, 1)
+metallic = 0.6
+roughness = 0.35
+emission_enabled = true
+emission = Color(0.721569, 0.52549, 0.0431373, 1)
+emission_energy_multiplier = 0.35
+
+[sub_resource type="CylinderMesh" id="Malla_pila"]
+material = SubResource("Mat_pila")
+top_radius = 0.04
+bottom_radius = 0.04
+height = 0.16
+
+[sub_resource type="SphereShape3D" id="Forma_pila"]
+radius = 0.18
+
+[node name="Bateria" type="StaticBody3D"]
+script = ExtResource("1_bateria")
+
+[node name="Malla" type="MeshInstance3D" parent="."]
+mesh = SubResource("Malla_pila")
+
+[node name="Forma" type="CollisionShape3D" parent="."]
+shape = SubResource("Forma_pila")

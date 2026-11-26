@@ -22,10 +22,6 @@ func consumir_seleccionado() -> void:
 
 func interactuar() -> void:
 	var o := objetivo()
-	print("miro: ", o)
-	if o != null:
-		print("tiene interactuar: ", o.has_method("interactuar"))
-		print("bateria: ", luz.bateria, " de ", luz.duracion)
 	if o != null and o.has_method("interactuar"):
 		o.call("interactuar", self)
 	elif o != null and o.has_method("leer"):

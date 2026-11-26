@@ -18,6 +18,16 @@ var _bob_tiempo: float = 0.0
 @onready var interactor: Interactor = $Interactor
 @onready var notas: LectorNotas = $LectorNotas
 @onready var presencia: Presencia = $Presencia
+@onready var pasos: AudioStreamPlayer = $Pasos
+
+
+func _actualizar_pasos() -> void:
+	var caminando := is_on_floor() and Vector2(velocity.x, velocity.z).length() > 0.5
+	if caminando and not pasos.playing:
+		pasos.play()
+	elif not caminando and pasos.playing:
+		pasos.stop()
+
 
 var _punto_reinicio: Vector3
 
@@ -67,6 +77,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = 0
 		velocity.z = 0
 		move_and_slide()
+		_actualizar_pasos()
 		return
 	
 	if not is_on_floor():
@@ -81,6 +92,7 @@ func _physics_process(delta: float) -> void:
 	velocity.z = move_toward(velocity.z, objetivo.z, ritmo * delta)
 
 	move_and_slide()
+	_actualizar_pasos()
 	_bob(delta)
 
 

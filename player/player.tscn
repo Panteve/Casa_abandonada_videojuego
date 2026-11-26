@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://dorktw011if4y" path="res://player/interactor.gd" id="9_interactor"]
 [ext_resource type="Script" uid="uid://cwucftlflt6i1" path="res://player/lector_notas.gd" id="10_notas"]
 [ext_resource type="Script" uid="uid://c4k4lfa6a550u" path="res://presencia/presencia.gd" id="11_presencia"]
+[ext_resource type="AudioStream" uid="uid://dqmvq7r502v68" path="res://assets/Audios/koiroylers-perfect-footsteps-351921.mp3" id="12_ebec5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0kdyo"]
 radius = 0.36
@@ -63,3 +64,6 @@ script = ExtResource("9_interactor")
 [node name="Mira" parent="." unique_id=596184626 instance=ExtResource("7_mira")]
 
 [node name="BateriaHUD" parent="." unique_id=1425343901 instance=ExtResource("8_rgyib")]
+
+[node name="Pasos" type="AudioStreamPlayer" parent="." unique_id=269540610]
+stream = ExtResource("12_ebec5")

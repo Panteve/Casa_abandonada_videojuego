@@ -17,6 +17,7 @@ extends Node3D
 @onready var door3: MeshInstance3D = $Abandoned_Apartment_Floor_01/ARCH_Door_Closet
 @onready var door4: MeshInstance3D = $Abandoned_Apartment_Floor_01/ARCH_Door_HallDoor
 @onready var door5: MeshInstance3D = $Abandoned_Apartment_Floor_01/ARCH_Door_Basement
+@onready var forniture: MeshInstance3D = $Abandoned_Apartment_Floor_01/FURN_Corridor_CoatHooks
 
 
 
@@ -37,3 +38,4 @@ func _ready():
 	door3.visible = false
 	door4.visible = false
 	door5.visible = false
+	forniture.visible = false

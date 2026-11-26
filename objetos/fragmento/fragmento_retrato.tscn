@@ -3,13 +3,18 @@
 [sub_resource type="BoxMesh" id="BoxMesh_uxa2c"]
 size = Vector3(1, 1, 0.033447266)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a6jrf"]
+albedo_color = Color(1, 1, 0, 1)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_hchaj"]
 size = Vector3(1, 1, 0.033)
 
 [node name="FragmentoRetrato" type="Area3D" unique_id=389515303]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=824853346]
 mesh = SubResource("BoxMesh_uxa2c")
+surface_material_override/0 = SubResource("StandardMaterial3D_a6jrf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1392174965]
 shape = SubResource("BoxShape3D_hchaj")

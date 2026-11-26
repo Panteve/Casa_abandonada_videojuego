@@ -1,6 +1,6 @@
 
 class_name CuadroRetrato
-extends StaticBody3D
+extends Area3D
 
 signal fragmento_colocado(id: int)
 signal retrato_completado

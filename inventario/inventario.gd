@@ -33,3 +33,13 @@ func quitar(indice: int) -> Item:
 func seleccionar(indice: int) -> void:
 	seleccionado = clampi(indice, 0, TAMANO - 1)
 	cambio_seleccion.emit(seleccionado)
+	
+func buscar_fragmento(id: int) -> int:
+	for i in range(TAMANO):
+		var item := slots[i]
+
+		if item != null:
+			if item.tipo == "fragmento" and item.id_fragmento == id:
+				return i
+
+	return -1

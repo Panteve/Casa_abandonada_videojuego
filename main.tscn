@@ -136,3 +136,8 @@ script = ExtResource("12_vivmo")
 [node name="Nota sala" parent="Sala" unique_id=546005525 instance=ExtResource("4_cmtxc")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 2.0499232, 0.69343233, -2.196663)
 item = ExtResource("18_074og")
+
+[node name="Corredor" type="Node3D" parent="." unique_id=564122292]
+
+[node name="Puerta" parent="Corredor" unique_id=316208557 instance=ExtResource("7_o80qs")]
+transform = Transform3D(-4.8082526e-08, 0, 1, 0, 1, 0, -1.1, 0, -4.371139e-08, 13.995482, 0.025653094, -7.4496884)

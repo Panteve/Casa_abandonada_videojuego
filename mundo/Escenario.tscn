@@ -511,181 +511,191 @@ shadow_mesh = SubResource("ArrayMesh_cqn1n")
 
 [node name="Abandoned_Apartment_Floor_01" parent="." unique_id=1975250841 instance=ExtResource("1_7ad2w")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_Corridor" parent_id_path=PackedInt32Array(1975250841, 532085781) index="0" unique_id=1006552936]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_Corridor" parent_id_path=PackedInt32Array(1975250841, 1388356539) index="0" unique_id=1006552936]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_Corridor/StaticBody3D" unique_id=98147662]
 shape = SubResource("ConcavePolygonShape3D_xedgu")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_Living" parent_id_path=PackedInt32Array(1975250841, 30409950) index="0" unique_id=706412783]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_Living" parent_id_path=PackedInt32Array(1975250841, 1142056384) index="0" unique_id=706412783]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_Living/StaticBody3D" unique_id=1329143877]
 shape = SubResource("ConcavePolygonShape3D_6a1ef")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_Kitchen" parent_id_path=PackedInt32Array(1975250841, 1372010540) index="0" unique_id=1471323313]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_Kitchen" parent_id_path=PackedInt32Array(1975250841, 1487268375) index="0" unique_id=1471323313]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_Kitchen/StaticBody3D" unique_id=1556301690]
 shape = SubResource("ConcavePolygonShape3D_c5t56")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_Bedroom" parent_id_path=PackedInt32Array(1975250841, 1223929859) index="0" unique_id=532273621]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_Bedroom" parent_id_path=PackedInt32Array(1975250841, 1580179961) index="0" unique_id=532273621]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_Bedroom/StaticBody3D" unique_id=353423297]
 shape = SubResource("ConcavePolygonShape3D_v6l3d")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_Bathroom" parent_id_path=PackedInt32Array(1975250841, 792323766) index="0" unique_id=1806871602]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_Bathroom" parent_id_path=PackedInt32Array(1975250841, 937617652) index="0" unique_id=1806871602]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_Bathroom/StaticBody3D" unique_id=960582473]
 shape = SubResource("ConcavePolygonShape3D_82dbl")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_Utility" parent_id_path=PackedInt32Array(1975250841, 917808516) index="0" unique_id=1072913708]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_Utility" parent_id_path=PackedInt32Array(1975250841, 1360851626) index="0" unique_id=1072913708]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_Utility/StaticBody3D" unique_id=2139110778]
 shape = SubResource("ConcavePolygonShape3D_oydqw")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_StairHall" parent_id_path=PackedInt32Array(1975250841, 1080223429) index="0" unique_id=2088784546]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_StairHall" parent_id_path=PackedInt32Array(1975250841, 1975335806) index="0" unique_id=2088784546]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_StairHall/StaticBody3D" unique_id=209189790]
 shape = SubResource("ConcavePolygonShape3D_4sdn5")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_DoorStep" parent_id_path=PackedInt32Array(1975250841, 1114755469) index="0" unique_id=1871188900]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_DoorStep" parent_id_path=PackedInt32Array(1975250841, 214761768) index="0" unique_id=1871188900]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_DoorStep/StaticBody3D" unique_id=1306158002]
 shape = SubResource("ConcavePolygonShape3D_ftth4")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_SealedChase" parent_id_path=PackedInt32Array(1975250841, 1551396455) index="0" unique_id=814484615]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_SealedChase" parent_id_path=PackedInt32Array(1975250841, 887289499) index="0" unique_id=814484615]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Floor_SealedChase/StaticBody3D" unique_id=949689982]
 shape = SubResource("ConcavePolygonShape3D_ysiew")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_S_Living" parent_id_path=PackedInt32Array(1975250841, 1139240291) index="0" unique_id=1914109211]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_S_Living" parent_id_path=PackedInt32Array(1975250841, 1608124774) index="0" unique_id=1914109211]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_S_Living/StaticBody3D" unique_id=79388146]
 shape = SubResource("ConcavePolygonShape3D_d72rt")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_S_Kitchen" parent_id_path=PackedInt32Array(1975250841, 1591038959) index="0" unique_id=1533132559]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_S_Kitchen" parent_id_path=PackedInt32Array(1975250841, 1037348492) index="0" unique_id=1533132559]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_S_Kitchen/StaticBody3D" unique_id=1716530467]
 shape = SubResource("ConcavePolygonShape3D_knw6f")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_S_Hall" parent_id_path=PackedInt32Array(1975250841, 133801789) index="0" unique_id=980403150]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_S_Hall" parent_id_path=PackedInt32Array(1975250841, 632601904) index="0" unique_id=980403150]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_S_Hall/StaticBody3D" unique_id=1784922080]
 shape = SubResource("ConcavePolygonShape3D_sn5wv")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_N_Bed" parent_id_path=PackedInt32Array(1975250841, 1434255581) index="0" unique_id=1675066920]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_N_Bed" parent_id_path=PackedInt32Array(1975250841, 1518349873) index="0" unique_id=1675066920]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_N_Bed/StaticBody3D" unique_id=468208729]
 shape = SubResource("ConcavePolygonShape3D_ane14")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_N_Bath" parent_id_path=PackedInt32Array(1975250841, 1182170411) index="0" unique_id=780488676]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_N_Bath" parent_id_path=PackedInt32Array(1975250841, 1521264609) index="0" unique_id=780488676]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_N_Bath/StaticBody3D" unique_id=154567281]
 shape = SubResource("ConcavePolygonShape3D_mj03m")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_N_Closet" parent_id_path=PackedInt32Array(1975250841, 1027339211) index="0" unique_id=620571504]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_N_Closet" parent_id_path=PackedInt32Array(1975250841, 1240056950) index="0" unique_id=620571504]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_N_Closet/StaticBody3D" unique_id=253920154]
 shape = SubResource("ConcavePolygonShape3D_l06nk")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_N_Hall" parent_id_path=PackedInt32Array(1975250841, 1428534500) index="0" unique_id=902603701]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_N_Hall" parent_id_path=PackedInt32Array(1975250841, 842861265) index="0" unique_id=902603701]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_N_Hall/StaticBody3D" unique_id=1663622898]
 shape = SubResource("ConcavePolygonShape3D_tmgay")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_W_Living" parent_id_path=PackedInt32Array(1975250841, 428067382) index="0" unique_id=9197798]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_W_Living" parent_id_path=PackedInt32Array(1975250841, 1036015970) index="0" unique_id=9197798]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_W_Living/StaticBody3D" unique_id=1411316041]
 shape = SubResource("ConcavePolygonShape3D_pevjm")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_W_Corridor" parent_id_path=PackedInt32Array(1975250841, 602798057) index="0" unique_id=2114793796]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_W_Corridor" parent_id_path=PackedInt32Array(1975250841, 277702574) index="0" unique_id=2114793796]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_W_Corridor/StaticBody3D" unique_id=977768415]
 shape = SubResource("ConcavePolygonShape3D_pe5h0")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_W_Bed" parent_id_path=PackedInt32Array(1975250841, 5702248) index="0" unique_id=879410101]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_W_Bed" parent_id_path=PackedInt32Array(1975250841, 1466211079) index="0" unique_id=879410101]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_W_Bed/StaticBody3D" unique_id=1217684278]
 shape = SubResource("ConcavePolygonShape3D_xwsvc")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_E_Hall" parent_id_path=PackedInt32Array(1975250841, 1946364599) index="0" unique_id=1547198581]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_E_Hall" parent_id_path=PackedInt32Array(1975250841, 671582033) index="0" unique_id=1547198581]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Ext_E_Hall/StaticBody3D" unique_id=1245407750]
 shape = SubResource("ConcavePolygonShape3D_lef5p")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_y6_Living" parent_id_path=PackedInt32Array(1975250841, 833144750) index="0" unique_id=1877826698]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_y6_Living" parent_id_path=PackedInt32Array(1975250841, 385901246) index="0" unique_id=1877826698]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_y6_Living/StaticBody3D" unique_id=1635295419]
 shape = SubResource("ConcavePolygonShape3D_cwnmb")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_y6_Kitchen" parent_id_path=PackedInt32Array(1975250841, 1222792707) index="0" unique_id=1684071432]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_y6_Kitchen" parent_id_path=PackedInt32Array(1975250841, 467330548) index="0" unique_id=1684071432]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_y6_Kitchen/StaticBody3D" unique_id=1905140707]
 shape = SubResource("ConcavePolygonShape3D_bujae")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_y8_Bed" parent_id_path=PackedInt32Array(1975250841, 2062564281) index="0" unique_id=33652792]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_y8_Bed" parent_id_path=PackedInt32Array(1975250841, 372665615) index="0" unique_id=33652792]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_y8_Bed/StaticBody3D" unique_id=789505457]
 shape = SubResource("ConcavePolygonShape3D_rdc1a")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_y8_Bath" parent_id_path=PackedInt32Array(1975250841, 1102835902) index="0" unique_id=840344954]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_y8_Bath" parent_id_path=PackedInt32Array(1975250841, 1276689086) index="0" unique_id=840344954]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_y8_Bath/StaticBody3D" unique_id=1318643101]
 shape = SubResource("ConcavePolygonShape3D_t1u6d")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_y8_Closet" parent_id_path=PackedInt32Array(1975250841, 759204374) index="0" unique_id=1186311543]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_y8_Closet" parent_id_path=PackedInt32Array(1975250841, 651406720) index="0" unique_id=1186311543]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_y8_Closet/StaticBody3D" unique_id=2013325104]
 shape = SubResource("ConcavePolygonShape3D_awm0o")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_x9" parent_id_path=PackedInt32Array(1975250841, 1233756) index="0" unique_id=864536011]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_x9" parent_id_path=PackedInt32Array(1975250841, 1149576173) index="0" unique_id=864536011]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_x9/StaticBody3D" unique_id=987701725]
 shape = SubResource("ConcavePolygonShape3D_suit3")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_x14_South" parent_id_path=PackedInt32Array(1975250841, 294224604) index="0" unique_id=1084223026]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_x14_South" parent_id_path=PackedInt32Array(1975250841, 1081106476) index="0" unique_id=1084223026]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_x14_South/StaticBody3D" unique_id=221721694]
 shape = SubResource("ConcavePolygonShape3D_yo231")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_x14_Corr" parent_id_path=PackedInt32Array(1975250841, 730317540) index="0" unique_id=2074833538]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_x14_Corr" parent_id_path=PackedInt32Array(1975250841, 1370866097) index="0" unique_id=2074833538]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_x14_Corr/StaticBody3D" unique_id=1852657385]
 shape = SubResource("ConcavePolygonShape3D_y7i4j")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_x14_North" parent_id_path=PackedInt32Array(1975250841, 1289654768) index="0" unique_id=187423011]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_x14_North" parent_id_path=PackedInt32Array(1975250841, 183629944) index="0" unique_id=187423011]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_x14_North/StaticBody3D" unique_id=966343200]
 shape = SubResource("ConcavePolygonShape3D_538yj")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_x8" parent_id_path=PackedInt32Array(1975250841, 154158865) index="0" unique_id=135126113]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_x8" parent_id_path=PackedInt32Array(1975250841, 1046715194) index="0" unique_id=135126113]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_x8/StaticBody3D" unique_id=1128368991]
 shape = SubResource("ConcavePolygonShape3D_qjdmb")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_x12" parent_id_path=PackedInt32Array(1975250841, 454451362) index="0" unique_id=1973419493]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_x12" parent_id_path=PackedInt32Array(1975250841, 750296571) index="0" unique_id=1973419493]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_x12/StaticBody3D" unique_id=1126495745]
 shape = SubResource("ConcavePolygonShape3D_vahkx")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_y11" parent_id_path=PackedInt32Array(1975250841, 1710451954) index="0" unique_id=224909069]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_y11" parent_id_path=PackedInt32Array(1975250841, 1914603768) index="0" unique_id=224909069]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Wall_Int_y11/StaticBody3D" unique_id=1643379656]
 shape = SubResource("ConcavePolygonShape3D_5nhdr")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Door_Entrance" parent_id_path=PackedInt32Array(1975250841, 292370117) index="0" unique_id=1068987840]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Door_Entrance" parent_id_path=PackedInt32Array(1975250841, 1681284537) index="0" unique_id=1068987840]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Door_Entrance/StaticBody3D" unique_id=1092192878]
 shape = SubResource("ConcavePolygonShape3D_gymtn")
 
-[node name="ARCH_Door_Living" parent="Abandoned_Apartment_Floor_01" index="33" unique_id=128729106]
+[node name="ARCH_Door_Living" parent="Abandoned_Apartment_Floor_01" index="33" unique_id=1894031137]
 visible = false
 
-[node name="ARCH_Door_Kitchen" parent="Abandoned_Apartment_Floor_01" index="34" unique_id=1663131442]
+[node name="ARCH_Door_Kitchen" parent="Abandoned_Apartment_Floor_01" index="34" unique_id=1619249722]
 visible = false
 
-[node name="ARCH_Door_Bedroom" parent="Abandoned_Apartment_Floor_01" index="35" unique_id=233986251]
+[node name="ARCH_Door_Bedroom" parent="Abandoned_Apartment_Floor_01" index="35" unique_id=1433726089]
 transform = Transform3D(-0.76604444, 0, 0.64278764, 0, 1, 0, -0.64278764, 0, -0.76604444, 7.44, 0, -8)
+visible = false
 
-[node name="ARCH_Door_Basement" parent="Abandoned_Apartment_Floor_01" index="39" unique_id=286031821]
+[node name="ARCH_Door_Bath" parent="Abandoned_Apartment_Floor_01" index="36" unique_id=1922415513]
+visible = false
+
+[node name="ARCH_Door_Closet" parent="Abandoned_Apartment_Floor_01" index="37" unique_id=1742445092]
+visible = false
+
+[node name="ARCH_Door_HallDoor" parent="Abandoned_Apartment_Floor_01" index="38" unique_id=2113151935]
+visible = false
+
+[node name="ARCH_Door_Basement" parent="Abandoned_Apartment_Floor_01" index="39" unique_id=1531329929]
 transform = Transform3D(-0.99999714, 0, 0.002367049, 0, 1, 0, -0.002367049, 0, -0.99999714, 16.46, -2.8, -1.1332661)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Door_Basement" index="0" unique_id=1584968381]
@@ -693,62 +703,62 @@ transform = Transform3D(-0.99999714, 0, 0.002367049, 0, 1, 0, -0.002367049, 0, -
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Door_Basement/StaticBody3D" unique_id=2093953203]
 shape = SubResource("ConcavePolygonShape3D_gygy8")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Entrance" parent_id_path=PackedInt32Array(1975250841, 6039623) index="0" unique_id=399412824]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Entrance" parent_id_path=PackedInt32Array(1975250841, 1225542143) index="0" unique_id=399412824]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Entrance/StaticBody3D" unique_id=1564259574]
 shape = SubResource("ConcavePolygonShape3D_e1rtg")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Living" parent_id_path=PackedInt32Array(1975250841, 1015736197) index="0" unique_id=728152174]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Living" parent_id_path=PackedInt32Array(1975250841, 65285088) index="0" unique_id=728152174]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Living/StaticBody3D" unique_id=981499271]
 shape = SubResource("ConcavePolygonShape3D_pempj")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Kitchen" parent_id_path=PackedInt32Array(1975250841, 19278915) index="0" unique_id=1933306066]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Kitchen" parent_id_path=PackedInt32Array(1975250841, 1700058834) index="0" unique_id=1933306066]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Kitchen/StaticBody3D" unique_id=402005734]
 shape = SubResource("ConcavePolygonShape3D_u6oab")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Bedroom" parent_id_path=PackedInt32Array(1975250841, 1799615700) index="0" unique_id=851433953]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Bedroom" parent_id_path=PackedInt32Array(1975250841, 1588560960) index="0" unique_id=851433953]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Bedroom/StaticBody3D" unique_id=1651545992]
 shape = SubResource("ConcavePolygonShape3D_f3p8d")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Bath" parent_id_path=PackedInt32Array(1975250841, 1774646235) index="0" unique_id=2009617513]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Bath" parent_id_path=PackedInt32Array(1975250841, 252827634) index="0" unique_id=2009617513]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Bath/StaticBody3D" unique_id=1217421575]
 shape = SubResource("ConcavePolygonShape3D_0hr0x")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Closet" parent_id_path=PackedInt32Array(1975250841, 1418606037) index="0" unique_id=1041323151]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Closet" parent_id_path=PackedInt32Array(1975250841, 424808568) index="0" unique_id=1041323151]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Closet/StaticBody3D" unique_id=1926711065]
 shape = SubResource("ConcavePolygonShape3D_wjf5o")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_HallDoor" parent_id_path=PackedInt32Array(1975250841, 1462343549) index="0" unique_id=1625840815]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_HallDoor" parent_id_path=PackedInt32Array(1975250841, 1648451721) index="0" unique_id=1625840815]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_HallDoor/StaticBody3D" unique_id=348818980]
 shape = SubResource("ConcavePolygonShape3D_w4lua")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Basement" parent_id_path=PackedInt32Array(1975250841, 1004784516) index="0" unique_id=1639530798]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Basement" parent_id_path=PackedInt32Array(1975250841, 315110783) index="0" unique_id=1639530798]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_Basement/StaticBody3D" unique_id=914305797]
 shape = SubResource("ConcavePolygonShape3D_ohmsy")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_LivingKitchen" parent_id_path=PackedInt32Array(1975250841, 1593382296) index="0" unique_id=1309778231]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_LivingKitchen" parent_id_path=PackedInt32Array(1975250841, 1812892623) index="0" unique_id=1309778231]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Frame_LivingKitchen/StaticBody3D" unique_id=1069519840]
 shape = SubResource("ConcavePolygonShape3D_72v7g")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_S_Living_A" parent_id_path=PackedInt32Array(1975250841, 207055791) index="0" unique_id=1178226091]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_S_Living_A" parent_id_path=PackedInt32Array(1975250841, 428171997) index="0" unique_id=1178226091]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_S_Living_A/StaticBody3D" unique_id=1098178089]
 shape = SubResource("ConcavePolygonShape3D_52o5s")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_S_Living_B" parent_id_path=PackedInt32Array(1975250841, 1388286007) index="0" unique_id=776147533]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_S_Living_B" parent_id_path=PackedInt32Array(1975250841, 916862673) index="0" unique_id=776147533]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_S_Living_B/StaticBody3D" unique_id=699213613]
 shape = SubResource("ConcavePolygonShape3D_u44oc")
 
-[node name="ARCH_Window_S_Kitchen" parent="Abandoned_Apartment_Floor_01" index="51" unique_id=1189074906]
+[node name="ARCH_Window_S_Kitchen" parent="Abandoned_Apartment_Floor_01" index="51" unique_id=405277858]
 cast_shadow = 0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_S_Kitchen" index="0" unique_id=2013447983]
@@ -756,490 +766,490 @@ cast_shadow = 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_S_Kitchen/StaticBody3D" unique_id=165234258]
 shape = SubResource("ConcavePolygonShape3D_t3t6x")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_N_Bed_A" parent_id_path=PackedInt32Array(1975250841, 1287122922) index="0" unique_id=106643693]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_N_Bed_A" parent_id_path=PackedInt32Array(1975250841, 2131613290) index="0" unique_id=106643693]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_N_Bed_A/StaticBody3D" unique_id=628799641]
 shape = SubResource("ConcavePolygonShape3D_npccn")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_N_Bed_B" parent_id_path=PackedInt32Array(1975250841, 1946350154) index="0" unique_id=95879393]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_N_Bed_B" parent_id_path=PackedInt32Array(1975250841, 443033923) index="0" unique_id=95879393]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_N_Bed_B/StaticBody3D" unique_id=962396252]
 shape = SubResource("ConcavePolygonShape3D_1vyvw")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_N_Bath" parent_id_path=PackedInt32Array(1975250841, 253449514) index="0" unique_id=1068578409]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_N_Bath" parent_id_path=PackedInt32Array(1975250841, 811647878) index="0" unique_id=1068578409]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_N_Bath/StaticBody3D" unique_id=2059972388]
 shape = SubResource("ConcavePolygonShape3D_h6wfn")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_N_Hall" parent_id_path=PackedInt32Array(1975250841, 1181656876) index="0" unique_id=1293365804]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_N_Hall" parent_id_path=PackedInt32Array(1975250841, 399002795) index="0" unique_id=1293365804]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_N_Hall/StaticBody3D" unique_id=1515852513]
 shape = SubResource("ConcavePolygonShape3D_qos17")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_W_Living" parent_id_path=PackedInt32Array(1975250841, 273962543) index="0" unique_id=1380604580]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_W_Living" parent_id_path=PackedInt32Array(1975250841, 903778483) index="0" unique_id=1380604580]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_W_Living/StaticBody3D" unique_id=518884966]
 shape = SubResource("ConcavePolygonShape3D_cfvuk")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_E_Hall_A" parent_id_path=PackedInt32Array(1975250841, 1936645159) index="0" unique_id=1450422785]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_E_Hall_A" parent_id_path=PackedInt32Array(1975250841, 881853169) index="0" unique_id=1450422785]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_E_Hall_A/StaticBody3D" unique_id=1647037641]
 shape = SubResource("ConcavePolygonShape3D_er4f5")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_E_Hall_B" parent_id_path=PackedInt32Array(1975250841, 988640921) index="0" unique_id=1540624842]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_E_Hall_B" parent_id_path=PackedInt32Array(1975250841, 147776923) index="0" unique_id=1540624842]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Window_E_Hall_B/StaticBody3D" unique_id=2015982351]
 shape = SubResource("ConcavePolygonShape3D_du3gc")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Skirting" parent_id_path=PackedInt32Array(1975250841, 1117871827) index="0" unique_id=1439891698]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Skirting" parent_id_path=PackedInt32Array(1975250841, 1042808806) index="0" unique_id=1439891698]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Skirting/StaticBody3D" unique_id=863713162]
 shape = SubResource("ConcavePolygonShape3D_xcso6")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Stairs_Up" parent_id_path=PackedInt32Array(1975250841, 1799614485) index="0" unique_id=278658433]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Stairs_Up" parent_id_path=PackedInt32Array(1975250841, 1099506021) index="0" unique_id=278658433]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Stairs_Up/StaticBody3D" unique_id=1528366459]
 shape = SubResource("ConcavePolygonShape3D_ce7pb")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Stairs_Down" parent_id_path=PackedInt32Array(1975250841, 777644470) index="0" unique_id=1577678665]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Stairs_Down" parent_id_path=PackedInt32Array(1975250841, 1919560799) index="0" unique_id=1577678665]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Stairs_Down/StaticBody3D" unique_id=771517051]
 shape = SubResource("ConcavePolygonShape3D_eprbg")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Shaft_Sides" parent_id_path=PackedInt32Array(1975250841, 1339028503) index="0" unique_id=1305584591]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Shaft_Sides" parent_id_path=PackedInt32Array(1975250841, 916968955) index="0" unique_id=1305584591]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Shaft_Sides/StaticBody3D" unique_id=760352605]
 shape = SubResource("ConcavePolygonShape3D_buo86")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Shaft_South" parent_id_path=PackedInt32Array(1975250841, 1995324449) index="0" unique_id=237855735]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Shaft_South" parent_id_path=PackedInt32Array(1975250841, 1909694451) index="0" unique_id=237855735]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Shaft_South/StaticBody3D" unique_id=1913772039]
 shape = SubResource("ConcavePolygonShape3D_4qjh1")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Shaft_Dark" parent_id_path=PackedInt32Array(1975250841, 1811440936) index="0" unique_id=92831842]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Shaft_Dark" parent_id_path=PackedInt32Array(1975250841, 184452660) index="0" unique_id=92831842]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Shaft_Dark/StaticBody3D" unique_id=729332464]
 shape = SubResource("ConcavePolygonShape3D_empbv")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Rails" parent_id_path=PackedInt32Array(1975250841, 723605115) index="0" unique_id=1656298090]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Rails" parent_id_path=PackedInt32Array(1975250841, 619556952) index="0" unique_id=1656298090]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Rails/StaticBody3D" unique_id=2123517723]
 shape = SubResource("ConcavePolygonShape3D_4sxwv")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_SwitchesSockets" parent_id_path=PackedInt32Array(1975250841, 1738500605) index="0" unique_id=2046181975]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_SwitchesSockets" parent_id_path=PackedInt32Array(1975250841, 2039607945) index="0" unique_id=2046181975]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_SwitchesSockets/StaticBody3D" unique_id=472453934]
 shape = SubResource("ConcavePolygonShape3D_ywglp")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Fixture_BasementCageLamp" parent_id_path=PackedInt32Array(1975250841, 659253208) index="0" unique_id=1464493652]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/ARCH_Fixture_BasementCageLamp" parent_id_path=PackedInt32Array(1975250841, 374669814) index="0" unique_id=1464493652]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/ARCH_Fixture_BasementCageLamp/StaticBody3D" unique_id=2035342303]
 shape = SubResource("ConcavePolygonShape3D_dwxci")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Slab" parent_id_path=PackedInt32Array(1975250841, 417915101) index="0" unique_id=804584685]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Slab" parent_id_path=PackedInt32Array(1975250841, 1976276930) index="0" unique_id=804584685]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/CEIL_Slab/StaticBody3D" unique_id=763985897]
 shape = SubResource("ConcavePolygonShape3D_dc7aa")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Decal_Ceil_Corr_1" parent_id_path=PackedInt32Array(1975250841, 2002375288) index="0" unique_id=417779543]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Decal_Ceil_Corr_1" parent_id_path=PackedInt32Array(1975250841, 1551825861) index="0" unique_id=417779543]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/CEIL_Decal_Ceil_Corr_1/StaticBody3D" unique_id=1120560320]
 shape = SubResource("ConcavePolygonShape3D_te4g0")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Decal_Ceil_Liv_1" parent_id_path=PackedInt32Array(1975250841, 1778806670) index="0" unique_id=1668629593]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Decal_Ceil_Liv_1" parent_id_path=PackedInt32Array(1975250841, 663298074) index="0" unique_id=1668629593]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/CEIL_Decal_Ceil_Liv_1/StaticBody3D" unique_id=1396090243]
 shape = SubResource("ConcavePolygonShape3D_1hab5")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Decal_Ceil_Kit_1" parent_id_path=PackedInt32Array(1975250841, 102018386) index="0" unique_id=287704958]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Decal_Ceil_Kit_1" parent_id_path=PackedInt32Array(1975250841, 508408246) index="0" unique_id=287704958]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/CEIL_Decal_Ceil_Kit_1/StaticBody3D" unique_id=589309491]
 shape = SubResource("ConcavePolygonShape3D_ex04b")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Decal_Ceil_Bed_1" parent_id_path=PackedInt32Array(1975250841, 42489041) index="0" unique_id=441833168]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Decal_Ceil_Bed_1" parent_id_path=PackedInt32Array(1975250841, 679227832) index="0" unique_id=441833168]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/CEIL_Decal_Ceil_Bed_1/StaticBody3D" unique_id=1986539969]
 shape = SubResource("ConcavePolygonShape3D_5fv7s")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Decal_Ceil_Bath_1" parent_id_path=PackedInt32Array(1975250841, 215111027) index="0" unique_id=1846141902]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Decal_Ceil_Bath_1" parent_id_path=PackedInt32Array(1975250841, 709465218) index="0" unique_id=1846141902]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/CEIL_Decal_Ceil_Bath_1/StaticBody3D" unique_id=1443087981]
 shape = SubResource("ConcavePolygonShape3D_sw3rk")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Decal_Ceil_Hall_1" parent_id_path=PackedInt32Array(1975250841, 684585519) index="0" unique_id=704537298]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Decal_Ceil_Hall_1" parent_id_path=PackedInt32Array(1975250841, 2044024564) index="0" unique_id=704537298]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/CEIL_Decal_Ceil_Hall_1/StaticBody3D" unique_id=1621584975]
 shape = SubResource("ConcavePolygonShape3D_faaga")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Corridor_A" parent_id_path=PackedInt32Array(1975250841, 258948090) index="0" unique_id=1718802440]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Corridor_A" parent_id_path=PackedInt32Array(1975250841, 1637457423) index="0" unique_id=1718802440]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Corridor_A/StaticBody3D" unique_id=1126100737]
 shape = SubResource("ConcavePolygonShape3D_ffldt")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Corridor_B" parent_id_path=PackedInt32Array(1975250841, 1846296422) index="0" unique_id=2088813380]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Corridor_B" parent_id_path=PackedInt32Array(1975250841, 1709252630) index="0" unique_id=2088813380]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Corridor_B/StaticBody3D" unique_id=1083549502]
 shape = SubResource("ConcavePolygonShape3D_3nlfe")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Corridor_C_Broken" parent_id_path=PackedInt32Array(1975250841, 132515417) index="0" unique_id=1139532430]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Corridor_C_Broken" parent_id_path=PackedInt32Array(1975250841, 1284396128) index="0" unique_id=1139532430]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Corridor_C_Broken/StaticBody3D" unique_id=669855842]
 shape = SubResource("ConcavePolygonShape3D_lfcr1")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_SmokeDetector_Corridor" parent_id_path=PackedInt32Array(1975250841, 167383235) index="0" unique_id=446100913]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_SmokeDetector_Corridor" parent_id_path=PackedInt32Array(1975250841, 1852222440) index="0" unique_id=446100913]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/CEIL_SmokeDetector_Corridor/StaticBody3D" unique_id=1153369466]
 shape = SubResource("ConcavePolygonShape3D_dhh10")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Living_Pendant" parent_id_path=PackedInt32Array(1975250841, 1483860624) index="0" unique_id=769793741]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Living_Pendant" parent_id_path=PackedInt32Array(1975250841, 449186451) index="0" unique_id=769793741]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Living_Pendant/StaticBody3D" unique_id=59357339]
 shape = SubResource("ConcavePolygonShape3D_svuyk")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Kitchen" parent_id_path=PackedInt32Array(1975250841, 1319881627) index="0" unique_id=1483374256]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Kitchen" parent_id_path=PackedInt32Array(1975250841, 857331326) index="0" unique_id=1483374256]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Kitchen/StaticBody3D" unique_id=1059118787]
 shape = SubResource("ConcavePolygonShape3D_t5cm0")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Bedroom_Bulb" parent_id_path=PackedInt32Array(1975250841, 206479733) index="0" unique_id=748502653]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Bedroom_Bulb" parent_id_path=PackedInt32Array(1975250841, 364851135) index="0" unique_id=748502653]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Bedroom_Bulb/StaticBody3D" unique_id=264490388]
 shape = SubResource("ConcavePolygonShape3D_6nc58")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Bathroom" parent_id_path=PackedInt32Array(1975250841, 1265236387) index="0" unique_id=1560101121]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Bathroom" parent_id_path=PackedInt32Array(1975250841, 1130806431) index="0" unique_id=1560101121]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Bathroom/StaticBody3D" unique_id=1077048778]
 shape = SubResource("ConcavePolygonShape3D_2d008")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Utility_Bulb" parent_id_path=PackedInt32Array(1975250841, 1313794492) index="0" unique_id=728486355]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Utility_Bulb" parent_id_path=PackedInt32Array(1975250841, 1476961864) index="0" unique_id=728486355]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Utility_Bulb/StaticBody3D" unique_id=1888776438]
 shape = SubResource("ConcavePolygonShape3D_o72jw")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Hall_A" parent_id_path=PackedInt32Array(1975250841, 639511237) index="0" unique_id=199638724]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Hall_A" parent_id_path=PackedInt32Array(1975250841, 2115347337) index="0" unique_id=199638724]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Hall_A/StaticBody3D" unique_id=1360791810]
 shape = SubResource("ConcavePolygonShape3D_cgti6")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Hall_B_Bulb" parent_id_path=PackedInt32Array(1975250841, 64143742) index="0" unique_id=766666859]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Hall_B_Bulb" parent_id_path=PackedInt32Array(1975250841, 1577650008) index="0" unique_id=766666859]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/CEIL_Fixture_Hall_B_Bulb/StaticBody3D" unique_id=568378575]
 shape = SubResource("ConcavePolygonShape3D_17e50")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_StairShaft_Up_Dark" parent_id_path=PackedInt32Array(1975250841, 795619472) index="0" unique_id=76726417]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/CEIL_StairShaft_Up_Dark" parent_id_path=PackedInt32Array(1975250841, 1706750640) index="0" unique_id=76726417]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/CEIL_StairShaft_Up_Dark/StaticBody3D" unique_id=783370092]
 shape = SubResource("ConcavePolygonShape3D_13qvd")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Corridor_CoatHooks" parent_id_path=PackedInt32Array(1975250841, 1538821791) index="0" unique_id=1627001384]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Corridor_CoatHooks" parent_id_path=PackedInt32Array(1975250841, 1709786066) index="0" unique_id=1627001384]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Corridor_CoatHooks/StaticBody3D" unique_id=544948954]
 shape = SubResource("ConcavePolygonShape3D_vthxu")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Corridor_Console" parent_id_path=PackedInt32Array(1975250841, 1549188142) index="0" unique_id=1006836396]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Corridor_Console" parent_id_path=PackedInt32Array(1975250841, 1396167471) index="0" unique_id=1006836396]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Corridor_Console/StaticBody3D" unique_id=1253998680]
 shape = SubResource("ConcavePolygonShape3D_028fm")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Sofa" parent_id_path=PackedInt32Array(1975250841, 1373522900) index="0" unique_id=650279017]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Sofa" parent_id_path=PackedInt32Array(1975250841, 281668471) index="0" unique_id=650279017]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Sofa/StaticBody3D" unique_id=1901345214]
 shape = SubResource("ConcavePolygonShape3D_jje2m")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_CoffeeTable" parent_id_path=PackedInt32Array(1975250841, 1633980188) index="0" unique_id=1888617048]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_CoffeeTable" parent_id_path=PackedInt32Array(1975250841, 2014561695) index="0" unique_id=1888617048]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_CoffeeTable/StaticBody3D" unique_id=799282446]
 shape = SubResource("ConcavePolygonShape3D_ei5d2")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_TVUnit" parent_id_path=PackedInt32Array(1975250841, 609080139) index="0" unique_id=1734031847]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_TVUnit" parent_id_path=PackedInt32Array(1975250841, 1275101615) index="0" unique_id=1734031847]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_TVUnit/StaticBody3D" unique_id=2092535893]
 shape = SubResource("ConcavePolygonShape3D_xje7o")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_TV_CRT" parent_id_path=PackedInt32Array(1975250841, 1781895135) index="0" unique_id=1270550954]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_TV_CRT" parent_id_path=PackedInt32Array(1975250841, 1395439995) index="0" unique_id=1270550954]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_TV_CRT/StaticBody3D" unique_id=1466666228]
 shape = SubResource("ConcavePolygonShape3D_mivap")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Bookcase" parent_id_path=PackedInt32Array(1975250841, 2144760330) index="0" unique_id=538667849]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Bookcase" parent_id_path=PackedInt32Array(1975250841, 19945861) index="0" unique_id=538667849]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Bookcase/StaticBody3D" unique_id=474181558]
 shape = SubResource("ConcavePolygonShape3D_eljiq")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Sideboard" parent_id_path=PackedInt32Array(1975250841, 1510004014) index="0" unique_id=1769945513]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Sideboard" parent_id_path=PackedInt32Array(1975250841, 1166688777) index="0" unique_id=1769945513]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Sideboard/StaticBody3D" unique_id=227847177]
 shape = SubResource("ConcavePolygonShape3D_8jijm")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_DiningTable" parent_id_path=PackedInt32Array(1975250841, 157525835) index="0" unique_id=1397411071]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_DiningTable" parent_id_path=PackedInt32Array(1975250841, 1656943339) index="0" unique_id=1397411071]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_DiningTable/StaticBody3D" unique_id=1476532704]
 shape = SubResource("ConcavePolygonShape3D_0favp")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Chair_1" parent_id_path=PackedInt32Array(1975250841, 2019820581) index="0" unique_id=371375995]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Chair_1" parent_id_path=PackedInt32Array(1975250841, 2104322292) index="0" unique_id=371375995]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Chair_1/StaticBody3D" unique_id=1151642864]
 shape = SubResource("ConcavePolygonShape3D_78m5h")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Chair_2" parent_id_path=PackedInt32Array(1975250841, 1441224692) index="0" unique_id=299343624]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Chair_2" parent_id_path=PackedInt32Array(1975250841, 436543286) index="0" unique_id=299343624]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Chair_2/StaticBody3D" unique_id=1857211634]
 shape = SubResource("ConcavePolygonShape3D_oe3yw")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Chair_3" parent_id_path=PackedInt32Array(1975250841, 726522136) index="0" unique_id=1614127079]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Chair_3" parent_id_path=PackedInt32Array(1975250841, 234284584) index="0" unique_id=1614127079]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Chair_3/StaticBody3D" unique_id=1650823655]
 shape = SubResource("ConcavePolygonShape3D_f8vc3")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Chair_West" parent_id_path=PackedInt32Array(1975250841, 964757037) index="0" unique_id=441709397]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Chair_West" parent_id_path=PackedInt32Array(1975250841, 750532826) index="0" unique_id=441709397]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Chair_West/StaticBody3D" unique_id=1776673755]
 shape = SubResource("ConcavePolygonShape3D_mvlnp")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Chair_Fallen" parent_id_path=PackedInt32Array(1975250841, 2014633818) index="0" unique_id=268327640]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Chair_Fallen" parent_id_path=PackedInt32Array(1975250841, 1072650340) index="0" unique_id=268327640]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Chair_Fallen/StaticBody3D" unique_id=324935580]
 shape = SubResource("ConcavePolygonShape3D_87se7")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_FloorLamp" parent_id_path=PackedInt32Array(1975250841, 1890486590) index="0" unique_id=467373940]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_FloorLamp" parent_id_path=PackedInt32Array(1975250841, 1622992547) index="0" unique_id=467373940]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_FloorLamp/StaticBody3D" unique_id=297796742]
 shape = SubResource("ConcavePolygonShape3D_4kfmb")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Rug" parent_id_path=PackedInt32Array(1975250841, 2120013044) index="0" unique_id=724038037]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Rug" parent_id_path=PackedInt32Array(1975250841, 180244930) index="0" unique_id=724038037]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Living_Rug/StaticBody3D" unique_id=1504581821]
 shape = SubResource("ConcavePolygonShape3D_oujwh")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Fridge" parent_id_path=PackedInt32Array(1975250841, 1394755453) index="0" unique_id=1263789856]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Fridge" parent_id_path=PackedInt32Array(1975250841, 533599135) index="0" unique_id=1263789856]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Fridge/StaticBody3D" unique_id=1750594628]
 shape = SubResource("ConcavePolygonShape3D_mmt3h")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_A" parent_id_path=PackedInt32Array(1975250841, 344405782) index="0" unique_id=877527072]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_A" parent_id_path=PackedInt32Array(1975250841, 595632496) index="0" unique_id=877527072]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_A/StaticBody3D" unique_id=155800906]
 shape = SubResource("ConcavePolygonShape3D_amp1v")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_B" parent_id_path=PackedInt32Array(1975250841, 1255158985) index="0" unique_id=1460259391]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_B" parent_id_path=PackedInt32Array(1975250841, 1578100106) index="0" unique_id=1460259391]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_B/StaticBody3D" unique_id=894012745]
 shape = SubResource("ConcavePolygonShape3D_75yjl")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_Corner" parent_id_path=PackedInt32Array(1975250841, 228215407) index="0" unique_id=2040440459]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_Corner" parent_id_path=PackedInt32Array(1975250841, 2051350516) index="0" unique_id=2040440459]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_Corner/StaticBody3D" unique_id=1505014142]
 shape = SubResource("ConcavePolygonShape3D_wsc4m")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_E1" parent_id_path=PackedInt32Array(1975250841, 1742127343) index="0" unique_id=1577402343]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_E1" parent_id_path=PackedInt32Array(1975250841, 541418582) index="0" unique_id=1577402343]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_E1/StaticBody3D" unique_id=1131617817]
 shape = SubResource("ConcavePolygonShape3D_tu1qv")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_E2" parent_id_path=PackedInt32Array(1975250841, 890680701) index="0" unique_id=1184038548]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_E2" parent_id_path=PackedInt32Array(1975250841, 1160828447) index="0" unique_id=1184038548]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_E2/StaticBody3D" unique_id=799730143]
 shape = SubResource("ConcavePolygonShape3D_puxdd")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_E3" parent_id_path=PackedInt32Array(1975250841, 596426061) index="0" unique_id=1092716145]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_E3" parent_id_path=PackedInt32Array(1975250841, 526585267) index="0" unique_id=1092716145]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_E3/StaticBody3D" unique_id=755930914]
 shape = SubResource("ConcavePolygonShape3D_s5c60")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Stove" parent_id_path=PackedInt32Array(1975250841, 1238493841) index="0" unique_id=1313559272]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Stove" parent_id_path=PackedInt32Array(1975250841, 66145531) index="0" unique_id=1313559272]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Stove/StaticBody3D" unique_id=1147941684]
 shape = SubResource("ConcavePolygonShape3D_dsw3y")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Hood" parent_id_path=PackedInt32Array(1975250841, 1045057789) index="0" unique_id=1231530914]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Hood" parent_id_path=PackedInt32Array(1975250841, 1114933539) index="0" unique_id=1231530914]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Hood/StaticBody3D" unique_id=1203536205]
 shape = SubResource("ConcavePolygonShape3D_iu7ty")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Counter_W" parent_id_path=PackedInt32Array(1975250841, 619770490) index="0" unique_id=1746865078]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Counter_W" parent_id_path=PackedInt32Array(1975250841, 1296765142) index="0" unique_id=1746865078]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Counter_W/StaticBody3D" unique_id=149584790]
 shape = SubResource("ConcavePolygonShape3D_68ac4")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_SinkTop" parent_id_path=PackedInt32Array(1975250841, 1351819558) index="0" unique_id=1472496736]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_SinkTop" parent_id_path=PackedInt32Array(1975250841, 525453069) index="0" unique_id=1472496736]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_SinkTop/StaticBody3D" unique_id=1599649416]
 shape = SubResource("ConcavePolygonShape3D_whb8s")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Counter_E" parent_id_path=PackedInt32Array(1975250841, 1642065242) index="0" unique_id=327003531]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Counter_E" parent_id_path=PackedInt32Array(1975250841, 501512318) index="0" unique_id=327003531]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Counter_E/StaticBody3D" unique_id=2026893955]
 shape = SubResource("ConcavePolygonShape3D_f04a8")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Counter_Side" parent_id_path=PackedInt32Array(1975250841, 1991470578) index="0" unique_id=1918479643]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Counter_Side" parent_id_path=PackedInt32Array(1975250841, 1924074770) index="0" unique_id=1918479643]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Counter_Side/StaticBody3D" unique_id=834488212]
 shape = SubResource("ConcavePolygonShape3D_63e8l")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Upper_A" parent_id_path=PackedInt32Array(1975250841, 34440602) index="0" unique_id=276537242]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Upper_A" parent_id_path=PackedInt32Array(1975250841, 1846308998) index="0" unique_id=276537242]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Upper_A/StaticBody3D" unique_id=2021877800]
 shape = SubResource("ConcavePolygonShape3D_k6lwb")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Upper_C" parent_id_path=PackedInt32Array(1975250841, 1279218062) index="0" unique_id=944116156]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Upper_C" parent_id_path=PackedInt32Array(1975250841, 1164488531) index="0" unique_id=944116156]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Upper_C/StaticBody3D" unique_id=675896560]
 shape = SubResource("ConcavePolygonShape3D_2rsqg")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Table" parent_id_path=PackedInt32Array(1975250841, 458886842) index="0" unique_id=1038858498]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Table" parent_id_path=PackedInt32Array(1975250841, 1111846027) index="0" unique_id=1038858498]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Table/StaticBody3D" unique_id=348074837]
 shape = SubResource("ConcavePolygonShape3D_iv51p")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Chair_1" parent_id_path=PackedInt32Array(1975250841, 1663962244) index="0" unique_id=1124503274]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Chair_1" parent_id_path=PackedInt32Array(1975250841, 1847995241) index="0" unique_id=1124503274]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Chair_1/StaticBody3D" unique_id=899326260]
 shape = SubResource("ConcavePolygonShape3D_62hw8")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Chair_2" parent_id_path=PackedInt32Array(1975250841, 1105303282) index="0" unique_id=803060998]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Chair_2" parent_id_path=PackedInt32Array(1975250841, 1233986237) index="0" unique_id=803060998]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Chair_2/StaticBody3D" unique_id=934618348]
 shape = SubResource("ConcavePolygonShape3D_cka1p")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_Sink" parent_id_path=PackedInt32Array(1975250841, 1717271327) index="0" unique_id=1820668789]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_Sink" parent_id_path=PackedInt32Array(1975250841, 732775039) index="0" unique_id=1820668789]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Base_Sink/StaticBody3D" unique_id=604751420]
 shape = SubResource("ConcavePolygonShape3D_jiffd")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Upper_D" parent_id_path=PackedInt32Array(1975250841, 1347750694) index="0" unique_id=572055461]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Upper_D" parent_id_path=PackedInt32Array(1975250841, 64340418) index="0" unique_id=572055461]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Upper_D/StaticBody3D" unique_id=1906543293]
 shape = SubResource("ConcavePolygonShape3D_kbr18")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Upper_E1" parent_id_path=PackedInt32Array(1975250841, 79155268) index="0" unique_id=1798992156]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Upper_E1" parent_id_path=PackedInt32Array(1975250841, 748616575) index="0" unique_id=1798992156]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Upper_E1/StaticBody3D" unique_id=1736194079]
 shape = SubResource("ConcavePolygonShape3D_68wox")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Upper_E2" parent_id_path=PackedInt32Array(1975250841, 325945533) index="0" unique_id=334294738]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Upper_E2" parent_id_path=PackedInt32Array(1975250841, 864059086) index="0" unique_id=334294738]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Kitchen_Upper_E2/StaticBody3D" unique_id=1663358802]
 shape = SubResource("ConcavePolygonShape3D_ydfbp")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Bed" parent_id_path=PackedInt32Array(1975250841, 591276877) index="0" unique_id=1637125629]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Bed" parent_id_path=PackedInt32Array(1975250841, 1874528414) index="0" unique_id=1637125629]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Bed/StaticBody3D" unique_id=1982791254]
 shape = SubResource("ConcavePolygonShape3D_nm3px")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Nightstand_A" parent_id_path=PackedInt32Array(1975250841, 1974563781) index="0" unique_id=1122178924]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Nightstand_A" parent_id_path=PackedInt32Array(1975250841, 1552935799) index="0" unique_id=1122178924]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Nightstand_A/StaticBody3D" unique_id=1189275426]
 shape = SubResource("ConcavePolygonShape3D_0qg45")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Nightstand_B" parent_id_path=PackedInt32Array(1975250841, 167202401) index="0" unique_id=344000735]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Nightstand_B" parent_id_path=PackedInt32Array(1975250841, 1531598436) index="0" unique_id=344000735]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Nightstand_B/StaticBody3D" unique_id=509302178]
 shape = SubResource("ConcavePolygonShape3D_s78rd")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Wardrobe" parent_id_path=PackedInt32Array(1975250841, 171383597) index="0" unique_id=1489936335]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Wardrobe" parent_id_path=PackedInt32Array(1975250841, 1035267642) index="0" unique_id=1489936335]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Wardrobe/StaticBody3D" unique_id=1978676992]
 shape = SubResource("ConcavePolygonShape3D_yxh7o")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Dresser" parent_id_path=PackedInt32Array(1975250841, 1684952448) index="0" unique_id=1425728167]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Dresser" parent_id_path=PackedInt32Array(1975250841, 1293332237) index="0" unique_id=1425728167]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Dresser/StaticBody3D" unique_id=867874364]
 shape = SubResource("ConcavePolygonShape3D_mb1j4")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Suitcase" parent_id_path=PackedInt32Array(1975250841, 461003732) index="0" unique_id=746471448]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Suitcase" parent_id_path=PackedInt32Array(1975250841, 1564589697) index="0" unique_id=746471448]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Suitcase/StaticBody3D" unique_id=293931766]
 shape = SubResource("ConcavePolygonShape3D_khyeg")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Chair_Window" parent_id_path=PackedInt32Array(1975250841, 1660063828) index="0" unique_id=2114514069]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Chair_Window" parent_id_path=PackedInt32Array(1975250841, 1405657113) index="0" unique_id=2114514069]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Chair_Window/StaticBody3D" unique_id=1399597795]
 shape = SubResource("ConcavePolygonShape3D_35e83")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Curtain_A" parent_id_path=PackedInt32Array(1975250841, 753148641) index="0" unique_id=1912656669]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Curtain_A" parent_id_path=PackedInt32Array(1975250841, 1550882457) index="0" unique_id=1912656669]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Curtain_A/StaticBody3D" unique_id=1194476744]
 shape = SubResource("ConcavePolygonShape3D_b5y5b")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Curtain_B" parent_id_path=PackedInt32Array(1975250841, 53577366) index="0" unique_id=28758098]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Curtain_B" parent_id_path=PackedInt32Array(1975250841, 1345836474) index="0" unique_id=28758098]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Bedroom_Curtain_B/StaticBody3D" unique_id=792043061]
 shape = SubResource("ConcavePolygonShape3D_5gf0s")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bathroom_Toilet" parent_id_path=PackedInt32Array(1975250841, 776416477) index="0" unique_id=1242873157]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bathroom_Toilet" parent_id_path=PackedInt32Array(1975250841, 341284612) index="0" unique_id=1242873157]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Bathroom_Toilet/StaticBody3D" unique_id=1289358865]
 shape = SubResource("ConcavePolygonShape3D_5qfqi")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bathroom_Basin" parent_id_path=PackedInt32Array(1975250841, 34198357) index="0" unique_id=76270246]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bathroom_Basin" parent_id_path=PackedInt32Array(1975250841, 1840506019) index="0" unique_id=76270246]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Bathroom_Basin/StaticBody3D" unique_id=1583166037]
 shape = SubResource("ConcavePolygonShape3D_rmhik")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bathroom_MirrorCabinet" parent_id_path=PackedInt32Array(1975250841, 1072012944) index="0" unique_id=979801736]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bathroom_MirrorCabinet" parent_id_path=PackedInt32Array(1975250841, 1463790951) index="0" unique_id=979801736]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Bathroom_MirrorCabinet/StaticBody3D" unique_id=1159548466]
 shape = SubResource("ConcavePolygonShape3D_ujvmu")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bathroom_Shower" parent_id_path=PackedInt32Array(1975250841, 904733176) index="0" unique_id=1535238158]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Bathroom_Shower" parent_id_path=PackedInt32Array(1975250841, 408013093) index="0" unique_id=1535238158]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Bathroom_Shower/StaticBody3D" unique_id=1101032270]
 shape = SubResource("ConcavePolygonShape3D_5ans5")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Utility_BreakerBox" parent_id_path=PackedInt32Array(1975250841, 1161247539) index="0" unique_id=94108092]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Utility_BreakerBox" parent_id_path=PackedInt32Array(1975250841, 1748865916) index="0" unique_id=94108092]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Utility_BreakerBox/StaticBody3D" unique_id=1068178581]
 shape = SubResource("ConcavePolygonShape3D_rmi5n")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Utility_WaterHeater" parent_id_path=PackedInt32Array(1975250841, 1489862703) index="0" unique_id=1829440992]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Utility_WaterHeater" parent_id_path=PackedInt32Array(1975250841, 2060942897) index="0" unique_id=1829440992]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Utility_WaterHeater/StaticBody3D" unique_id=720627522]
 shape = SubResource("ConcavePolygonShape3D_suqni")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Utility_Shelf" parent_id_path=PackedInt32Array(1975250841, 2112588137) index="0" unique_id=1729293344]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Utility_Shelf" parent_id_path=PackedInt32Array(1975250841, 2013496322) index="0" unique_id=1729293344]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Utility_Shelf/StaticBody3D" unique_id=1311790382]
 shape = SubResource("ConcavePolygonShape3D_e1i6u")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Utility_MopBucket" parent_id_path=PackedInt32Array(1975250841, 489053069) index="0" unique_id=311737588]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Utility_MopBucket" parent_id_path=PackedInt32Array(1975250841, 1689462813) index="0" unique_id=311737588]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Utility_MopBucket/StaticBody3D" unique_id=487906456]
 shape = SubResource("ConcavePolygonShape3D_fmxeg")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Utility_Pipes" parent_id_path=PackedInt32Array(1975250841, 587933112) index="0" unique_id=1738962381]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_Utility_Pipes" parent_id_path=PackedInt32Array(1975250841, 1851545790) index="0" unique_id=1738962381]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_Utility_Pipes/StaticBody3D" unique_id=820995234]
 shape = SubResource("ConcavePolygonShape3D_t1ui2")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_StairHall_Mailboxes" parent_id_path=PackedInt32Array(1975250841, 692316073) index="0" unique_id=501655009]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_StairHall_Mailboxes" parent_id_path=PackedInt32Array(1975250841, 989091890) index="0" unique_id=501655009]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_StairHall_Mailboxes/StaticBody3D" unique_id=124135987]
 shape = SubResource("ConcavePolygonShape3D_b153q")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_StairHall_Boards" parent_id_path=PackedInt32Array(1975250841, 1529442473) index="0" unique_id=827946855]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_StairHall_Boards" parent_id_path=PackedInt32Array(1975250841, 116788180) index="0" unique_id=827946855]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_StairHall_Boards/StaticBody3D" unique_id=657655917]
 shape = SubResource("ConcavePolygonShape3D_j2ltn")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_StairHall_Radiator" parent_id_path=PackedInt32Array(1975250841, 792774349) index="0" unique_id=2022578646]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/FURN_StairHall_Radiator" parent_id_path=PackedInt32Array(1975250841, 916009468) index="0" unique_id=2022578646]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/FURN_StairHall_Radiator/StaticBody3D" unique_id=1330179773]
 shape = SubResource("ConcavePolygonShape3D_yhfw7")
 
-[node name="PROP_Corridor_Photo_3" parent="Abandoned_Apartment_Floor_01" index="148" unique_id=371777613]
+[node name="PROP_Corridor_Photo_3" parent="Abandoned_Apartment_Floor_01" index="148" unique_id=637665624]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.245547, 1.55, -7.94)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/PROP_StairHall_Box_1" parent_id_path=PackedInt32Array(1975250841, 1018660866) index="0" unique_id=1415975867]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/PROP_StairHall_Box_1" parent_id_path=PackedInt32Array(1975250841, 2017554635) index="0" unique_id=1415975867]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/PROP_StairHall_Box_1/StaticBody3D" unique_id=1277472948]
 shape = SubResource("ConcavePolygonShape3D_yhpra")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/PROP_StairHall_Box_2" parent_id_path=PackedInt32Array(1975250841, 625221010) index="0" unique_id=1753940478]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/PROP_StairHall_Box_2" parent_id_path=PackedInt32Array(1975250841, 2028450750) index="0" unique_id=1753940478]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/PROP_StairHall_Box_2/StaticBody3D" unique_id=9844843]
 shape = SubResource("ConcavePolygonShape3D_epvc6")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/PROP_StairHall_Box_3" parent_id_path=PackedInt32Array(1975250841, 1634215645) index="0" unique_id=1949162219]
+[node name="StaticBody3D" type="StaticBody3D" parent="Abandoned_Apartment_Floor_01/PROP_StairHall_Box_3" parent_id_path=PackedInt32Array(1975250841, 293596823) index="0" unique_id=1949162219]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abandoned_Apartment_Floor_01/PROP_StairHall_Box_3/StaticBody3D" unique_id=919022828]
 shape = SubResource("ConcavePolygonShape3D_eyqfd")

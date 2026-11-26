@@ -31,7 +31,6 @@ func cerrar_nota() -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if abierta and event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
-			cerrar_nota()
-			get_viewport().set_input_as_handled()
+	if abierta and event.is_action_pressed("interactuar"):
+		cerrar_nota()
+		get_viewport().set_input_as_handled()

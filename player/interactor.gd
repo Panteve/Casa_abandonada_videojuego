@@ -20,27 +20,13 @@ func consumir_seleccionado() -> void:
 	inventario.quitar(inventario.seleccionado)
 
 func interactuar() -> void:
-	_llamar(&"interactuar")
+	var o := objetivo()
+	if o != null and o.has_method("interactuar"):
+		o.call("interactuar", self)
+	elif o != null and o.has_method("leer"):
+		o.call("leer", self)
 
 func usar() -> void:
-	_llamar(&"usar")
-
-
-func leer() -> void:
 	var o := objetivo()
-	if o != null and o.has_method(&"leer"):
-		o.leer(self)
-		get_viewport().set_input_as_handled()
-		return
-
-	# Sin nota delante: nota del inventario, si hay una seleccionada
-	var item := item_seleccionado()
-	if item != null and item.tipo == "nota":
-		notas.abrir(item.nombre, item.contenido)
-		get_viewport().set_input_as_handled()
-
-
-func _llamar(metodo: StringName) -> void:
-	var o := objetivo()
-	if o != null and o.has_method(metodo):
-		o.call(metodo, self)
+	if o != null and o.has_method("usar"):
+		o.call("usar", self)

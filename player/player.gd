@@ -61,12 +61,6 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("linterna"):
 		luz.alternar()
 
-	
-	#TODO:PONER TECLA ASIGNADA
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
-			interactor.leer()
-
 
 func _physics_process(delta: float) -> void:
 	if notas.abierta:

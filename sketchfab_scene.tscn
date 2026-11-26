@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b2gxigtj7jfx2"]
+
+[ext_resource type="PackedScene" uid="uid://52bdwxgq5nqb" path="res://assets/objetos/presencia/fantasma_animado.glb" id="1_r57si"]
+
+[node name="Sketchfab_Scene" unique_id=1365439551 instance=ExtResource("1_r57si")]
+
+[node name="Skeleton3D" parent="Sketchfab_model/8bd8decf61364279a9f09772427ece17_fbx/Object_2/RootNode/Object_4" parent_id_path=PackedInt32Array(1251549215) index="0" unique_id=635577070]
+bones/1/rotation = Quaternion(0.27471986, 0.032455824, 0.028692871, 0.960548)
+bones/2/rotation = Quaternion(-0.13524535, -0.08427213, 0.019366795, 0.9870319)
+bones/3/rotation = Quaternion(-0.0495153, -0.012410222, 0.002149681, 0.99869394)
+bones/4/rotation = Quaternion(-0.04933348, -0.01270954, 0.0038732246, 0.998694)
+bones/5/rotation = Quaternion(0.13589011, 0.014188727, -0.014668388, 0.99051374)
+bones/6/rotation = Quaternion(-0.34096313, 0.0790487, -0.06731346, 0.9343257)
+bones/8/rotation = Quaternion(0.57127243, 0.4295656, -0.49733752, 0.4917079)
+bones/9/rotation = Quaternion(0.3721871, -0.25195372, -0.10534583, 0.8870729)
+bones/10/rotation = Quaternion(0.074103266, 0.0007191544, 0.53354216, 0.84252065)
+bones/12/rotation = Quaternion(0.5343855, -0.4621452, 0.53735614, 0.46054575)
+bones/13/rotation = Quaternion(0.3172061, 0.18181403, 0.42210406, 0.8295495)
+bones/14/rotation = Quaternion(0.10471686, 0.00021682368, -0.8092596, 0.5780426)
+
+[node name="Object_8" parent="Sketchfab_model/8bd8decf61364279a9f09772427ece17_fbx/Object_2/RootNode/Object_4/Skeleton3D" index="1" unique_id=1029531880]
+visible = false

@@ -1,6 +1,6 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://bgvkwde3h4jnf"]
 
-[ext_resource type="Script" path="res://objetos/bateria_recarga.gd" id="1_bateria"]
+[ext_resource type="Script" uid="uid://bdbr6oahrs7nd" path="res://objetos/bateria/bateria_recarga.gd" id="1_38tr3"]
 
 [sub_resource type="StandardMaterial3D" id="Mat_pila"]
 albedo_color = Color(0.721569, 0.52549, 0.0431373, 1)
@@ -19,11 +19,11 @@ height = 0.16
 [sub_resource type="SphereShape3D" id="Forma_pila"]
 radius = 0.18
 
-[node name="Bateria" type="StaticBody3D"]
-script = ExtResource("1_bateria")
+[node name="Bateria" type="StaticBody3D" unique_id=714964625]
+script = ExtResource("1_38tr3")
 
-[node name="Malla" type="MeshInstance3D" parent="."]
+[node name="Malla" type="MeshInstance3D" parent="." unique_id=1181003937]
 mesh = SubResource("Malla_pila")
 
-[node name="Forma" type="CollisionShape3D" parent="."]
+[node name="Forma" type="CollisionShape3D" parent="." unique_id=433684293]
 shape = SubResource("Forma_pila")

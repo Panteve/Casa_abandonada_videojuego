@@ -20,7 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://cfo555l15vieg" path="res://objetos/cuchillo/cuchillo_cocina.tscn" id="16_yaehf"]
 [ext_resource type="PackedScene" uid="uid://caecvafliepjn" path="res://mundo/gabinete/gabinete_cocina.tscn" id="17_074og"]
 [ext_resource type="Resource" uid="uid://dogapnyxb5dbw" path="res://objetos/nota_comedor/nota.tres" id="18_074og"]
-[ext_resource type="PackedScene" uid="uid://bgvkwde3h4jnf" path="res://objetos/bateria/bateria.tscn" id="21_getpj"]
+[ext_resource type="PackedScene" path="res://objetos/bateria/bateria.tscn" id="21_getpj"]
+[ext_resource type="PackedScene" uid="uid://djmqyug2bphx" path="res://presencia/presencia.tscn" id="21_ryguw"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_uxa2c"]
 
@@ -137,6 +138,9 @@ script = ExtResource("12_vivmo")
 [node name="Nota sala" parent="Sala" unique_id=546005525 instance=ExtResource("4_cmtxc")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 2.0499232, 0.69343233, -2.196663)
 item = ExtResource("18_074og")
+
+[node name="Presencia" parent="Sala" unique_id=100249002 instance=ExtResource("21_ryguw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6092038, 1.342024, -4.6561604)
 
 [node name="Corredor" type="Node3D" parent="." unique_id=564122292]
 

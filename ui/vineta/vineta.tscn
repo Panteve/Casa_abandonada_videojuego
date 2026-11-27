@@ -6,7 +6,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vineta"]
 shader = ExtResource("2_shader")
 shader_parameter/intensidad = 0.0
-shader_parameter/color_borde = Color(0, 0, 0, 1)
+shader_parameter/color_borde = Color(0.14261264, 1.7296989e-08, 0.010633816, 1)
 shader_parameter/suavidad = 0.45
 
 [node name="Vineta" type="CanvasLayer" unique_id=2082569166]

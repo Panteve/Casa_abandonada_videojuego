@@ -2,7 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://52bdwxgq5nqb" path="res://assets/objetos/presencia/fantasma_animado.glb" id="1_xhel8"]
 
-[node name="Presencia" type="Node3D" unique_id=100249002]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+[node name="Sketchfab_Scene" unique_id=1164827883 instance=ExtResource("1_xhel8")]
+transform = Transform3D(0.045, 0, 0, 0, 0.045, 0, 0, 0, 0.045, 0, 0, 0)
 
-[node name="Sketchfab_Scene" parent="." unique_id=1365439551 instance=ExtResource("1_xhel8")]
+[node name="Object_8" parent="Sketchfab_model/8bd8decf61364279a9f09772427ece17_fbx/Object_2/RootNode/Object_4/Skeleton3D" parent_id_path=PackedInt32Array(2116016855) index="1" unique_id=1697654139]
+visible = false

@@ -13,8 +13,8 @@ signal alcanzado
 @export var desfase_altura: float = -0.75
 
 @export_group("Movimiento")
-@export_range(1.0, 30.0, 0.5, "suffix:m") var distancia_aparicion: float = 8.0
-@export_range(0.05, 5.0, 0.05, "suffix:m/s") var velocidad: float = 0.4
+@export_range(1.0, 30.0, 0.5, "suffix:m") var distancia_aparicion: float = 10.0
+@export_range(0.05, 5.0, 0.05, "suffix:m/s") var velocidad: float = 0.5
 @export var multiplicador_moviendose: float = 1.25
 @export_range(1.0, 3.0, 0.05) var ventaja_sobre_jugador: float = 1.2
 @export_range(0.5, 15.0, 0.5, "suffix:m") var distancia_aviso: float = 3.0

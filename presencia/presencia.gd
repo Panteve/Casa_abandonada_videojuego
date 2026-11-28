@@ -110,22 +110,21 @@ func _process(delta: float) -> void:
 	if distancia <= distancia_atrapa:
 		desactivar()
 		alcanzado.emit()
-		# Si la linterna no pudo encenderse (sin batería), vuelve a empezar.
 		if _luz and not _luz.encendida:
 			activar.call_deferred()
 		return
-
 	_aplicar_efectos(distancia)
 
 
 # --- Fantasma (modelo) ---
-
+#PROMPT: Como podria hacer una mecanica para que la escena del fantasma siga al jugador
+#cada vez que apago la linterna
 func _crear_fantasma() -> void:
 	if escena_fantasma == null:
 		push_warning("Presencia: falta la escena del fantasma.")
 		return
 	_fantasma = escena_fantasma.instantiate() as Node3D
-	_fantasma.top_level = true    # se mueve en el mundo, no pegado al jugador
+	_fantasma.top_level = true 
 	add_child(_fantasma)
 	_fantasma.hide()
 

@@ -16,6 +16,7 @@ signal alcanzado
 @export_range(1.0, 30.0, 0.5, "suffix:m") var distancia_aparicion: float = 8.0
 @export_range(0.05, 5.0, 0.05, "suffix:m/s") var velocidad: float = 0.4
 @export var multiplicador_moviendose: float = 1.25
+@export_range(1.0, 3.0, 0.05) var ventaja_sobre_jugador: float = 1.2
 @export_range(0.5, 15.0, 0.5, "suffix:m") var distancia_aviso: float = 3.0
 @export_range(0.2, 3.0, 0.1, "suffix:m") var distancia_atrapa: float = 1.0
 
@@ -96,8 +97,9 @@ func _process(delta: float) -> void:
 	var distancia := hacia.length()
 
 	var v := velocidad
-	if Vector2(_jugador.velocity.x, _jugador.velocity.z).length() > 0.5:
-		v *= multiplicador_moviendose
+	var vel_jugador := Vector2(_jugador.velocity.x, _jugador.velocity.z).length()
+	if vel_jugador > 0.5:
+		v = maxf(velocidad * multiplicador_moviendose, vel_jugador * ventaja_sobre_jugador)
 	if distancia > 0.001:
 		_fantasma.global_position += hacia / distancia * minf(v * delta, distancia)
 	_fantasma.global_position.y = objetivo.y + desfase_altura

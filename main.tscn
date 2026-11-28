@@ -21,9 +21,10 @@
 [ext_resource type="PackedScene" uid="uid://caecvafliepjn" path="res://mundo/gabinete/gabinete_cocina.tscn" id="17_074og"]
 [ext_resource type="Resource" uid="uid://dogapnyxb5dbw" path="res://objetos/nota_comedor/nota.tres" id="18_074og"]
 [ext_resource type="PackedScene" uid="uid://bgvkwde3h4jnf" path="res://objetos/bateria/bateria.tscn" id="21_getpj"]
-[ext_resource type="PackedScene" uid="uid://dbx7ikoghv286" path="res://mundo/retrato/cuadro_retrato.tscn" id="22_d13ii"]
+[ext_resource type="Script" uid="uid://b16xau6b8367m" path="res://inventario/recogible.gd" id="22_0odxb"]
+[ext_resource type="PackedScene" uid="uid://l8hjeg3qgmrl" path="res://mundo/retrato/cuadro.tscn" id="22_d13ii"]
 [ext_resource type="Script" uid="uid://bn7lsu1mpwbm3" path="res://mundo/retrato/CuadroRetrato.gd" id="23_0odxb"]
-[ext_resource type="Script" uid="uid://r2475biyavpv" path="res://objetos/fragmento/FragmentoRetrato.gd" id="25_a6jrf"]
+[ext_resource type="Script" uid="uid://cp2bgmowlyi31" path="res://inventario/item.gd" id="23_lswn8"]
 [ext_resource type="PackedScene" uid="uid://dnoany3qb3uri" path="res://objetos/fragmento/fragmento_retrato.tscn" id="25_lswn8"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_uxa2c"]
@@ -58,6 +59,11 @@ transparency = 1
 albedo_texture = ExtResource("14_2cqfq")
 emission_enabled = true
 emission = Color(0, 0.7921569, 0, 1)
+
+[sub_resource type="Resource" id="Resource_1u8w0"]
+script = ExtResource("23_lswn8")
+tipo = "fragmento"
+metadata/_custom_type_script = "uid://cp2bgmowlyi31"
 
 [node name="Main" type="Node3D" unique_id=1245151571]
 
@@ -147,13 +153,14 @@ item = ExtResource("18_074og")
 [node name="Puerta" parent="Corredor" unique_id=316208557 instance=ExtResource("7_o80qs")]
 transform = Transform3D(-4.8082526e-08, 0, 1, 0, 1, 0, -1.1, 0, -4.371139e-08, 13.995482, 0.025653094, -7.4496884)
 
-[node name="CuadroRetrato" parent="Corredor" unique_id=1384379607 instance=ExtResource("22_d13ii")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4669435, 1.5306245, -7.8317776)
-script = ExtResource("23_0odxb")
-
 [node name="FragmentoRetrato" parent="Corredor" unique_id=389515303 instance=ExtResource("25_lswn8")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 5.8017583, 0.49889743, -8.1378565)
-script = ExtResource("25_a6jrf")
+script = ExtResource("22_0odxb")
+item = SubResource("Resource_1u8w0")
+
+[node name="Cuadro" parent="Corredor" unique_id=583460216 instance=ExtResource("22_d13ii")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4723243, 1.0576084, -7.8538504)
+script = ExtResource("23_0odxb")
 
 [node name="Bateria" parent="." unique_id=442410942 instance=ExtResource("21_getpj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.223432, 1.0343609, -0.65842354)

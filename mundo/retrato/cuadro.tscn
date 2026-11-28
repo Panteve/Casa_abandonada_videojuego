@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://l8hjeg3qgmrl"]
+
+[ext_resource type="PackedScene" uid="uid://bdmrdgkswt66" path="res://assets/objetos/cuadro/picture_frame.glb" id="1_308vi"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_308vi"]
+points = PackedVector3Array(3.3405135, 4.0388303, -1.2819694, 2.9876711, 3.827118, -1.0539422, 3.3405135, 0.6070395, 2.1498213, 3.4527204, 4.021377, -1.4401847, -3.3411896, 4.0388303, -1.2819694, 2.9876711, 0.8350668, 1.9381089, -2.988347, 3.827118, -1.0539422, 3.4527204, 0.4488243, 2.1323683, -3.3411896, 0.6070395, 2.1498213, 3.4527204, 3.7349205, -1.7262621, -3.4527204, 4.021377, -1.4401847, -2.988347, 0.8350668, 1.9381089, 3.4527204, 0.16274689, 1.8459115, -3.4527204, 0.4488243, 2.1323683, 3.310096, 1.820023, 0.068740845, 2.6071146, 2.3166747, -0.42829013, -2.545604, 2.4009042, -0.51251984, -3.4527204, 3.7349205, -1.7262621, 3.0782473, 1.6557372, 0.2326473, -3.4527204, 0.16274689, 1.8459115, -3.2485855, 1.9038732, -0.015488744, -3.0167367, 1.7399669, 0.14841759)
+
+[node name="Cuadro" type="Area3D" unique_id=1566473677]
+
+[node name="Sketchfab_Scene" parent="." unique_id=1514577253 instance=ExtResource("1_308vi")]
+
+[node name="Object_3" parent="Sketchfab_Scene/Sketchfab_model/6db9d82528fb446c8907ec6fc7bd7694_fbx/RootNode" parent_id_path=PackedInt32Array(1514577253, 1236939789) index="0" unique_id=538510309]
+transform = Transform3D(1, 0, 0, 0, 0.7300838, -0.6833576, 0, 0.6833576, 0.7300838, 0, 0, 0)
+
+[node name="Object_5" parent="Sketchfab_Scene/Sketchfab_model/6db9d82528fb446c8907ec6fc7bd7694_fbx/RootNode/Object_3" index="1" unique_id=633579193]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, -9.313226e-09, 0, 9.313226e-09, 0.25, 0, -0.27653164, -0.29543996)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=883691866]
+transform = Transform3D(0.2, 0, 0, 0, 0.14601676, -0.13667153, 0, 0.13667153, 0.14601676, 0, -1.3411045e-07, -0.40466595)
+shape = SubResource("ConvexPolygonShape3D_308vi")
+
+[editable path="Sketchfab_Scene"]

@@ -5,14 +5,16 @@ extends Area3D
 signal fragmento_colocado(id: int)
 signal retrato_completado
 
-const TOTAL_PIEZAS := 6
+@export var visuales: Array[Node3D]   # arrastra aquí los 6 nodos, en orden de id
 
 var piezas_colocadas: Array[bool] = []
 
 
 func _ready() -> void:
-	piezas_colocadas.resize(TOTAL_PIEZAS)
+	piezas_colocadas.resize(visuales.size())
 	piezas_colocadas.fill(false)
+	for v in visuales:
+		v.visible = false
 
 
 func interactuar(interactor: Interactor) -> void:
@@ -31,8 +33,7 @@ func interactuar(interactor: Interactor) -> void:
 
 	var id := item.id_fragmento
 
-	# Comprobar que el identificador sea válido.
-	if id < 0 or id >= TOTAL_PIEZAS:
+	if id < 0 or id >= piezas_colocadas.size():
 		return
 
 	# Comprobar que la posición no esté ocupada.
@@ -42,24 +43,13 @@ func interactuar(interactor: Interactor) -> void:
 
 	# Colocar el fragmento.
 	piezas_colocadas[id] = true
-
+	visuales[id].visible = true
 	# Eliminarlo del inventario.
 	interactor.consumir_seleccionado()
-
-	print("Has colocado el fragmento: ", id)
-
-	# Avisar a la interfaz.
 	fragmento_colocado.emit(id)
 
-	comprobar_completado()
 
 
-func comprobar_completado() -> void:
-
-	for colocada in piezas_colocadas:
-		if not colocada:
-			return
-
-	print("¡Has reconstruido el retrato!")
-
-	retrato_completado.emit()
+	if not piezas_colocadas.has(false):
+		print("¡Has reconstruido el retrato!")
+		retrato_completado.emit()

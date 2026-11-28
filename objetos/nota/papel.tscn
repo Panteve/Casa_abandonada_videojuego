@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://hfqdhp0w3kva" path="res://assets/objetos/paper.glb" id="1_krmi2"]
 [ext_resource type="Script" uid="uid://2fo0hkmi8k81" path="res://objetos/nota/nota_leible.gd" id="1_r3rr0"]
+[ext_resource type="Script" path="res://objetos/nota/destello.gd" id="2_destello"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ajtct"]
 size = Vector3(7.584, 0.2, 5.762)
@@ -18,5 +19,8 @@ shape = SubResource("BoxShape3D_ajtct")
 
 [node name="Object_2" parent="Sketchfab_Scene/Sketchfab_model/ef143a20c7b24060971ea0d572fcbfca_obj_cleaner_materialmerger_gles" parent_id_path=PackedInt32Array(573660645, 1806266529) index="0" unique_id=1700197335]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.854689, -32.81685, -30.468435)
+
+[node name="Destello" type="Node3D" parent="."]
+script = ExtResource("2_destello")
 
 [editable path="Sketchfab_Scene"]

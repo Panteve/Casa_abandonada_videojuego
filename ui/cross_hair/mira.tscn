@@ -1,5 +1,7 @@
 [gd_scene format=3]
 
+[ext_resource type="Script" path="res://ui/cross_hair/mira.gd" id="1_mira"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_punto"]
 bg_color = Color(0.9607843, 0.9607843, 0.8627451, 0.8)
 corner_radius_top_left = 3
@@ -9,6 +11,7 @@ corner_radius_bottom_left = 3
 
 [node name="Mira" type="CanvasLayer"]
 layer = 2
+script = ExtResource("1_mira")
 
 [node name="Centro" type="CenterContainer" parent="."]
 anchors_preset = 15
